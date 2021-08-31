@@ -8,10 +8,10 @@ import container from './dependency-injection';
 import { registerRoutes } from './routes';
 
 export class Server {
-    private app: express.Express;
-    readonly port: string;
-    private logger: Logger;
-    httpServer?: http.Server;
+    private app    : express.Express;
+    readonly port  : string;
+    private logger : Logger;
+    httpServer?    : http.Server;
 
     constructor(port: string) {
         this.port   = port;

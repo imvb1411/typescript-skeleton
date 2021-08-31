@@ -33,5 +33,4 @@ class WinstonLogger {
     }
 }
 exports.default = WinstonLogger;
-//export default WinstonLogger;
 //# sourceMappingURL=winston-logger.js.map

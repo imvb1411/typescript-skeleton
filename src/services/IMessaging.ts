@@ -1,6 +1,7 @@
-import { MessageEntity } from "modules/Message/domain/message-entity";
+import { MessageEntity } from "./../modules/Message/domain/message-entity";
 
-export interface IMessaging {
-    sendMessage(message        : MessageEntity);
-    sendMessageToGroup(message : MessageEntity);
+export default interface IMessaging {
+    sendMessage(message: MessageEntity, token: string);
+    sendMessageToGroup(message : MessageEntity, token: string);
+    synchronize(messages: Array<MessageEntity>): Promise<Array<MessageEntity>>;
 }

@@ -13,6 +13,22 @@ class MessageEntity {
         this.createdAt = createdAt;
         this.sendedAt = sendedAt;
     }
+    static fromPrimitive(data) {
+        return new MessageEntity(data.id, data.messageTypeId, data.deviceFromId, data.destinationId, data.data, data.forGroup, data.status, data.createdAt, data.sendedAt);
+    }
+    toPrimitive() {
+        return {
+            id: this.id,
+            messageTypeId: this.messageTypeId.toString(),
+            deviceFromId: this.deviceFromId.toString(),
+            destinationId: this.destinationId.toString(),
+            data: this.data,
+            forGroup: this.forGroup.toString(),
+            status: this.status.toString(),
+            createdAt: this.createdAt.toString(),
+            sendedAt: this.sendedAt.toString()
+        };
+    }
 }
 exports.MessageEntity = MessageEntity;
 //# sourceMappingURL=message-entity.js.map
