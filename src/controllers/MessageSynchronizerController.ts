@@ -12,8 +12,7 @@ export default class MessageSynchronizerController implements Controller {
 
     constructor(private messaging: IMessaging) {}
 
-    async run(_req: Request, res: Response): Promise<Response> {
-        console.log(_req.body);
+    async run(_req: Request, res: Response): Promise<Response> {     
         var messages: Array<MessageEntity> = _req.body.messages;
         //var token: string = await token.findByUserId(message.destinationId); 
         var token: "";    
@@ -21,8 +20,9 @@ export default class MessageSynchronizerController implements Controller {
         const messageSynchronizer: MessageSynchronizer = new MessageSynchronizer(messageRepository);
         this.messaging = new Synchronizer(messageSynchronizer);
         var queryResponse = await this.messaging.synchronize(messages);
-
+        console.log("controller", queryResponse);
         res.header('Access-Control-Allow-Origin', '*');
+        res.header('Content-Type', 'application/json');
         return res.status(httpStatus.OK).json(queryResponse);
     }
 }

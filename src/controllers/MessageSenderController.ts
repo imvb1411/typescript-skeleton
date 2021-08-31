@@ -27,7 +27,7 @@ export default class MessageSenderController implements Controller {
         const queryResponse: MessageEntity = await this.messaging.sendMessage(message, token);
 
         res.header('Access-Control-Allow-Origin', '*');
-        return res.status(httpStatus.OK).json(queryResponse);
+        return res.status(httpStatus.OK).json(queryResponse.toPrimitive());
     }
 
 }

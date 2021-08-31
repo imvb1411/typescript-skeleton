@@ -1,4 +1,5 @@
 import { MessageTypeEntity } from "modules/MessageType/Domain/message-type-entity";
+import moment from "moment";
 
 export class MessageEntity {
 
@@ -65,8 +66,8 @@ export class MessageEntity {
             ,data          : this.data         
             ,forGroup      : this.forGroup.toString()     
             ,status        : this.status.toString()       
-            ,createdAt     : this.createdAt.toString()    
-            ,sendedAt      : this.sendedAt.toString()         
+            ,createdAt     : moment(this.createdAt).format("yyyy-MM-DD HH:mm:ss")    
+            ,sendedAt      : moment(this.sendedAt).format("yyyy-MM-DD HH:mm:ss")            
         }
     }
 }

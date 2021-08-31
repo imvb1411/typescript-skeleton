@@ -16,8 +16,11 @@ export default class FirebaseMessaging implements IMessaging {
     }
 
     async sendMessage(message: MessageEntity, token: string): Promise<MessageEntity> {
-        const inserts = this.messageRepository.insert(message);
-        return this.sender.sendMessage(message, token);        
+        const sended = await this.sender.sendMessage(message, token);
+        if (sended) {
+            this.messageRepository.insert(message);
+        }        
+        return sended;        
     }
 
     sendMessageToGroup(message: MessageEntity) {

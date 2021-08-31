@@ -1,6 +1,10 @@
 "use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.MessageEntity = void 0;
+const moment_1 = __importDefault(require("moment"));
 class MessageEntity {
     constructor(id, messageTypeId, deviceFromId, destinationId, data, forGroup, status, createdAt, sendedAt) {
         this.id = id;
@@ -25,8 +29,8 @@ class MessageEntity {
             data: this.data,
             forGroup: this.forGroup.toString(),
             status: this.status.toString(),
-            createdAt: this.createdAt.toString(),
-            sendedAt: this.sendedAt.toString()
+            createdAt: moment_1.default(this.createdAt).format("yyyy-MM-DD HH:mm:ss"),
+            sendedAt: moment_1.default(this.sendedAt).format("yyyy-MM-DD HH:mm:ss")
         };
     }
 }

@@ -12,6 +12,7 @@ export default class FirebaseMessaging implements IMessaging {
             const messagesSynchronizedAux = await this.synchronizer.synchronize(message);
             messagesSynchronized = messagesSynchronized.concat(messagesSynchronizedAux);
         }));
+        console.log("synchronizer",messagesSynchronized);
         return messagesSynchronized;
     }
 

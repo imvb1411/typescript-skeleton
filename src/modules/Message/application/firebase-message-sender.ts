@@ -39,8 +39,8 @@ export default class FirebaseMessageSender {
                         .messaging()
                         .sendToDevice(token, payload, options);
 
-        message.id = result.results[0].messageId;
-
+        //message.id = result.results[0].messageId;
+        //console.log(result.results[0]);
         return message;
     }
     
