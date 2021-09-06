@@ -3,31 +3,31 @@ import IRepository from './IRepository';
 
 export class MySqlRepository implements IRepository{
 
-    connection: Pool;
+    static connection: Pool;
 
     constructor() {}
 
-    private async connect(): Promise<Pool> {
-        this.connection = await createPool({
-            host: 'localhost',
-            user: 'root',
-            password: '123',
-            database: 'db_aizama'
-        });
+    static async connect(): Promise<Pool> {
+        if(!this.connection) {
+            this.connection = await createPool({
+                host: 'localhost',
+                user: 'root',
+                password: '123',
+                database: 'db_aizama'
+            });
+        }
         return this.connection;
     }
 
     async executeSqlStatement(sqlStatement: string): Promise<any> {
-        await this.connect();
-        const [rows, cols] = await this.connection.query({ sql: sqlStatement});
-        this.connection.end();
+        await MySqlRepository.connect();
+        const [rows, cols] = await MySqlRepository.connection.query({ sql: sqlStatement});
         return JSON.parse(JSON.stringify(rows[0]));
     }
 
     async executeInsert(query: string): Promise<number> {
-        await this.connect();
-        const [result] = await this.connection.query({ sql: query});
-        this.connection.end();
+        await MySqlRepository.connect();
+        const [result] = await MySqlRepository.connection.query({ sql: query});
         return JSON.parse(JSON.stringify(result)).affectedRows;
     }
 }

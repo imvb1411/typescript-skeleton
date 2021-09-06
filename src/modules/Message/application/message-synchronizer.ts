@@ -5,7 +5,11 @@ export default class MessageSynchronizer {
 
     constructor(private messageRepository: MessageRepository) { }
     
-    async synchronize(message: MessageEntity) : Promise<Array<MessageEntity>> {
-        return await this.messageRepository.getMissingMessagesFromMessageId(message);
+    async synchronize(owerId: number) : Promise<Array<MessageEntity>> {
+        return await this.messageRepository.findPendingMessages(owerId);
+    }
+
+    async getPendingMessages(destinationId: number): Promise<Array<MessageEntity>> {
+        return await this.messageRepository.findPendingMessages(destinationId);
     }
 }

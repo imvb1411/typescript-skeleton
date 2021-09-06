@@ -1,5 +1,3 @@
-import { ServiceAccount } from 'config/service-account';
-import admin from 'firebase-admin';
 import { App } from './App';
 
 try {
