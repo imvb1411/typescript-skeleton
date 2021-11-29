@@ -39,7 +39,7 @@ export default class FirebaseMessaging implements IMessaging {
                 ,status            : messageEntity.status.toString()
                 ,createdAt         : moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss")
                 ,sendedAt          : moment(messageEntity.sendedAt).format("yyyy-MM-DD HH:mm:ss")
-                ,receivedAt        : moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
+                //,receivedAt        : messageEntity.receivedAt == null?"": moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
                 ,notificationBody  : notificationBody
             }              
         };

@@ -12,10 +12,14 @@ export default class MessageACKController implements Controller {
 
     async run(_req: Request, res: Response): Promise<void>  {
         try { 
-            const messages: MessagesResponse = new MessagesResponse(JSON.parse(_req.body.messages.replace("'","")));
+            console.log(_req.body)
+            const id: string = _req.body.id;
+            // const messages: MessagesResponse = new MessagesResponse(JSON.parse(_req.body.messages.replace("'","")));
+            console.log("messageACK: ", id);
             const messageConfirmer: MessageConfirmer = new MessageConfirmer(new MySqlMessageRepository(new MySqlRepository()));
-            const confirm: number = await messageConfirmer.confirmReceivedMessage(messages.messages);
+            const confirm: number = await messageConfirmer.confirmReceivedMessage(id);
             res.header('Access-Control-Allow-Origin', '*');
+            console.log(confirm);
             res.status(httpStatus.OK).json(confirm);
         }catch(error) {
             res.status(httpStatus.SERVICE_UNAVAILABLE).json(error);

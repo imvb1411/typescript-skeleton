@@ -6,7 +6,7 @@ export class MessageEntity {
     id                     : string;
     readonly messageTypeId : number;
     readonly deviceFromId  : number;
-    readonly destinationId : number;
+    readonly destinationId : string;
     data                   : string;
     readonly forGroup      : number;
     destinationStatus      : number;
@@ -19,7 +19,7 @@ export class MessageEntity {
         id                : string,
         messageTypeId     : number,
         deviceFromId      : number,
-        destinationId     : number,
+        destinationId     : string,
         data              : string,
         forGroup          : number,
         destinationStatus : number,
@@ -42,10 +42,10 @@ export class MessageEntity {
     }
     
     public static fromPrimitive(data : {
-        id                               : string,
+        
         messageTypeId                    : number,
         deviceFromId                     : number,
-        destinationId                    : number,
+        destinationId                    : string,
         data                             : string,
         forGroup                         : number,
         destinationStatus                : number,
@@ -54,7 +54,7 @@ export class MessageEntity {
         sendedAt                         : Date,
         receivedAt                       : Date
     })                               : MessageEntity {
-        return new MessageEntity(data.id, 
+        return new MessageEntity("",
             data.messageTypeId, 
             data.deviceFromId, 
             data.destinationId, 

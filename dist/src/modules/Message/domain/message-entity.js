@@ -20,7 +20,7 @@ class MessageEntity {
         this.receivedAt = receivedAt;
     }
     static fromPrimitive(data) {
-        return new MessageEntity(data.id, data.messageTypeId, data.deviceFromId, data.destinationId, data.data, data.forGroup, data.destinationStatus, data.status, data.createdAt, data.sendedAt, data.receivedAt);
+        return new MessageEntity("", data.messageTypeId, data.deviceFromId, data.destinationId, data.data, data.forGroup, data.destinationStatus, data.status, data.createdAt, data.sendedAt, data.receivedAt);
     }
     toPrimitive() {
         return {

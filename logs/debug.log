@@ -766,3 +766,870 @@
 [32minfo[39m: MessageSender:[object Object]
 [32minfo[39m: MessageSender:1
 [32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Credential implementation provided to initializeApp() via the "credential" property failed to fetch a valid Google OAuth2 access token with the following error: "Error fetching access token: Error while making request: getaddrinfo ENOTFOUND accounts.google.com. Error code: ENOTFOUND".
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:Error: Unknown column 'D1' in 'field list'
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'I_destinationId' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'I_destinationId' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'destinationId' at row 1
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Registration token(s) provided to sendToDevice() must be a non-empty string or a non-empty array.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender:1
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> [object Object]
+[32minfo[39m: MessageSender:[object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"ec7eae6e-db28-4b74-8b21-1439011e37dc","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ggrd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T20:55:13.724Z","sendedAt":"2021-11-28T20:55:13.799Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"ec7eae6e-db28-4b74-8b21-1439011e37dc","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ggrd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T20:55:13.724Z","sendedAt":"2021-11-28T20:55:13.799Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"15128cd7-475c-4dec-aea7-5d987d37eec7","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"yyiy","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T20:56:02.126Z","sendedAt":"2021-11-28T20:56:02.196Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"15128cd7-475c-4dec-aea7-5d987d37eec7","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"yyiy","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T20:56:02.126Z","sendedAt":"2021-11-28T20:56:02.196Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"49b87e49-4928-4ba8-b6e5-add22b886c9f","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:02:05.443Z","sendedAt":"2021-11-28T21:02:05.546Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"49b87e49-4928-4ba8-b6e5-add22b886c9f","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:02:05.443Z","sendedAt":"2021-11-28T21:02:05.546Z","receivedAt":"1900-01-01 00:00:00"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"395550fe-d230-4b41-bd7c-5618a2a0e254","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:26:00.846Z","sendedAt":"2021-11-28T21:26:01.126Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"395550fe-d230-4b41-bd7c-5618a2a0e254","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:26:00.846Z","sendedAt":"2021-11-28T21:26:01.126Z","receivedAt":"1900-01-01 00:00:00"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"5e8b8ce6-278e-4b48-8c2d-4bf17161ccec","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:28:33.489Z","sendedAt":"2021-11-28T21:28:33.490Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"5e8b8ce6-278e-4b48-8c2d-4bf17161ccec","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:28:33.489Z","sendedAt":"2021-11-28T21:28:33.490Z","receivedAt":"1900-01-01 00:00:00"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"1160d126-d765-4e21-a400-2fdb4295f9a0","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:29:02.442Z","sendedAt":"2021-11-28T21:29:02.443Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"1160d126-d765-4e21-a400-2fdb4295f9a0","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T21:29:02.442Z","sendedAt":"2021-11-28T21:29:02.443Z","receivedAt":"1900-01-01 00:00:00"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"50febd79-ace4-4093-9b1f-c6e8fa5317d9","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:26:28.568Z","sendedAt":"2021-11-28T22:26:29.917Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"50febd79-ace4-4093-9b1f-c6e8fa5317d9","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:26:28.568Z","sendedAt":"2021-11-28T22:26:29.917Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"174ff35f-52c9-4a84-8028-f816bdd04e9a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:27:53.106Z","sendedAt":"2021-11-28T22:27:53.108Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"174ff35f-52c9-4a84-8028-f816bdd04e9a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:27:53.106Z","sendedAt":"2021-11-28T22:27:53.108Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"3b95f27c-7952-473d-8b2a-68e7c68be92f","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:31:39.727Z","sendedAt":"2021-11-28T22:31:44.351Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"3b95f27c-7952-473d-8b2a-68e7c68be92f","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:31:39.727Z","sendedAt":"2021-11-28T22:31:44.351Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"cdcf31a2-bd2a-4ebc-9286-13d25a590480","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:33:42.592Z","sendedAt":"2021-11-28T22:33:42.634Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"cdcf31a2-bd2a-4ebc-9286-13d25a590480","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:33:42.592Z","sendedAt":"2021-11-28T22:33:42.634Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"311f301a-e142-45e7-817c-524dc18ffee0","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:34:14.031Z","sendedAt":"2021-11-28T22:34:14.034Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"311f301a-e142-45e7-817c-524dc18ffee0","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test2","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:34:14.031Z","sendedAt":"2021-11-28T22:34:14.034Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"5cf6ac33-30ec-4519-b6be-70643d2ecdf0","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:35:09.485Z","sendedAt":"2021-11-28T22:35:09.487Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"5cf6ac33-30ec-4519-b6be-70643d2ecdf0","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:35:09.485Z","sendedAt":"2021-11-28T22:35:09.487Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"9c18e3b1-9581-4931-b81f-d918547cde61","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:39:46.626Z","sendedAt":"2021-11-28T22:39:46.756Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"9c18e3b1-9581-4931-b81f-d918547cde61","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:39:46.626Z","sendedAt":"2021-11-28T22:39:46.756Z","receivedAt":"1900-01-01 00:00:00"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"69cb9cda-dd49-42e5-821f-b01a9e507429","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qtal","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:40:14.485Z","sendedAt":"2021-11-28T22:40:14.488Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"69cb9cda-dd49-42e5-821f-b01a9e507429","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qtal","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:40:14.485Z","sendedAt":"2021-11-28T22:40:14.488Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"983b07a0-e83f-4b4c-b51d-40b70c6155d2","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"y","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:45:40.775Z","sendedAt":"2021-11-28T22:45:43.715Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"983b07a0-e83f-4b4c-b51d-40b70c6155d2","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"y","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T22:45:40.775Z","sendedAt":"2021-11-28T22:45:43.715Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"47527923-4524-4c67-a5b4-fd7020e4d746","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"holh","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:01:10.264Z","sendedAt":"2021-11-28T23:01:10.269Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"47527923-4524-4c67-a5b4-fd7020e4d746","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"holh","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:01:10.264Z","sendedAt":"2021-11-28T23:01:10.269Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"c8b06039-d79e-46fc-a00b-f713c494f8a8","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"xd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:02:06.363Z","sendedAt":"2021-11-28T23:02:06.366Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"c8b06039-d79e-46fc-a00b-f713c494f8a8","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"xd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:02:06.363Z","sendedAt":"2021-11-28T23:02:06.366Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"d6fc1c3e-ccfa-492a-b85a-0c038eecd778","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"y","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:04:22.005Z","sendedAt":"2021-11-28T23:04:22.007Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"d6fc1c3e-ccfa-492a-b85a-0c038eecd778","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"y","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:04:22.005Z","sendedAt":"2021-11-28T23:04:22.007Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"5033fc62-d8ca-4f78-91c5-314e9602b44c","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ter","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:09:58.799Z","sendedAt":"2021-11-28T23:09:58.801Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"5033fc62-d8ca-4f78-91c5-314e9602b44c","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ter","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:09:58.799Z","sendedAt":"2021-11-28T23:09:58.801Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"2a1699f1-0c47-44a4-91b4-ede1fd077166","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qtal","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:22:37.043Z","sendedAt":"2021-11-28T23:22:37.045Z","receivedAt":"1900-01-01T00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"2a1699f1-0c47-44a4-91b4-ede1fd077166","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qtal","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:22:37.043Z","sendedAt":"2021-11-28T23:22:37.045Z","receivedAt":"1900-01-01T00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"d83acad6-24eb-4976-b3d5-358d30603e0e","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qr","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:26:24.338Z","sendedAt":"2021-11-28T23:26:24.340Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"d83acad6-24eb-4976-b3d5-358d30603e0e","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"qr","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:26:24.338Z","sendedAt":"2021-11-28T23:26:24.340Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"0b009e49-81a2-47fa-8e38-73a8e50fafed","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"yt","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:27:26.542Z","sendedAt":"2021-11-28T23:27:26.544Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"0b009e49-81a2-47fa-8e38-73a8e50fafed","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"yt","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:27:26.542Z","sendedAt":"2021-11-28T23:27:26.544Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"0a69991b-55cb-4078-80bf-b8e13a0a4ecb","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:28:09.024Z","sendedAt":"2021-11-28T23:28:09.026Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"0a69991b-55cb-4078-80bf-b8e13a0a4ecb","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:28:09.024Z","sendedAt":"2021-11-28T23:28:09.026Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"74c553cc-b570-4d40-85b8-a52c28b4ba7a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hols","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:31:39.893Z","sendedAt":"2021-11-28T23:31:39.895Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"74c553cc-b570-4d40-85b8-a52c28b4ba7a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hols","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-28T23:31:39.893Z","sendedAt":"2021-11-28T23:31:39.895Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"cc28c33b-8dd6-4e37-b267-0491a6e54706","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"sdcv","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:03:07.637Z","sendedAt":"2021-11-29T01:03:07.751Z"}
+[31merror[39m: MessageSender: error->Error: Messaging payload contains an invalid value for the "data.receivedAt" property. Values must be strings.
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"891278fc-077b-4630-abd4-cea197012879","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"sss","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:06:41.502Z","sendedAt":"2021-11-29T01:06:45.112Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"891278fc-077b-4630-abd4-cea197012879","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"sss","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:06:41.502Z","sendedAt":"2021-11-29T01:06:45.112Z"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"22c95b94-a13b-4250-b149-aa8b3d7aa81e","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"re","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:10:30.100Z","sendedAt":"2021-11-29T01:10:30.508Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"22c95b94-a13b-4250-b149-aa8b3d7aa81e","messageTypeId":1,"deviceFromId":"16","destinationId":"1","data":"re","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:10:30.100Z","sendedAt":"2021-11-29T01:10:30.508Z"} ,token: dwM6SoGaR76QgaPNxCWP7c:APA91bFQfUmQdhsVyJp7xFKOg1-y0f9_7PU1MbqH11rb4fCAWZ0UsTkC4NTGvxrMOk5LFPSAy1I5f2wDLSY-Uleb41qvUA3O0dS6qzk0LyMtlzUfIwjK4D4NxRwRr_YaT5Da7ieD2j8m
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"7a0d7f79-38e6-408a-a124-9c004a9d83e3","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"esdd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:17:15.933Z","sendedAt":"2021-11-29T01:17:17.398Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"7a0d7f79-38e6-408a-a124-9c004a9d83e3","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"esdd","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:17:15.933Z","sendedAt":"2021-11-29T01:17:17.398Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"aedb5deb-b2d4-43a3-8cf2-da5f75679c19","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"rgff","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:17:49.075Z","sendedAt":"2021-11-29T01:17:49.077Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"aedb5deb-b2d4-43a3-8cf2-da5f75679c19","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"rgff","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:17:49.075Z","sendedAt":"2021-11-29T01:17:49.077Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"2f95801f-dec0-4fc5-8c88-0cfb7ddc1a64","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:25:33.995Z","sendedAt":"2021-11-29T01:25:36.591Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"2f95801f-dec0-4fc5-8c88-0cfb7ddc1a64","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:25:33.995Z","sendedAt":"2021-11-29T01:25:36.591Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"dfd7ed69-206c-4bd9-a00f-c9b44d14df1f","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:26:49.632Z","sendedAt":"2021-11-29T01:26:49.850Z","receivedAt":"1900-01-01 00:00:00"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"dfd7ed69-206c-4bd9-a00f-c9b44d14df1f","messageTypeId":1,"deviceFromId":"2057","destinationId":"16","data":"Test3","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:26:49.632Z","sendedAt":"2021-11-29T01:26:49.850Z","receivedAt":"1900-01-01 00:00:00"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"bad401b2-1809-440a-b4e1-212aaf9c6ad7","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"uuuuggg","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:28:30.991Z","sendedAt":"2021-11-29T01:28:31.133Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"bad401b2-1809-440a-b4e1-212aaf9c6ad7","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"uuuuggg","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:28:30.991Z","sendedAt":"2021-11-29T01:28:31.133Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"eded2255-8d13-4275-a948-b0a41d281af5","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"tio","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:36:24.791Z","sendedAt":"2021-11-29T01:36:25.299Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"eded2255-8d13-4275-a948-b0a41d281af5","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"tio","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:36:24.791Z","sendedAt":"2021-11-29T01:36:25.299Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"6979bd6d-50b0-47ce-9061-9387fae15bcf","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"kkk","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:38:08.321Z","sendedAt":"2021-11-29T01:38:08.377Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"6979bd6d-50b0-47ce-9061-9387fae15bcf","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"kkk","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:38:08.321Z","sendedAt":"2021-11-29T01:38:08.377Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"9959deb7-8710-495c-a89e-0b720a8e239a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"jju","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:39:19.319Z","sendedAt":"2021-11-29T01:39:19.327Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"9959deb7-8710-495c-a89e-0b720a8e239a","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"jju","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:39:19.319Z","sendedAt":"2021-11-29T01:39:19.327Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"956525da-2604-4094-8da1-edac74faf48f","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ffff","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:40:41.964Z","sendedAt":"2021-11-29T01:40:41.966Z"}
+[32minfo[39m: MessageSender: sendMessage->{"id":"956525da-2604-4094-8da1-edac74faf48f","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"ffff","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-11-29T01:40:41.964Z","sendedAt":"2021-11-29T01:40:41.966Z"} ,token: fZ64FTi6Qv-jhPQZBVUisu:APA91bH3hLlDvIVsgq694zHxY96FtsdFwjyURKuzK0a1NVvbBNHtNvGUH0p18T44vdjREsrd99lFl9Z2GESI683ZWU5nnhJwe1cXiBZdq-5mW3Fq3w79OY31H-b2Ki0ln_rPO8MNeu2j

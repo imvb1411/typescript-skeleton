@@ -15,8 +15,15 @@ services:
 
   controllers.MessageSenderController:
     class: ./../../controllers/MessageSenderController
-    arguments: ['@controllers.messaging']
-
+    
   controllers.MessageSynchronizerController:
     class: ./../../controllers/MessageSynchronizerController
-    arguments: ['@controllers.synchronizer']
+
+  controllers.MessageACKController:
+    class: ./../../controllers/MessageACKController
+
+  controllers.TokenValidatorController:
+    class: ./../../controllers/TokenValidatorController
+  
+  controllers.GetContactsController:
+    class: ./../../controllers/GetContactsController

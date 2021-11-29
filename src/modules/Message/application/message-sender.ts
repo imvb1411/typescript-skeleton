@@ -18,28 +18,30 @@ export default class MessageSender {
         let rowInserted: number;
         messageEntity.id = Uuid.random().value;
         messageEntity.sendedAt = new Date();
+        console.log(messageEntity);
         if(messageEntity) {         
             await this.messageRepository.save(messageEntity)
                 .then(e => {
-                    this.logger.info("MessageSender:" + e);
+                    this.logger.info("MessageSender: rowsInserted" + e + " ,messageInserted -> " + JSON.stringify(messageEntity));
                     rowInserted = e;
                 })
                 .catch(e => {
-                    this.logger.error("MessageSender:" + e);
+                    this.logger.error("MessageSenderError: " + e);
                     rowInserted = 0;
                 });
         }
 
         if (rowInserted > 0) {
-            const notificationBody: string = await this.messageRepository.findNotificationBody(messageEntity.destinationId);
-            await this.messaging.sendMessageToDevice(messageEntity, token, notificationBody)
+            const notificationsBody: string = await this.messageRepository.findNotificationBody(messageEntity.destinationId);
+            await this.messaging.sendMessageToDevice(messageEntity, token, notificationsBody)
             .then(e => {
-                this.logger.info("MessageSender:" + e);
+                this.logger.info("MessageSender: sendMessage->" + JSON.stringify(e) + " ,token: " + token);
                 messageSended = e;                       
             })
             .catch(e => {
-                this.logger.error("MessageSender:" + e);
+                this.logger.error("MessageSender: error->" + e);
                 messageSended = null;
+                throw e;
             });
         }               
         return messageEntity;

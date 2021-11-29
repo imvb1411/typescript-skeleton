@@ -9,28 +9,30 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
     constructor(private repository: IRepository) {
         super();
     }
+    
 
     async save(messageEntity: MessageEntity): Promise<number> {
-        var sql = "call proc_chat_insert_message('" + messageEntity.id + "'," 
-                                                    + messageEntity.messageTypeId + "," 
-                                                    + messageEntity.deviceFromId + "," 
-                                                    + messageEntity.destinationId + ",'" 
+        var sql = "insert into messages values('" + messageEntity.id + "'," 
+                                                    + messageEntity.messageTypeId + ",'" 
+                                                    + messageEntity.deviceFromId + "','" 
+                                                    + messageEntity.destinationId + "','" 
                                                     + messageEntity.data + "'," 
                                                     + messageEntity.forGroup + "," 
                                                     + messageEntity.destinationStatus + ","
                                                     + messageEntity.status + ",'" 
                                                     + moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss") + "','" 
-                                                    + moment(messageEntity.sendedAt).format("yyyy-MM-DD HH:mm:ss") + "','" 
-                                                    + moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "');"
-        const query = await this.repository.executeSqlStatement(sql);
-        return query[0].affectedRows;
+                                                    + moment(messageEntity.sendedAt).format("yyyy-MM-DD HH:mm:ss") + "'," 
+                                                    + (messageEntity.receivedAt == null?null: "'" + moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "'") + ");"
+        console.log(sql);
+        const query = await this.repository.executeInsert(sql);
+        return query;
     }
 
     async update(messageEntity: MessageEntity): Promise<number> {
         var sql = "call proc_chat_update_message('" + messageEntity.id + "'," 
                                                     + messageEntity.messageTypeId + "," 
-                                                    + messageEntity.deviceFromId + "," 
-                                                    + messageEntity.destinationId + ",'" 
+                                                    + messageEntity.deviceFromId + ",'" 
+                                                    + messageEntity.destinationId + "','" 
                                                     + messageEntity.data + "'," 
                                                     + messageEntity.forGroup + "," 
                                                     + messageEntity.destinationStatus + ","
@@ -38,21 +40,25 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
                                                     + moment(new Date(messageEntity.createdAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "','" 
                                                     + moment(new Date(messageEntity.sendedAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "','" 
                                                     + moment(new Date(messageEntity.receivedAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "');"
-        console.log(sql);
         const query = await this.repository.executeSqlStatement(sql);
-        console.log(query);
         return query[0].affectedRows;
     }
 
-    async findPendingMessages(destinationId: number): Promise<Array<MessageEntity>> {
+    async updateStatusDestionation(messageId: string): Promise<number> {
+        var sql = "update messages set destinationStatus = 1 where id = '" + messageId + "';"
+        const query = await this.repository.executeInsert(sql);
+        return query;
+    }
+
+    async findPendingMessages(destinationId: string): Promise<Array<MessageEntity>> {
         let messages: Array<MessageEntity> = new Array<MessageEntity>();
-        let sql = "call proc_chat_mensajes_pendientes_by_destinationId(" + destinationId + ");";
+        let sql = "call proc_chat_mensajes_pendientes_by_destinationId('" + destinationId + "');";
         const query = await this.repository.executeSqlStatement(sql);
         query.map(function(item : {
             id                      : string;
             messageTypeId           : number;
             deviceFromId            : number;
-            destinationId           : number;
+            destinationId           : string;
             data                    : string;
             forGroup                : number;
             destinationStatus       : number;
@@ -65,27 +71,13 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
         return messages;
     }
 
-    async findNotificationBody(destinationId: number): Promise<string> {
-        let sql = "call proc_chat_cuerpo_notificacion(" + destinationId + ");";
+    async findNotificationBody(destinationId: string): Promise<string> {
+        let notificationsBody : string;
+        let sql = "call proc_chat_cuerpo_notificacion('" + destinationId + "');";
         const query = await this.repository.executeSqlStatement(sql);
-        console.log(query);
-        const bodyNotification = query[0].body;
-        return bodyNotification;
-    }
-    
-    async insert(message: MessageEntity): Promise<number> {
-        const query = await this.repository.
-                                    executeInsert("insert into messages (id, messageTypeId, deviceFromId, destinationId, data, forGroup, status, createdAt, sendedAt) " 
-                                            + "values ('" 
-                                            + message.id + "'," 
-                                            + message.messageTypeId + "," 
-                                            + message.deviceFromId + "," 
-                                            + message.destinationId + ",'" 
-                                            + message.data + "'," 
-                                            + message.forGroup + "," 
-                                            + message.status + ",'" 
-                                            + moment(message.createdAt).format("yyyy-MM-DD HH:mm:ss") + "','" 
-                                            + moment(message.sendedAt).format("yyyy-MM-DD HH:mm:ss") + "');");
-        return query;
+        query.map(function(item:{ body: string}) {
+            notificationsBody = item.body;
+        })
+        return notificationsBody;
     }
 }

@@ -1,0 +1,28 @@
+[31merror[39m: MessageSender:Error: Credential implementation provided to initializeApp() via the "credential" property failed to fetch a valid Google OAuth2 access token with the following error: "Error fetching access token: Error while making request: getaddrinfo ENOTFOUND accounts.google.com. Error code: ENOTFOUND".
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[31merror[39m: MessageSender:Error: Error while making request: getaddrinfo ENOTFOUND fcm.googleapis.com. Error code: ENOTFOUND
+[31merror[39m: MessageSender:Error: Unknown column 'D1' in 'field list'
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'I_destinationId' at row 1
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'I_destinationId' at row 1
+[31merror[39m: MessageSender:Error: Incorrect integer value: 'D1' for column 'destinationId' at row 1
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[31merror[39m: MessageSender:TypeError: Cannot read property 'affectedRows' of undefined
+[31merror[39m: MessageSender:Error: Registration token(s) provided to sendToDevice() must be a non-empty string or a non-empty array.
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[31merror[39m: MessageSender:Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
+[31merror[39m: MessageSender: error->Error: Messaging payload contains an invalid value for the "data.receivedAt" property. Values must be strings.

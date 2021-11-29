@@ -12,7 +12,7 @@ export default class MessageSynchronizerController implements Controller {
 
     async run(_req: Request, res: Response): Promise<void> {   
         try {
-            const destinationId: number = _req.body.destinationId;
+            const destinationId: string = _req.body.destinationId;
             const synchronizer = new MessageSynchronizer(new MySqlMessageRepository(new MySqlRepository()));
             const pendingMessages: MessagesResponse = new MessagesResponse(await synchronizer.getPendingMessages(destinationId));
             res.header('Access-Control-Allow-Origin', '*');
