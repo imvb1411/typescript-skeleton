@@ -42,7 +42,7 @@ export class MessageEntity {
     }
     
     public static fromPrimitive(data : {
-        
+        id                               : string,
         messageTypeId                    : number,
         deviceFromId                     : number,
         destinationId                    : string,
@@ -54,7 +54,7 @@ export class MessageEntity {
         sendedAt                         : Date,
         receivedAt                       : Date
     })                               : MessageEntity {
-        return new MessageEntity("",
+        return new MessageEntity(data.id,
             data.messageTypeId, 
             data.deviceFromId, 
             data.destinationId, 

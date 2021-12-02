@@ -20,8 +20,6 @@ export default class MessageSenderController implements Controller {
         try {
             let tokenRepository = new MySqlTokenRepository(new MySqlRepository());
             var message: MessageEntity = MessageEntity.fromPrimitive(JSON.parse(_req.body.message.replace("'","")));
-            //var message: MessageEntity = MessageEntity.fromPrimitive(_req.body.message);
-            // var token = _req.body.token;
             message.createdAt = new Date(); // En la app se crea este campo   
             var tokenFounded: TokenEntity = await tokenRepository.findTokenByUserId(message.destinationId);
             if (tokenFounded == null) {
@@ -29,9 +27,8 @@ export default class MessageSenderController implements Controller {
             }
             var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository()));
             const messageSended = await messageSender.sendMessageToDevice(message, tokenFounded.firebaseToken);
-      
             res.header('Access-Control-Allow-Origin', '*');
-            res.status(httpStatus.OK).json(messageSended);
+            res.status(httpStatus.OK).json({ id: messageSended.id});
         }catch(error) {
             res.status(httpStatus.SERVICE_UNAVAILABLE).json(error.message);
         }

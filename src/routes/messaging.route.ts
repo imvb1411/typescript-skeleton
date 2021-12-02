@@ -16,6 +16,6 @@ export const register = (app: Express) => {
   );
 
   app.post('/send-message', messageSenderController.run.bind(MessageSenderController));
-  app.post('/pending-messages', messageSynchronizerController.run.bind(MessageSynchronizerController));
+  app.post('/pending-message', messageSynchronizerController.run.bind(MessageSynchronizerController));
   app.post('/confirm-message', messageACKController.run.bind(MessageACKController));
 };

@@ -1,4 +1,4 @@
-import { createPool, Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
+import { createPool, Pool } from 'mysql2/promise';
 import IRepository from './IRepository';
 
 export class MySqlRepository implements IRepository {

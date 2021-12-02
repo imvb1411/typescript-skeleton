@@ -51,7 +51,7 @@ export default class FirebaseMessaging implements IMessaging {
         const result = await admin
                         .messaging()
                         .sendToDevice(token, payload, options);
-
+        console.log(result);
         return messageEntity;
     }
 
