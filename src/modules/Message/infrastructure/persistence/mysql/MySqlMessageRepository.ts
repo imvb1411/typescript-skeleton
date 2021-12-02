@@ -45,7 +45,7 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
     }
 
     async updateStatusDestination(message: MessageEntity): Promise<number> {
-        var sql = "update messages set destinationStatus = 1, receivedAt = '" + moment(message.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + message.id + "';"
+        var sql = "update messages set destinationStatus = " + message.destinationStatus + ", receivedAt = '" + moment(message.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + message.id + "';"
         console.log(sql);
         const query = await this.repository.executeInsert(sql);
         return query;

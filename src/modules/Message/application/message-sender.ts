@@ -1,3 +1,4 @@
+import { UserEntity } from 'modules/user/domain/user-entity';
 import container from './../../../dependency-injection';
 import Logger from "./../../../shared/domain/logger";
 import { Uuid } from "./../../../shared/domain/value-object/Uuid";
@@ -18,7 +19,6 @@ export default class MessageSender {
         let rowInserted: number;
         messageEntity.id = Uuid.random().value;
         messageEntity.sendedAt = new Date();
-        console.log(messageEntity);
         if(messageEntity) {         
             await this.messageRepository.save(messageEntity)
                 .then(e => {
@@ -45,5 +45,10 @@ export default class MessageSender {
             });
         }               
         return messageEntity;
+    }
+
+    async sendMessageToGroup(messageEntity: MessageEntity) : Promise<MessageEntity> {
+
+        return null;
     }
 }
