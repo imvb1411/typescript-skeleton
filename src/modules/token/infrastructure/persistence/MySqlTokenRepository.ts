@@ -9,8 +9,10 @@ import { MySqlRepository } from "./../../../../shared/infrastructure/persistence
 export class MySqlTokenRepository extends MySqlRepository implements ITokenRepository {
 
     private readonly tableName: string = "UserToken";
-    constructor(private repository: IRepository) {
-        super();
+    private repository: IRepository;
+    
+    constructor(repository: IRepository) {
+        this.repository = repository;
     }
 
     async save(token: TokenForCreation): Promise<number> {
