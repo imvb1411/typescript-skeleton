@@ -1,6 +1,7 @@
 export class TokenForCreation {
     id: string;
     userId: string;
+    userType: number;
     firebaseToken: string;
     status: number;
     createdAt: Date;

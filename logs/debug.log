@@ -2139,3 +2139,9 @@
 
 [32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"id":"ae516233-a744-40af-bbb7-e63448ed50d4","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-12-02T10:40:37.530Z","sendedAt":"2021-12-02T10:40:37.563Z"}
 [32minfo[39m: MessageSender: sendMessage->{"id":"ae516233-a744-40af-bbb7-e63448ed50d4","messageTypeId":1,"deviceFromId":"1","destinationId":"16","data":"hola","forGroup":0,"destinationStatus":0,"status":1,"createdAt":"2021-12-02T10:40:37.530Z","sendedAt":"2021-12-02T10:40:37.563Z"} ,token: eCf7TZWITKmP495Zys0N6x:APA91bGpXaE08XGMo2_bmVGS6JOxOWqUdQts3FJzbQKd1JNhPiMpZdlRQ99xM72XeMI9GMMFurG_9XBhJVs0h8O7SX2mQ1yurwqmKQbGOr6vo9YZL2WSFEMcSXZKl7Q2EOPcA02aSr5S
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+

@@ -25,7 +25,7 @@ export default class MessageSenderController implements Controller {
             message.createdAt = new Date(); // En la app se crea este campo   
             let messageSended;
             if (message.forGroup == 0) {
-                var tokenFounded: TokenEntity = await tokenRepository.findTokenByUserId(message.destinationId);
+                var tokenFounded: TokenEntity = await tokenRepository.findTokenByUserId(message.destinationId, 1);
                 if (tokenFounded == null) {
                     throw new Error("El usuario no tiene una cuenta activa.");
                 }

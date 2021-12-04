@@ -1,4 +1,4 @@
-import { UserEntity } from 'modules/user/domain/user-entity';
+import { TokenEntity } from './../../token/domain/token-entity';
 import container from './../../../dependency-injection';
 import Logger from "./../../../shared/domain/logger";
 import { Uuid } from "./../../../shared/domain/value-object/Uuid";
@@ -48,7 +48,7 @@ export default class MessageSender {
     }
 
     async sendMessageToGroup(messageEntity: MessageEntity) : Promise<MessageEntity> {
-
+        let tokens: TokenEntity[];
         return null;
     }
 }

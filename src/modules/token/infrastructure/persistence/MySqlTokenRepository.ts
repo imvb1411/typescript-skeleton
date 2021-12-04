@@ -8,6 +8,7 @@ import { MySqlRepository } from "./../../../../shared/infrastructure/persistence
 
 export class MySqlTokenRepository extends MySqlRepository implements ITokenRepository {
 
+    private readonly tableName: string = "UserToken";
     constructor(private repository: IRepository) {
         super();
     }
@@ -33,9 +34,9 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         return affectedRows;
     }
 
-    async findTokenByUserId(userId: string): Promise<TokenEntity> {
+    async findTokenByUserId(userId: string, userType: number): Promise<TokenEntity> {
         let tokenEntity: TokenEntity = null;
-        let sql = "select id, userId, firebaseToken, status, createdAt, updatedAt from Token where status = 1 and userId = '" + userId + "';";
+        let sql = "select id, userId, firebaseToken, status, createdAt, updatedAt from Token where status = 1 and userId = '" + userId + "' and userType = " + userType + ";";
         console.log(sql);
         const query = await this.repository.executeSqlStatement(sql);
         console.log(query);
@@ -45,4 +46,9 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         return tokenEntity;
     }
     
+    async findTokenByGroupId(groupId: string): Promise<TokenEntity[]> {
+        let tokens: TokenEntity[];
+        let sql = "SELECT "
+        return null;
+    }
 }
