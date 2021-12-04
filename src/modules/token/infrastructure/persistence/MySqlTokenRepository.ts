@@ -34,9 +34,9 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         return affectedRows;
     }
 
-    async findTokenByUserId(userId: string, userType: number): Promise<TokenEntity> {
+    async findTokenByUserId(userId: string): Promise<TokenEntity> {
         let tokenEntity: TokenEntity = null;
-        let sql = "select id, userId, firebaseToken, status, createdAt, updatedAt from Token where status = 1 and userId = '" + userId + "' and userType = " + userType + ";";
+        let sql = "select id, userId, firebaseToken, status, createdAt, updatedAt from Token where status = 1 and userId = '" + userId + "' ;";
         console.log(sql);
         const query = await this.repository.executeSqlStatement(sql);
         console.log(query);
@@ -46,7 +46,7 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         return tokenEntity;
     }
     
-    async findTokenByGroupId(groupId: string): Promise<TokenEntity[]> {
+    async findTokensByGroupId(groupId: string): Promise<TokenEntity[]> {
         let tokens: TokenEntity[];
         let sql = "SELECT "
         return null;
