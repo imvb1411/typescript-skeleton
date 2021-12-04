@@ -1,17 +1,6 @@
 services:
-  modules.message.application.sender:
-    class: ./../../modules/Message/application/firebase-message-sender
-
   modules.message.application.synchronizer:
     class: ./../../modules/Message/application/message-synchronizer
-
-  controllers.messaging:
-    class: ./../../services/_impl/firebase-messaging
-    arguments: ['@modules.message.application.sender']
-
-  controllers.synchronizer:
-    class: ./../../services/_impl/synchronizer
-    arguments: ['@modules.message.application.synchronizer']
 
   controllers.MessageSenderController:
     class: ./../../controllers/MessageSenderController
