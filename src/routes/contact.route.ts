@@ -1,11 +1,11 @@
 import { Express } from 'express';
-import container from '../dependency-injection';
-import GetContactsController from "./../controllers/GetContactsController";
+import container from './../dependency-injection';
+import GetContacts from "./../api/endpoints/contacts/get";
 
 export const register = (app: Express) => {
 
-    const getContactsController: GetContactsController = container.get('controllers.GetContactsController');
+    const getContactsController: GetContacts = container.get('endpoints.contacts.get');
   
-    app.post('/contacts', getContactsController.run.bind(GetContactsController));
+    app.post('/contacts', getContactsController.run.bind(GetContacts));
   };
   

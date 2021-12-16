@@ -1,10 +1,9 @@
-import { TokenEntity } from "./token-entity";
-import { TokenForCreation } from "./token-for-creation";
-import { TokenForUpdate } from "./token-for-update";
+import { UserTokenEntity } from "./token-entity";
 
 export interface ITokenRepository {
-    save(token : TokenForCreation): Promise<number>;
-    update(token : TokenForUpdate): Promise<number>;
-    findTokenByUserId(userId: string): Promise<TokenEntity>;
-    findTokensByGroupId(groupId: string): Promise<TokenEntity[]>;
+    save(token : UserTokenEntity): Promise<number>;
+    update(token : UserTokenEntity): Promise<number>;
+    findUserTokenByToken(token: string): Promise<UserTokenEntity>;
+    findUserTokenByUserIdAndType(userId: string, userTypeId: number): Promise<UserTokenEntity>;
+    findTokensByGroupId(groupId: string): Promise<UserTokenEntity[]>;
 }

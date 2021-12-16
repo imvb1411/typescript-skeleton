@@ -1,21 +1,17 @@
 import { Express } from 'express';
-import container from '../dependency-injection';
-import MessageSenderController from './../controllers/MessageSenderController';
-import MessageSynchronizerController from './../controllers/MessageSynchronizerController';
-import MessageACKController from './../controllers/MessageACKController';
+import container from './../dependency-injection';
+import SendMessage from './../api/endpoints/messages/send';
+import MessageACK from './../api/endpoints/messages/ack';
 
 export const register = (app: Express) => {
-  const messageSenderController: MessageSenderController = container.get(
-    'controllers.MessageSenderController'
-  );
-  const messageSynchronizerController: MessageSynchronizerController = container.get(
-    'controllers.MessageSynchronizerController'
-  );
-  const messageACKController: MessageACKController = container.get(
-    'controllers.MessageACKController'
+  const messageSenderController: SendMessage = container.get(
+    'endpoints.messages.send'
   );
 
-  app.post('/send-message', messageSenderController.run.bind(MessageSenderController));
-  app.post('/pending-message', messageSynchronizerController.run.bind(MessageSynchronizerController));
-  app.post('/confirm-message', messageACKController.run.bind(MessageACKController));
+  const messageACKController: MessageACK = container.get(
+    'endpoints.messages.ack'
+  );
+
+  app.post('/send-message', messageSenderController.run.bind(SendMessage));
+  app.post('/confirm-message', messageACKController.run.bind(MessageACK));
 };

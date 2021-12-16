@@ -7,6 +7,7 @@ export class MySqlRepository implements IRepository {
 
     constructor() {}
 
+
     static async connect(): Promise<Pool> {
         if(!this.connection) {
             this.connection = await createPool({
@@ -22,13 +23,18 @@ export class MySqlRepository implements IRepository {
     async executeSqlStatement(sqlStatement: string): Promise<any> {
         await MySqlRepository.connect();
         const [rows, cols] = await MySqlRepository.connection.query({ sql: sqlStatement});
-        console.log(rows);
         return rows[0] == null? null: JSON.parse(JSON.stringify(rows[0]));
     }
-    
+
     async executeSelect(sqlStatement: string): Promise<any> {
         await MySqlRepository.connect();
         const [rows, cols] = await MySqlRepository.connection.query({ sql: sqlStatement});
+        return rows[0] == null? null: JSON.parse(JSON.stringify(rows));
+    }
+
+    async executeSelectWithParams(sqlStatement: string, args: string[]): Promise<any> {
+        await MySqlRepository.connect();
+        const [rows, cols] = await MySqlRepository.connection.query(sqlStatement, args);
         return rows[0] == null? null: JSON.parse(JSON.stringify(rows));
     }
 

@@ -1,0 +1,12 @@
+services:
+  endpoints.token.create:
+    class: ./../../api/endpoints/token/create
+
+  endpoints.contacts.get:
+    class: ./../../api/endpoints/contacts/get
+
+  endpoints.messages.send:
+    class: ./../../api/endpoints/messages/send
+      
+  endpoints.messages.ack:
+    class: ./../../api/endpoints/messages/ack

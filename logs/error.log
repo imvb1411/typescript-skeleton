@@ -27,3 +27,19 @@
 [31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'null' for column 'receivedAt' at row 1
 [31merror[39m: MessageSender: error->Error: Messaging payload contains an invalid value for the "data.receivedAt" property. Values must be strings.
 [31merror[39m: MessageSenderError: Error: Unknown column 'Sent' in 'field list'
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1

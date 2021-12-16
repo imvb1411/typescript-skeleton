@@ -1,6 +1,4 @@
-import { TokenEntity } from "./../../domain/token-entity";
-import { TokenForCreation } from "./../../domain/token-for-creation";
-import { TokenForUpdate } from "./../../domain/token-for-update";
+import { UserTokenEntity } from "./../../domain/token-entity";
 import { ITokenRepository } from "./../../domain/token-repository";
 import moment from "moment";
 import IRepository from "./../../../../shared/infrastructure/persistence/IRepository";
@@ -9,47 +7,57 @@ import { MySqlRepository } from "./../../../../shared/infrastructure/persistence
 export class MySqlTokenRepository extends MySqlRepository implements ITokenRepository {
 
     private readonly tableName: string = "UserToken";
-    private repository: IRepository;
     
-    constructor(repository: IRepository) {
-        this.repository = repository;
+    constructor(private repository: IRepository) {
+        super();
     }
 
-    async save(token: TokenForCreation): Promise<number> {
-        var sql = "insert into Token (id, userId, firebaseToken, status, createdAt) values ('" 
-                                        + token.id + "',"
-                                        + token.userId + ",'" 
+    async save(token: UserTokenEntity): Promise<number> {
+        var sql = "insert into " + this.tableName + " (Id, UserId, UserType, FirebaseToken, State, CreatedAt) values ('" 
+                                        + token.id + "','"
+                                        + token.userId + "','" 
+                                        + token.userType + "','"
                                         + token.firebaseToken + "'," 
-                                        + token.status + ",'" 
+                                        + token.state + ",'" 
                                         + moment(token.createdAt).format("yyyy-MM-DD HH:mm:ss") + "');"
         const affectedRows = await this.repository.executeInsert(sql);
         return affectedRows;
     }
 
-    async update(token: TokenForUpdate): Promise<number> {
-        var sql = "update Token set status = " 
-                + token.status 
+    async update(token: UserTokenEntity): Promise<number> {
+        var sql = "update " + this.tableName + " set state = " 
+                + token.state 
                 + ", updatedAt = '" 
                 + moment(token.updatedAt).format("yyyy-MM-DD HH:mm:ss") 
-                + "' where id = '" + token.id + "';"                            
+                + "' where id = '" + token.id + "' and userType = " + token.userType + ";"                            
         const affectedRows = await this.repository.executeInsert(sql);
         return affectedRows;
     }
 
-    async findTokenByUserId(userId: string): Promise<TokenEntity> {
-        let tokenEntity: TokenEntity = null;
-        let sql = "select id, userId, firebaseToken, status, createdAt, updatedAt from Token where status = 1 and userId = '" + userId + "' ;";
-        console.log(sql);
+    async findUserTokenByUserIdAndType(userId: string, userType: number): Promise<UserTokenEntity> {
+        let tokenEntity: UserTokenEntity = null;
+        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from " + this.tableName + " where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
         const query = await this.repository.executeSqlStatement(sql);
-        console.log(query);
+
         if(query != null) {
-            tokenEntity = TokenEntity.fromPrimitive(query);
+            tokenEntity = Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query)));
         }
         return tokenEntity;
     }
     
-    async findTokensByGroupId(groupId: string): Promise<TokenEntity[]> {
-        let tokens: TokenEntity[];
+    async findUserTokenByToken(token: string): Promise<UserTokenEntity> {
+        let tokenEntity: UserTokenEntity = null;
+        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from " + this.tableName + " where state = 1 and firebaseToken = '" + token + "';";
+        const query = await this.repository.executeSqlStatement(sql);
+
+        if(query != null) {
+            tokenEntity = Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query)));
+        }
+        return tokenEntity;
+    }
+
+    async findTokensByGroupId(groupId: string): Promise<UserTokenEntity[]> {
+        let tokens: UserTokenEntity[];
         let sql = "SELECT "
         return null;
     }

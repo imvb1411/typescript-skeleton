@@ -1,15 +1,13 @@
+import { UserType } from "./../../token/domain/token-entity";
+
 export class ContactEntity {
     id: string;
     name: string;
-    typeContact: number;
+    typeContact: UserType;
 
-    constructor(id: string, name: string, typeContact: number) {
+    constructor(id: string, name: string, typeContact: UserType) {
         this.id = id;
         this.name = name;
         this.typeContact = typeContact;
-    }
-
-    static fromPrimitive(data: {id: string, name: string, typeContact: number}) {
-        return new ContactEntity(data.id, data.name, data.typeContact);
     }
 }
