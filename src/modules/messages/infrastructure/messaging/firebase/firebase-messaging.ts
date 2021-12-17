@@ -38,12 +38,12 @@ export default class FirebaseMessaging implements IMessaging {
                 ,destinationState : messageEntity.destinationState.toString()
                 ,status            : messageEntity.state.toString()
                 ,createdAt         : moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss")
-                ,sendedAt          : moment(messageEntity.sendedAt).format("yyyy-MM-DD HH:mm:ss")
+                ,sendedAt          : moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss")
                 //,receivedAt        : messageEntity.receivedAt == null?"": moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
                 ,notificationBody  : notificationBody
             }              
         };
-
+        console.log(payload);
         var options = {
             priority: "high"
         };

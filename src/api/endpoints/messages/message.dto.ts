@@ -2,7 +2,7 @@ export interface SendMessageCommand {
     messageType: number;
     deviceFromId: string;
     destinationId: string;
-    destinationType: number;
+    destinationUserType: number;
     data: string;
     forGroup: number;
     createdAt: string;
@@ -11,7 +11,7 @@ export interface SendMessageCommand {
 export interface SendMessageResult {
     id: string;
     state: number;
-    sendedAt: string;
+    sentAt: string;
 }
 
 export interface ConfirmMessageCommand {

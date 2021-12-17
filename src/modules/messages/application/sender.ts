@@ -22,7 +22,7 @@ export default class MessageSender {
         let newMessage: MessageEntity = this.mapper.map<SendMessageCommand, MessageEntity>(sendMessageCommand, new MessageEntity());
         newMessage.id = Uuid.random().value;
         newMessage.createdAt = new Date(sendMessageCommand.createdAt);
-        newMessage.sendedAt = new Date();
+        newMessage.sentAt = new Date();
         newMessage.state = MessageState.Send;
         newMessage.destinationState = MessageDestinationState.Sent;
 
@@ -51,11 +51,11 @@ export default class MessageSender {
                 throw e;
             });
         } 
-        let sendMessageResult: SendMessageResult = { id: null, state: null, sendedAt: null };
+        let sendMessageResult: SendMessageResult = { id: null, state: null, sentAt: null };
         sendMessageResult = this.mapper.map<MessageEntity, SendMessageResult>(newMessage, sendMessageResult);
         sendMessageResult.id = newMessage.id;
         sendMessageResult.state = newMessage.state;
-        sendMessageResult.sendedAt = moment(newMessage.sendedAt).format('YYYY-MM-DD HH:mm:ss');
+        sendMessageResult.sentAt = moment(newMessage.sentAt).format('YYYY-MM-DD HH:mm:ss');
         return sendMessageResult;
     }
 

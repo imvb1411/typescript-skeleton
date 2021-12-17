@@ -25,7 +25,7 @@ export class MySqlContactRepository extends MySqlRepository implements IContactR
                     , courseAndParalel[0].cod_cur
                     , courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur
-                    , courseAndParalel[0].cod_tut
+                    , userId
                     , courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur, ]
                 break;

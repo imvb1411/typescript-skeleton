@@ -24,8 +24,9 @@ export default class SendMessage implements BaseEndpoint {
             //message.createdAt = new Date(); // En la app se crea este campo   
             let messageSended: SendMessageResult;
             if (messageToSend.forGroup == 0) {
-                var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationType);
+                var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationUserType);
                 if (tokenFounded == null) {
+                    console.log(tokenFounded);
                     throw new Error("El usuario no tiene una cuenta activa.");
                 }
                 messageSended = await messageSender.sendMessageToDevice(messageToSend, tokenFounded.firebaseToken);

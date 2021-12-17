@@ -2694,3 +2694,88 @@
 [32minfo[39m: Backend App is running at http://localhost:3000 in development mode
 [32minfo[39m:   Press CTRL-C to stop
 
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: GetContacts: {"userId":"504","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Save {"userId":"504","firebaseToken":"czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh","id":"9b087a59-215c-44f0-ba84-6fbcae9f6d6f","userType":1,"state":1,"createdAt":"2021-12-17T10:43:26.072Z"}
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"afd6a6c8-4375-4d3e-ab49-b7b2af4416dc","sentAt":"2021-12-17T10:44:58.770Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"afd6a6c8-4375-4d3e-ab49-b7b2af4416dc","sentAt":"2021-12-17T10:44:58.770Z","state":1,"destinationState":0} ,token: czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi2","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"a7f7dfda-70ff-4ac9-affd-7820f88ec56f","sentAt":"2021-12-17T10:46:03.845Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi2","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"a7f7dfda-70ff-4ac9-affd-7820f88ec56f","sentAt":"2021-12-17T10:46:03.845Z","state":1,"destinationState":0} ,token: czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi3","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"e98f819e-6ad6-4b8c-83ac-e926c4fd7ed2","sentAt":"2021-12-17T10:50:42.185Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi3","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"62d49fdd-ecfa-4ea8-bd76-541f87d377f3","sentAt":"2021-12-17T10:52:04.889Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi3","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"62d49fdd-ecfa-4ea8-bd76-541f87d377f3","sentAt":"2021-12-17T10:52:04.889Z","state":1,"destinationState":0} ,token: czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi3","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"6effa31d-51c6-4393-af9c-11d97b5bdda9","sentAt":"2021-12-17T10:54:32.976Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi3","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"6effa31d-51c6-4393-af9c-11d97b5bdda9","sentAt":"2021-12-17T10:54:32.976Z","state":1,"destinationState":0} ,token: czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi4","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"648251d0-c224-4e3e-b241-0eaf0de8cee9","sentAt":"2021-12-17T10:55:00.702Z","state":1,"destinationState":0}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"2057","destinationId":"504","data":"hi4","forGroup":0,"createdAt":"2021-12-17T10:28:10.000Z","id":"648251d0-c224-4e3e-b241-0eaf0de8cee9","sentAt":"2021-12-17T10:55:00.702Z","state":1,"destinationState":0} ,token: czPydIlORaGYtpOxkF4D7o:APA91bFIC9n8W6zx10C9VOZxo41zA0gIcNRC5VzWYKdjNtoC8BqHq4AB6bIwPrdnzuP01hVhaCjoMkN8rU-flXt3VsnDDy4o8NViADPtQ2QjZ7_5PRsukyx3cX9aUeDq3eLJA8Q4YUzh

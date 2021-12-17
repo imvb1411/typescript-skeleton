@@ -29,13 +29,13 @@ export class MessageProfile extends TypeMapper {
         this.createMap<MessageEntity, SendMessageResult>()
             .map(src => src.id, dest => dest.id)
             .map(src => src.state, dest => dest.state)
-            .map(src => moment(src.sendedAt).format('YYYY-MM-DD HH:mm:ss'), dest => dest.sendedAt)
+            .map(src => moment(src.sentAt).format('YYYY-MM-DD HH:mm:ss'), dest => dest.sentAt)
         ;
 
         this.createMap<SendMessageResult, MessageEntity>()
             .map(src => src.id, dest => dest.id)
             .map(src => src.state, dest => dest.state)
-            .map(src => moment(src.sendedAt, 'YYYY-MM-DD HH:mm:ss'), dest => dest.sendedAt)
+            .map(src => moment(src.sentAt, 'YYYY-MM-DD HH:mm:ss'), dest => dest.sentAt)
         ;
     }
 }

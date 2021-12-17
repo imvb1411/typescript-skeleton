@@ -11,7 +11,7 @@ export class MessageEntity {
     destinationState       : MessageDestinationState;
     state                  : MessageState;
     createdAt              : Date;
-    sendedAt               : Date;
+    sentAt               : Date;
     receivedAt             : Date;
 
     constructor() {}
