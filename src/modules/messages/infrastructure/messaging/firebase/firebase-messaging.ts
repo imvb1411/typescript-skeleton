@@ -30,17 +30,19 @@ export default class FirebaseMessaging implements IMessaging {
             // },
             data               : {
                 id                 : messageEntity.id
-                ,messageTypeId     : messageEntity.messageType.toString()
+                ,messageType     : messageEntity.messageType.toString()
                 ,deviceFromId      : messageEntity.deviceFromId.toString()
+                ,deviceFromType    : messageEntity.deviceFromType.toString()
                 ,destinationId     : messageEntity.destinationId.toString()
+                ,destinationType : messageEntity.destinationType.toString()
                 ,data              : messageEntity.data
                 ,forGroup          : messageEntity.forGroup.toString()
                 ,destinationState : messageEntity.destinationState.toString()
-                ,status            : messageEntity.state.toString()
+                ,state            : messageEntity.state.toString()
                 ,createdAt         : moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss")
-                ,sendedAt          : moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss")
+                ,sentAt          : moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss")
                 //,receivedAt        : messageEntity.receivedAt == null?"": moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
-                ,notificationBody  : notificationBody
+                ,notificationBody  : notificationBody == null?"" + messageEntity.data: notificationBody
             }              
         };
         console.log(payload);
@@ -51,7 +53,7 @@ export default class FirebaseMessaging implements IMessaging {
         const result = await admin
                         .messaging()
                         .sendToDevice(token, payload, options);
-        console.log(result);
+        console.log(result.results[0].error);
         return messageEntity;
     }
 

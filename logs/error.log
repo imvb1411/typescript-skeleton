@@ -43,3 +43,11 @@
 [31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
 [31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
 [31merror[39m: MessageSenderError: Error: Incorrect datetime value: 'Invalid date' for column 'createdAt' at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[31merror[39m: MessageSenderError: Error: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '',1,'hhhhh',0,1,1,'2021-12-17 23:49:17','2021-12-17 23:49:18',null)' at line 1
+[31merror[39m: MessageSender: error->Error: Messaging payload contains an invalid value for the "data.notificationBody" property. Values must be strings.

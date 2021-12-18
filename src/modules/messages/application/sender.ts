@@ -21,6 +21,8 @@ export default class MessageSender {
         let rowInserted: number;
         let newMessage: MessageEntity = this.mapper.map<SendMessageCommand, MessageEntity>(sendMessageCommand, new MessageEntity());
         newMessage.id = Uuid.random().value;
+        newMessage.deviceFromType = sendMessageCommand.deviceFromType;
+        newMessage.destinationType = sendMessageCommand.destinationType;
         newMessage.createdAt = new Date(sendMessageCommand.createdAt);
         newMessage.sentAt = new Date();
         newMessage.state = MessageState.Send;
@@ -40,6 +42,7 @@ export default class MessageSender {
 
         if (rowInserted > 0) {
             const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage.destinationId);
+            console.log(notificationsBody);
             await this.messaging.sendMessageToDevice(newMessage, token, notificationsBody)
             .then(e => {
                 this.logger.info("MessageSender: sendMessage->" + JSON.stringify(e) + " ,token: " + token);
@@ -51,9 +54,10 @@ export default class MessageSender {
                 throw e;
             });
         } 
-        let sendMessageResult: SendMessageResult = { id: null, state: null, sentAt: null };
+        let sendMessageResult: SendMessageResult = { id: null, deviceFromType: null, state: null, sentAt: null };
         sendMessageResult = this.mapper.map<MessageEntity, SendMessageResult>(newMessage, sendMessageResult);
         sendMessageResult.id = newMessage.id;
+        sendMessageResult.deviceFromType = newMessage.deviceFromType;
         sendMessageResult.state = newMessage.state;
         sendMessageResult.sentAt = moment(newMessage.sentAt).format('YYYY-MM-DD HH:mm:ss');
         return sendMessageResult;

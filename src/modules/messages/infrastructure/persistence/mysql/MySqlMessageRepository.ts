@@ -14,8 +14,10 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
     async save(messageEntity: MessageEntity): Promise<number> {
         var sql = "insert into messages values('" + messageEntity.id + "'," 
                                                     + messageEntity.messageType + ",'" 
-                                                    + messageEntity.deviceFromId + "','" 
-                                                    + messageEntity.destinationId + "','" 
+                                                    + messageEntity.deviceFromId + "'," 
+                                                    + messageEntity.deviceFromType + ",'"
+                                                    + messageEntity.destinationId + "'," 
+                                                    + messageEntity.destinationType + ",'"
                                                     + messageEntity.data + "'," 
                                                     + messageEntity.forGroup + "," 
                                                     + messageEntity.destinationState + ","
@@ -63,7 +65,7 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
             data                    : string;
             forGroup                : number;
             destinationState       : number;
-            status                  : number;
+            state                  : number;
             createdAt               : Date;
             sendedAt                : Date;
             receivedAt              : Date; }) {

@@ -9,7 +9,6 @@ import { UserTokenEntity } from './../../../modules/token/domain/token-entity';
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';
-import moment from 'moment';
 
 export default class SendMessage implements BaseEndpoint {
 
@@ -17,14 +16,13 @@ export default class SendMessage implements BaseEndpoint {
         try {
             let tokenRepository = new MySqlTokenRepository(new MySqlRepository());
             var messageToSend: SendMessageCommand = _req.body.message as SendMessageCommand;
-            // m.isValid(); // false
-            //var message: MessageEntity = MessageEntity.fromPrimitive(JSON.parse(_req.body.message.replace("'","")));
-            //var message: MessageEntity = MessageEntity.fromPrimitive(_req.body.message);
+            console.log(messageToSend);
             var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository()), container.get('shared.logger'));
             //message.createdAt = new Date(); // En la app se crea este campo   
             let messageSended: SendMessageResult;
             if (messageToSend.forGroup == 0) {
-                var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationUserType);
+                var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationType);
+                console.log(tokenFounded);
                 if (tokenFounded == null) {
                     console.log(tokenFounded);
                     throw new Error("El usuario no tiene una cuenta activa.");

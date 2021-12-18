@@ -5,7 +5,9 @@ export class MessageEntity {
     id                     : string;
     readonly messageType   : MessageType;
     readonly deviceFromId  : number;
-    readonly destinationId : string;
+    deviceFromType : number;
+    destinationId : string;
+    destinationType : number;
     data                   : string;
     readonly forGroup      : number;
     destinationState       : MessageDestinationState;
@@ -99,7 +101,8 @@ export enum MessageState {
 }
 
 export enum MessageDestinationState {
-    Sent = 0,
-    Received = 1,
-    Readed = 2
+    Create = 0,
+    Sent = 1,
+    Received = 2,
+    Read = 3
 }
