@@ -7,13 +7,16 @@ export interface SendMessageCommand {
     data: string;
     forGroup: number;
     createdAt: string;
+    multimedia: SendMultimediaCommand;
 }
 
 export interface SendMessageResult {
     id: string;
+    messageType: number;
     deviceFromType: number;
     state: number;
     sentAt: string;
+    multimedia: SendMultimediaCommand;
 }
 
 export interface ConfirmMessageCommand {
@@ -24,4 +27,9 @@ export interface ConfirmMessageCommand {
 
 export interface ConfirmMessageResult {
     id: string;
+}
+
+export interface SendMultimediaCommand {
+    id: string;
+    firebaseUri: string;
 }

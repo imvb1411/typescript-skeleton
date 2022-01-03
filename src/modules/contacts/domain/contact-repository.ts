@@ -1,4 +1,3 @@
-import { UserTokenEntity } from "./../../token/domain/token-entity";
 import { ContactEntity } from "./contact-entity";
 
 export interface IContactRepository {

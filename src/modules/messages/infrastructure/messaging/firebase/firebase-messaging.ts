@@ -1,4 +1,4 @@
-import { MessageEntity } from "./../../../domain/message-entity";
+import { MessageEntity, MessageType } from "./../../../domain/message-entity";
 import IMessaging from "./../../../../../shared/infrastructure/messaging/IMessaging";
 import admin from 'firebase-admin';
 import { ServiceAccount } from "./service-account";
@@ -43,6 +43,7 @@ export default class FirebaseMessaging implements IMessaging {
                 ,sentAt          : moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss")
                 //,receivedAt        : messageEntity.receivedAt == null?"": moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
                 ,notificationBody  : notificationBody == null?"" + messageEntity.data: notificationBody
+                ,multimedia        : messageEntity.messageType != MessageType.Text ? JSON.stringify(messageEntity.multimedia):""
             }              
         };
         console.log(payload);

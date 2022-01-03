@@ -1,6 +1,6 @@
 import { TypeMapper } from "ts-mapper";
 import { CreateTokenCommand, CreateTokenResult } from "./../endpoints/token/token.dto";
-import { UserTokenEntity } from "./../../modules/token/domain/token-entity";
+import { UserTokenEntity } from "../../modules/user-tokens/domain/user-token-entity";
 
 export class TokenProfile extends TypeMapper {
     constructor() {

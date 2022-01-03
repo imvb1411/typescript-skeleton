@@ -1,8 +1,8 @@
-import { UserType } from "./../../token/domain/token-entity";
-import IRepository from "./../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "./../../../shared/infrastructure/persistence/MySqlRepository";
-import { ContactEntity } from "./../domain/contact-entity";
-import { IContactRepository } from "./../domain/contact-repository";
+import { UserType } from "../../../../user-tokens/domain/user-token-entity";
+import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
+import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
+import { ContactEntity } from "../../../domain/contact-entity";
+import { IContactRepository } from "../../../domain/contact-repository";
 import * as fs from 'fs';
 
 export class MySqlContactRepository extends MySqlRepository implements IContactRepository {
@@ -18,23 +18,30 @@ export class MySqlContactRepository extends MySqlRepository implements IContactR
         
         switch(userType) {
             case UserType.Tutor:
-                let courseAndParalelSql = fs.readFileSync(__dirname + '\\GetTutorCoursesAndParalels.sql', 'utf-8');
+                let courseAndParalelSql = fs.readFileSync(__dirname + '\\queries\\GetTutorCoursesAndParalels.sql', 'utf-8');
                 const courseAndParalel = await this.repository.executeSelectWithParams(courseAndParalelSql, [ userId ]);
-                sql = fs.readFileSync(__dirname + '\\GetTutorContacts.sql', 'utf-8');
-                params = [courseAndParalel[0].cod_par
+                sql = fs.readFileSync(__dirname + '\\queries\\GetTutorContacts.sql', 'utf-8');
+                params = [
+                    courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur
                     , courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur
                     , userId
                     , courseAndParalel[0].cod_par
-                    , courseAndParalel[0].cod_cur, ]
+                    , courseAndParalel[0].cod_cur ]
+                break;
+            case UserType.Student:
+                sql = fs.readFileSync(__dirname + '\\queries\\GetStudentContacts.sql', 'utf-8');
+                params = [userId]
                 break;
             case UserType.Teacher:
-                sql = fs.readFileSync(__dirname + '\\GetTeacherContacts.sql', 'utf-8');
+                sql = fs.readFileSync(__dirname + '\\queries\\GetTeacherContacts.sql', 'utf-8');
                 params = [ userId, userId ];
                 break;
             case UserType.Staff:
-                sql = "";
+            case UserType.Director:
+                sql = fs.readFileSync(__dirname + '\\queries\\GetDirectorAndStaffContacts.sql', 'utf-8');
+                params = [];
                 break;
             default:
                 throw new Error("Tipo usuario no existe");

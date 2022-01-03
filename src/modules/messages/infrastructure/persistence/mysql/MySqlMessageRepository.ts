@@ -2,7 +2,8 @@ import IMessageRepository from "../../../domain/message-repository";
 import moment from "moment";
 import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
 import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
-import { MessageEntity } from "../../../domain/message-entity";
+import { MessageEntity, MessageType } from "../../../domain/message-entity";
+import * as fs from 'fs';
 
 export default class MySqlMessageRepository extends MySqlRepository implements IMessageRepository{
 
@@ -10,7 +11,6 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
         super();
     }
     
-
     async save(messageEntity: MessageEntity): Promise<number> {
         var sql = "insert into messages values('" + messageEntity.id + "'," 
                                                     + messageEntity.messageType + ",'" 
@@ -27,60 +27,29 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
                                                     + (messageEntity.receivedAt == null?null: "'" + moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "'") + ");"
         console.log(sql);
         const query = await this.repository.executeInsert(sql);
+        if (messageEntity.messageType != MessageType.Text) {
+            sql = "insert into multimedia values('" + messageEntity.multimedia.id + "', '" + messageEntity.multimedia.messageId + "','" + messageEntity.multimedia.firebaseUri + "');"
+            console.log(sql);
+            await this.repository.executeInsert(sql);
+        }
         return query;
     }
 
-    async update(messageEntity: MessageEntity): Promise<number> {
-        var sql = "call proc_chat_update_message('" + messageEntity.id + "'," 
-                                                    + messageEntity.messageType + "," 
-                                                    + messageEntity.deviceFromId + ",'" 
-                                                    + messageEntity.destinationId + "','" 
-                                                    + messageEntity.data + "'," 
-                                                    + messageEntity.forGroup + "," 
-                                                    + messageEntity.destinationState + ","
-                                                    + messageEntity.state + ",'" 
-                                                    + moment(new Date(messageEntity.createdAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "','" 
-                                                    + moment(new Date(messageEntity.sentAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "','" 
-                                                    + moment(new Date(messageEntity.receivedAt).toISOString()).format("yyyy-MM-DD HH:mm:ss") + "');"
-        const query = await this.repository.executeSqlStatement(sql);
-        return query[0].affectedRows;
-    }
-
-    async updateStatusDestination(message: MessageEntity): Promise<number> {
+    async updateDestinationState(message: MessageEntity): Promise<number> {
         var sql = "update messages set destinationState = " + message.destinationState + ", receivedAt = '" + moment(message.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + message.id + "';"
         console.log(sql);
         const query = await this.repository.executeInsert(sql);
         return query;
     }
 
-    async findPendingMessages(destinationId: string): Promise<Array<MessageEntity>> {
-        let messages: Array<MessageEntity> = new Array<MessageEntity>();
-        let sql = "call proc_chat_mensajes_pendientes_by_destinationId('" + destinationId + "');";
-        const query = await this.repository.executeSqlStatement(sql);
-        query.map(function(item : {
-            id                      : string;
-            messageTypeId           : number;
-            deviceFromId            : number;
-            destinationId           : string;
-            data                    : string;
-            forGroup                : number;
-            destinationState       : number;
-            state                  : number;
-            createdAt               : Date;
-            sendedAt                : Date;
-            receivedAt              : Date; }) {
-        messages.push(Object.assign(new MessageEntity,JSON.parse(JSON.stringify(query))));
-        });
-        return messages;
-    }
-
-    async findNotificationBody(destinationId: string): Promise<string> {
+    async findNotificationBody(destinationType: number, destinationId: string): Promise<string> {
         let notificationsBody : string;
-        let sql = "call proc_chat_cuerpo_notificacion('" + destinationId + "');";
-        const query = await this.repository.executeSqlStatement(sql);
-        query.map(function(item:{ body: string}) {
+        let sql: string = fs.readFileSync(__dirname + '\\queries\\GetNotificationBody.sql', 'utf-8');
+        let params: string[] = [destinationType.toString(), destinationId ]
+        const query = await this.repository.executeSelectWithParams(sql, params);
+        query.map(function(item: { body: string; }) {
             notificationsBody = item.body;
-        })
+        });
         return notificationsBody;
     }
 }

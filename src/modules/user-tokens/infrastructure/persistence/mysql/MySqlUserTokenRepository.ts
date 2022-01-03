@@ -1,8 +1,8 @@
-import { UserTokenEntity } from "./../../domain/token-entity";
-import { ITokenRepository } from "./../../domain/token-repository";
+import { UserTokenEntity } from "../../../domain/user-token-entity";
+import { ITokenRepository } from "../../../domain/user-token-repository";
 import moment from "moment";
-import IRepository from "./../../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "./../../../../shared/infrastructure/persistence/MySqlRepository";
+import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
+import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
 
 export class MySqlTokenRepository extends MySqlRepository implements ITokenRepository {
 
@@ -13,8 +13,8 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
     }
 
     async save(token: UserTokenEntity): Promise<number> {
-        var sql = "insert into " + this.tableName + " (Id, UserId, UserType, FirebaseToken, State, CreatedAt) values ('" 
-                                        + token.id + "','"
+        var sql = "insert into " + this.tableName + " (Id, UserId, UserType, FirebaseToken, State, CreatedAt) values ("
+                                        + "default,'" 
                                         + token.userId + "','" 
                                         + token.userType + "','"
                                         + token.firebaseToken + "'," 
@@ -36,7 +36,8 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
 
     async findUserTokenByUserIdAndType(userId: string, userType: number): Promise<UserTokenEntity> {
         let tokenEntity: UserTokenEntity = null;
-        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from " + this.tableName + " where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
+        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt" + 
+                    " from " + this.tableName + " where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
         console.log(sql);
         const query = await this.repository.executeSqlStatement(sql);
 

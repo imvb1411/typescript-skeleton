@@ -9,6 +9,6 @@ export default class MessageConfirmer {
         // for (;index < messages.length; index++) {
         //     var message = messages[index];
             // message.destinationStatus = 1;
-        return await this.messageRepository.updateStatusDestination(message);
+        return await this.messageRepository.updateDestinationState(message);
     }
 }

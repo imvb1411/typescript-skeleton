@@ -5,7 +5,12 @@
   "main": "dist/src/index.js",
   "scripts": {
     "start": "tsc && nodemon dist/src/index.js",
-    "build": "tsc --project ./",
+    "copy-dependency-injection-files": "copyfiles -u 1 ./src/dependency-injection/**/*.yaml dist/src/",
+    "copy-firebase-key": "copyfiles -u 1 ./src/modules/messages/infrastructure/messaging/firebase/firebaseAccountKey.json dist/src/",
+    "copy-queries": "copyfiles -u 1 ./src/modules/**/*.sql dist/src/",
+    "copy-files": "npm run copy-dependency-injection-files && npm run copy-firebase-key && npm run copy-queries",
+    "clean": "rimraf dist/",
+    "build": "npm run clean && tsc --project ./ && npm run copy-files",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "imvb14@gmail.com",
@@ -31,6 +36,8 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@types/mysql2": "github:types/mysql2"
+    "@types/mysql2": "github:types/mysql2",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^3.0.2"
   }
 }

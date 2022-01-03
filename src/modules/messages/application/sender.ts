@@ -1,12 +1,13 @@
-import { UserTokenEntity } from './../../token/domain/token-entity';
+import { UserTokenEntity } from '../../user-tokens/domain/user-token-entity';
 import Logger from "./../../../shared/domain/logger";
 import { Uuid } from "./../../../shared/domain/value-object/Uuid";
 import IMessaging from "./../../../shared/infrastructure/messaging/IMessaging";
-import { MessageDestinationState, MessageEntity, MessageState } from "./../domain/message-entity";
+import { MessageDestinationState, MessageEntity, MessageState, MessageType } from "./../domain/message-entity";
 import IMessageRepository from "./../domain/message-repository";
 import { SendMessageCommand, SendMessageResult } from './../../../api/endpoints/messages/message.dto';
 import { MessageProfile } from './../../../api/mappers/message-profile';
 import moment from 'moment';
+import { MultimediaEntity } from '../domain/multimedia-entity';
 
 export default class MessageSender {
 
@@ -27,7 +28,14 @@ export default class MessageSender {
         newMessage.sentAt = new Date();
         newMessage.state = MessageState.Send;
         newMessage.destinationState = MessageDestinationState.Sent;
-
+        if (newMessage.messageType != MessageType.Text) {
+            let multimedia: MultimediaEntity = new MultimediaEntity();
+            multimedia.id = sendMessageCommand.multimedia.id;
+            multimedia.messageId = newMessage.id;
+            multimedia.firebaseUri = sendMessageCommand.multimedia.firebaseUri;
+            newMessage.multimedia = multimedia;
+        }
+        
         if(newMessage) {         
             await this.messageRepository.save(newMessage)
                 .then(e => {
@@ -41,7 +49,7 @@ export default class MessageSender {
         }
 
         if (rowInserted > 0) {
-            const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage.destinationId);
+            const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage.destinationType, newMessage.destinationId);
             console.log(notificationsBody);
             await this.messaging.sendMessageToDevice(newMessage, token, notificationsBody)
             .then(e => {
@@ -54,12 +62,14 @@ export default class MessageSender {
                 throw e;
             });
         } 
-        let sendMessageResult: SendMessageResult = { id: null, deviceFromType: null, state: null, sentAt: null };
+        let sendMessageResult: SendMessageResult = { id: null, messageType: null, deviceFromType: null, state: null, sentAt: null, multimedia: null };
         sendMessageResult = this.mapper.map<MessageEntity, SendMessageResult>(newMessage, sendMessageResult);
         sendMessageResult.id = newMessage.id;
+        sendMessageResult.messageType = newMessage.messageType;
         sendMessageResult.deviceFromType = newMessage.deviceFromType;
         sendMessageResult.state = newMessage.state;
         sendMessageResult.sentAt = moment(newMessage.sentAt).format('YYYY-MM-DD HH:mm:ss');
+        sendMessageResult.multimedia = sendMessageCommand.multimedia;
         return sendMessageResult;
     }
 

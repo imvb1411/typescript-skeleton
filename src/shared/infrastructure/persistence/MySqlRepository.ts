@@ -14,7 +14,7 @@ export class MySqlRepository implements IRepository {
                 host: 'localhost',
                 user: 'root',
                 password: '123',
-                database: 'db_aizama'
+                database: 'db_agendaaizama'
             });
         }
         return this.connection;

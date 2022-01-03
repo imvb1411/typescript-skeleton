@@ -4,8 +4,8 @@ import { MySqlRepository } from './../../../shared/infrastructure/persistence/My
 import MessageSender from './../../../modules/messages/application/sender';
 import FirebaseMessaging from './../../../modules/messages/infrastructure/messaging/firebase/firebase-messaging';
 import MySqlMessageRepository from './../../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository';
-import { MySqlTokenRepository } from './../../../modules/token/infrastructure/persistence/MySqlTokenRepository';
-import { UserTokenEntity } from './../../../modules/token/domain/token-entity';
+import { MySqlTokenRepository } from '../../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository';
+import { UserTokenEntity } from '../../../modules/user-tokens/domain/user-token-entity';
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';

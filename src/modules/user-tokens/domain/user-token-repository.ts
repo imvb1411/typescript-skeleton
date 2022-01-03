@@ -1,4 +1,4 @@
-import { UserTokenEntity } from "./token-entity";
+import { UserTokenEntity } from "./user-token-entity";
 
 export interface ITokenRepository {
     save(token : UserTokenEntity): Promise<number>;
