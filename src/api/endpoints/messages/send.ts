@@ -9,7 +9,7 @@ import { UserTokenEntity } from '../../../modules/user-tokens/domain/user-token-
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';
-import { ContactType } from 'modules/contacts/domain/contact-entity';
+import { ContactType } from './../../../modules/contacts/domain/contact-entity';
 
 export default class SendMessage implements BaseEndpoint {
 

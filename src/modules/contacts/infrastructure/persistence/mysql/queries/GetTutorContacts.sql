@@ -14,7 +14,7 @@ FROM prof_cur_mat pcm
 		ON (p.cod_pro = pcm.prof
 			AND p.estado = 'activo')
 	INNER JOIN prof_colegio as c 
-		ON (c.cod_pro = pcm.cod_pro
+		ON (c.cod_pro = pcm.prof
 			AND c.cod_col = ?)
 WHERE
 	pcm.codpar = ?
