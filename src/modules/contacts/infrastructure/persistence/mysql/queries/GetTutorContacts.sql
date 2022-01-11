@@ -13,6 +13,9 @@ FROM prof_cur_mat pcm
 	INNER JOIN profesores p 
 		ON (p.cod_pro = pcm.prof
 			AND p.estado = 'activo')
+	INNER JOIN prof_colegio as c 
+		ON (c.cod_pro = pcm.cod_pro
+			AND c.cod_col = ?)
 WHERE
 	pcm.codpar = ?
 	AND pcm.codcur = ?
@@ -31,5 +34,6 @@ FROM alumnos a
 WHERE
 	a.cod_par = ?
 	AND a.cod_cur = ?
+	AND a.cod_col = ?
 	AND a.estado = 1
 ORDER BY tipo, codigo;

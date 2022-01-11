@@ -24,24 +24,32 @@ export class MySqlContactRepository extends MySqlRepository implements IContactR
                 params = [
                     courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur
+                    , courseAndParalel[0].cod_col
                     , courseAndParalel[0].cod_par
                     , courseAndParalel[0].cod_cur
                     , userId
                     , courseAndParalel[0].cod_par
-                    , courseAndParalel[0].cod_cur ]
+                    , courseAndParalel[0].cod_cur
+                    , courseAndParalel[0].cod_col ]
                 break;
             case UserType.Student:
                 sql = fs.readFileSync(__dirname + '\\queries\\GetStudentContacts.sql', 'utf-8');
-                params = [userId]
+                params = [userId, userId, userId]
                 break;
             case UserType.Teacher:
                 sql = fs.readFileSync(__dirname + '\\queries\\GetTeacherContacts.sql', 'utf-8');
-                params = [ userId, userId ];
+                params = [ userId, userId, userId ];
                 break;
             case UserType.Staff:
             case UserType.Director:
+                let directorSchoolQuery = fs.readFileSync(__dirname + '\\queries\\GetDirectorAndStaffSchool.sql', 'utf-8');
+                const directorSchool = await this.repository.executeSelectWithParams(directorSchoolQuery, [ userId ]);
                 sql = fs.readFileSync(__dirname + '\\queries\\GetDirectorAndStaffContacts.sql', 'utf-8');
-                params = [];
+                params = [
+                    directorSchool[0].cod_col
+                    , directorSchool[0].cod_col
+                    , directorSchool[0].cod_col
+                    , directorSchool[0].cod_col];
                 break;
             default:
                 throw new Error("Tipo usuario no existe");

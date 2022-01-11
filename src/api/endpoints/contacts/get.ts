@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import container from "./../../../dependency-injection";
 import { ContactFinder } from "./../../../modules/contacts/application/contact-finder";
-import { BaseEndpoint } from "./../base.endpoint";
+import { BaseEndpoint } from "../base.endpoint";
 import { MySqlRepository } from "./../../../shared/infrastructure/persistence/MySqlRepository";
 import { MySqlContactRepository } from "../../../modules/contacts/infrastructure/persistence/mysql/mysql-contact-repository";
 import httpStatus from "http-status";

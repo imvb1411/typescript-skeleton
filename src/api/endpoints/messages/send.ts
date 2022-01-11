@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { BaseEndpoint } from "./../base.endpoint";
+import { BaseEndpoint } from "../base.endpoint";
 import { MySqlRepository } from './../../../shared/infrastructure/persistence/MySqlRepository';
 import MessageSender from './../../../modules/messages/application/sender';
 import FirebaseMessaging from './../../../modules/messages/infrastructure/messaging/firebase/firebase-messaging';
@@ -9,6 +9,7 @@ import { UserTokenEntity } from '../../../modules/user-tokens/domain/user-token-
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';
+import { ContactType } from 'modules/contacts/domain/contact-entity';
 
 export default class SendMessage implements BaseEndpoint {
 
@@ -16,24 +17,41 @@ export default class SendMessage implements BaseEndpoint {
         try {
             let tokenRepository = new MySqlTokenRepository(new MySqlRepository());
             var messageToSend: SendMessageCommand = _req.body.message as SendMessageCommand;
-            console.log(messageToSend);
             var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository()), container.get('shared.logger'));
-            //message.createdAt = new Date(); // En la app se crea este campo   
             let messageSended: SendMessageResult;
+
             if (messageToSend.forGroup == 0) {
                 var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationType);
-                console.log(tokenFounded);
                 if (tokenFounded == null) {
-                    console.log(tokenFounded);
                     throw new Error("El usuario no tiene una cuenta activa.");
                 }
                 messageSended = await messageSender.sendMessageToDevice(messageToSend, tokenFounded.firebaseToken);
             }else {
-                let x = await messageSender.sendMessageToGroup(messageToSend);
+                var tokens: UserTokenEntity[] = null;
+                switch(messageToSend.deviceFromType) {
+                    case ContactType.Tutor:
+                        tokens = await tokenRepository.findGroupForTutor(messageToSend.deviceFromId, messageToSend.destinationId);
+                        break;
+                    case ContactType.Student:
+                        tokens = await tokenRepository.findGroupForStudent(messageToSend.deviceFromId, messageToSend.destinationId);
+                        break;
+                    case ContactType.Teacher:
+                        tokens = await tokenRepository.findGroupForTeacher(messageToSend.deviceFromId, messageToSend.destinationId, messageToSend.destinationType);
+                        break; 
+                    case ContactType.Director:
+                        tokens = await tokenRepository.findGroupForDirector(messageToSend.deviceFromId, messageToSend.destinationId);
+                        break; 
+                    case ContactType.Staff:
+                        break; 
+                }
+                
+                for(let token of tokens) {
+                    messageSended = await messageSender.sendMessageToDevice(messageToSend, token.firebaseToken);
+                }
             }
             res.header('Access-Control-Allow-Origin', '*');
             res.status(httpStatus.OK).json({ "message": messageSended });
-        }catch(error) {
+        } catch(error) {
             res.status(httpStatus.SERVICE_UNAVAILABLE).json(error.message);
         }
     }

@@ -1,4 +1,4 @@
-import { BaseEndpoint } from "./../base.endpoint";
+import { BaseEndpoint } from "../base.endpoint";
 import container from "./../../../dependency-injection";
 import { Request, Response } from "express";
 import httpStatus from "http-status";

@@ -10,3 +10,6 @@ services:
       
   endpoints.messages.ack:
     class: ./../../api/endpoints/messages/ack
+
+  endpoints.health.checker:
+    class: ./../../api/endpoints/health/checker

@@ -38,6 +38,7 @@ class Server {
         return __awaiter(this, void 0, void 0, function* () {
             return new Promise(resolve => {
                 this.httpServer = this.app.listen(this.port, () => {
+                    console.log(this.httpServer.address());
                     this.logger.info(`Backend App is running at http://localhost:${this.port} in ${this.app.get('env')} mode`);
                     this.logger.info('  Press CTRL-C to stop\n');
                     resolve();

@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { BaseEndpoint } from "./../base.endpoint";
+import { BaseEndpoint } from "../base.endpoint";
 import httpStatus from 'http-status';
 import MessageConfirmer from './../../../modules/messages/application/receive-message-confirmer';
 import MySqlMessageRepository from './../../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository';

@@ -8,10 +8,10 @@
       "moduleResolution": "node",
       "sourceMap": true,
       "baseUrl": "./src",
-      "outDir": "./dist/src"
+      "outDir": "./dist"
     },
     "include": [
       "./src/**/*"
-    ],
+      , "index.ts"],
     "lib": ["es2015"]
   }

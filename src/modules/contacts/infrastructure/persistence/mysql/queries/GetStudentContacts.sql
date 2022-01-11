@@ -18,6 +18,10 @@ FROM profesores p
     INNER JOIN alumnos as a
         ON (a.cod_cur = pcm.cod_cur
 		    AND a.codigo = ?)
+	INNER JOIN prof_colegio as c 
+		ON (c.cod_pro = p.prof
+			AND c.cod_col = a.cod_col
+			AND c.estado = 1)
 WHERE
 	p.estado = 'activo'
 -- LISTADO DE TUTORES

@@ -4,7 +4,7 @@
   "description": "",
   "main": "dist/src/index.js",
   "scripts": {
-    "start": "tsc && nodemon dist/src/index.js",
+    "start": "tsc && nodemon dist/index.js",
     "copy-dependency-injection-files": "copyfiles -u 1 ./src/dependency-injection/**/*.yaml dist/src/",
     "copy-firebase-key": "copyfiles -u 1 ./src/modules/messages/infrastructure/messaging/firebase/firebaseAccountKey.json dist/src/",
     "copy-queries": "copyfiles -u 1 ./src/modules/**/*.sql dist/src/",

@@ -32,6 +32,7 @@ export class Server {
     async listen(): Promise<void> {
       return new Promise(resolve => {
         this.httpServer = this.app.listen(this.port, () => {
+          console.log( this.httpServer.address() );
           this.logger.info(
             `Backend App is running at http://localhost:${this.port} in ${this.app.get('env')} mode`
           );

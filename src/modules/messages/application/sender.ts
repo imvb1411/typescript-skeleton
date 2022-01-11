@@ -18,7 +18,7 @@ export default class MessageSender {
      }
 
      async sendMessageToDevice(sendMessageCommand: SendMessageCommand, token: string): Promise<SendMessageResult> {
-        let messageSended: MessageEntity;
+
         let rowInserted: number;
         let newMessage: MessageEntity = this.mapper.map<SendMessageCommand, MessageEntity>(sendMessageCommand, new MessageEntity());
         newMessage.id = Uuid.random().value;
@@ -50,15 +50,13 @@ export default class MessageSender {
 
         if (rowInserted > 0) {
             const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage.destinationType, newMessage.destinationId);
-            console.log(notificationsBody);
+
             await this.messaging.sendMessageToDevice(newMessage, token, notificationsBody)
             .then(e => {
-                this.logger.info("MessageSender: sendMessage->" + JSON.stringify(e) + " ,token: " + token);
-                messageSended = e;                       
+                this.logger.info("MessageSender: sendMessage->" + JSON.stringify(e) + " ,token: " + token);                  
             })
             .catch(e => {
                 this.logger.error("MessageSender: error->" + e);
-                messageSended = null;
                 throw e;
             });
         } 
@@ -71,10 +69,5 @@ export default class MessageSender {
         sendMessageResult.sentAt = moment(newMessage.sentAt).format('YYYY-MM-DD HH:mm:ss');
         sendMessageResult.multimedia = sendMessageCommand.multimedia;
         return sendMessageResult;
-    }
-
-    async sendMessageToGroup(command: SendMessageCommand,) : Promise<MessageEntity> {
-        let tokens: UserTokenEntity[];
-        return null;
     }
 }

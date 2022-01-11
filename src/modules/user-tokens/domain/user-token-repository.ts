@@ -5,5 +5,4 @@ export interface ITokenRepository {
     update(token : UserTokenEntity): Promise<number>;
     findUserTokenByToken(token: string): Promise<UserTokenEntity>;
     findUserTokenByUserIdAndType(userId: string, userTypeId: number): Promise<UserTokenEntity>;
-    findTokensByGroupId(groupId: string): Promise<UserTokenEntity[]>;
 }

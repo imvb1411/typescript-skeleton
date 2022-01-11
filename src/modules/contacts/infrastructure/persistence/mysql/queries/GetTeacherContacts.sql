@@ -11,15 +11,27 @@ UNION ALL
 -- LISTADO DE TUTORES
 SELECT DISTINCT d.cod_tut as codigo, b.cod_par, CONCAT(d.paterno,' ',d.materno,' ',d.nombres) as nombre, 1 as tipo
 FROM prof_cur_mat as a
-	 INNER JOIN alumnos as b
-     ON (b.estado = 1
- 		and b.cod_cur = a.codcur
-         and b.cod_par = a.codpar)
-	INNER JOIN tutor_alumno as c
-	ON (c.estado = 1
- 		AND c.codigo = b.codigo)
-	INNER JOIN tutorES as d
- 	ON (d.cod_tut = c.cod_tut)
-where a.prof= ?
-	and a.estado='activo'
+	INNER JOIN prof_colegio as b
+		ON (b.cod_pro = a.prof
+			AND b.estado = 1)
+	INNER JOIN alumnos as c
+		ON (c.estado = 1
+			AND c.cod_cur = a.codcur
+			AND c.cod_par = a.codpar
+			AND c.cod_col = b.cod_col)
+	INNER JOIN tutor_alumno as d
+		ON (d.estado = 1
+			AND d.codigo = c.codigo)
+	INNER JOIN tutores as e
+ 		ON (e.cod_tut = d.cod_tut)
+WHERE a.prof= ?
+	AND a.estado='activo'
 ORDER BY tipo, codigo;
+-- GRUPO DE PROFESORES Y EL DIRECTOR DEL COLEGIO
+SELECT DISTINCT a.cod_col as codigo, 0 as codpar, b.nombre, 7 as tipo
+FROM prof_colegio as a
+	INNER JOIN colegios as b
+    ON (b.cod_col = a.cod_col
+		AND b.estado = 1)
+WHERE a.cod_pro = ?
+	AND a.estado = 1;
