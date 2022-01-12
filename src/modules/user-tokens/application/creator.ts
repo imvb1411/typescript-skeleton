@@ -1,9 +1,9 @@
 import { Uuid } from "../../../shared/domain/value-object/Uuid";
 import { UserTokenEntity } from "../domain/user-token-entity";
 import { ITokenRepository } from "../domain/user-token-repository";
-import { CreateTokenCommand, CreateTokenResult } from "../../../api/endpoints/token/token.dto";
 import { TokenProfile } from "../../../api/mappers/token-profile";
 import Logger from "../../../shared/domain/logger";
+import { CreateTokenCommand, CreateTokenResult } from "./../../../api/endpoints/user-token/token.dto";
 
 export class TokenCreator {
 

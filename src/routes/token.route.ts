@@ -1,4 +1,4 @@
-import CreateToken from './../api/endpoints/token/create';
+import CreateToken from './../api/endpoints/user-token/create';
 import { Express } from 'express';
 import container from './../dependency-injection';
 

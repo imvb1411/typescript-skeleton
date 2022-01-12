@@ -1,4 +1,4 @@
-SELECT DISTINCT a.id, a.userId, a.userType, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
+SELECT DISTINCT a.id, a.userId, a.userType, '' as name, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
 FROM UserToken as a
     INNER JOIN tutor_alumno as b
 		ON (b.cod_tut = a.userId
@@ -19,21 +19,21 @@ WHERE
 	a.state = 1
 	AND a.UserType = 1 -- Tutores
 UNION ALL
-SELECT DISTINCT a.id, a.userId, a.userType, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
+SELECT DISTINCT a.id, a.userId, a.userType, '' as name, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
 FROM UserToken as a
 	INNER JOIN prof_cur_mat as b 
 		ON (b.prof = a.UserId
 			AND b.estado='activo')
-	INNER JOIN (SELECT y.cod_par, y.cod_col
+	INNER JOIN (SELECT y.cod_cur, y.cod_par, y.cod_col
 				FROM tutor_alumno x 
 					INNER JOIN alumnos y 
 					ON (y.codigo = x.codigo) 
 				WHERE x.cod_tut = ?
-				AND x.estado = 1) AS b
-		ON (a.cod_cur = b.cod_cur
-			AND a.cod_par = b.cod_par)
-	INNER JOIN prof_colegio as c
-		ON (c.cod_pro = b.prof
-			AND c.cod_col = d.cod_col)
+				AND x.estado = 1) AS c
+		ON (b.codcur = c.cod_cur
+			AND b.codpar = c.cod_par)
+	INNER JOIN prof_colegio as d
+		ON (d.cod_pro = b.prof
+			AND d.cod_col = c.cod_col)
 WHERE a.state=1
 	AND a.UserType = 3; -- Profesores

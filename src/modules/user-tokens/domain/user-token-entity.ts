@@ -15,3 +15,14 @@ export enum UserType {
     Director = 4,
     Staff = 5
 }
+
+export class UserTokenWithName {
+    id            : string;
+    userId        : string;
+    userType      : UserType;
+    name          : string;
+    firebaseToken : string;
+    state         : number;
+    createdAt     : Date;
+    updatedAt     : Date;
+}

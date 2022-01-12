@@ -1,5 +1,14 @@
 -- LISTADO DE CURSOS
-SELECT DISTINCT a.codcur as codigo, a.codpar, concat(b.descrip, ' ',c.descrip ) as nombre, 6 as tipo  
+SELECT DISTINCT a.codcur as codigo, a.codpar, concat(b.descrip, ' ',c.descrip) as nombre, 6 as tipo  
+FROM prof_cur_mat as a
+    INNER JOIN cursos as b
+        on (b.cod_cur = a.codcur)
+    INNER JOIN paralelos as c
+    ON (c.estado = 1
+        AND c.cod_par = a.codpar)
+WHERE a.prof= ? AND a.estado='activo'
+-- LISTADO DE CURSOS CON TUTORES
+SELECT DISTINCT a.codcur as codigo, a.codpar, concat(b.descrip, ' ',c.descrip, '-Tutores') as nombre, 7 as tipo  
 FROM prof_cur_mat as a
     INNER JOIN cursos as b
         on (b.cod_cur = a.codcur)

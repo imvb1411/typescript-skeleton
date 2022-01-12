@@ -17,5 +17,6 @@ export enum ContactType {
     Director = 4,
     Staff = 5,
     Course = 6,
-    TeacherAndDirectorGroup = 7
+    CourseWithTutors = 7,
+    TeacherAndDirectorGroup = 8
 }

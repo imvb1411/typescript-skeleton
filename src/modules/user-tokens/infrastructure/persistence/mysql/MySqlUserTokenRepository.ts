@@ -1,4 +1,4 @@
-import { UserTokenEntity } from "../../../domain/user-token-entity";
+import { UserTokenEntity, UserTokenWithName } from "../../../domain/user-token-entity";
 import { ITokenRepository } from "../../../domain/user-token-repository";
 import moment from "moment";
 import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
@@ -58,63 +58,5 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
             tokenEntity = Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query)));
         }
         return tokenEntity;
-    }
-
-    async findGroupForTutor(deviceFromId: string, destinationId: string): Promise<Array<UserTokenEntity>> {
-        let tokens: Array<UserTokenEntity> = new Array<UserTokenEntity>();
-        let getTokens = fs.readFileSync(__dirname + '\\queries\\GetTokensGroupForTutor.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, destinationId, deviceFromId, deviceFromId ]);
-        query.map(function() {
-            tokens.push(Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query))));
-        });
-        return tokens;
-    }
-
-    async findGroupForStudent(deviceFromId: string, destinationId: string): Promise<Array<UserTokenEntity>> {
-        let tokens: Array<UserTokenEntity> = new Array<UserTokenEntity>();
-        let getTokens = fs.readFileSync(__dirname + '\\queries\\GetTokensGroupForStudent.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, deviceFromId ]);
-        query.map(function() {
-            tokens.push(Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query))));
-        });
-        return tokens;
-    }
-
-    async findGroupForTeacher(deviceFromId: string, destinationId: string, destinationType: number): Promise<Array<UserTokenEntity>> {
-        let tokens: Array<UserTokenEntity> = new Array<UserTokenEntity>();
-        let getTokens: string = "";
-        let params: string[];
-        if (destinationType == ContactType.Course) {
-            getTokens = fs.readFileSync(__dirname + '\\queries\\GetTokensGroupForTeacherToCourse.sql', 'utf-8');
-            params = [ 
-                destinationId
-                , destinationId
-                , deviceFromId
-                , destinationId
-            ]
-        } else if (destinationType == ContactType.TeacherAndDirectorGroup) {
-            getTokens = fs.readFileSync(__dirname + '\\queries\\GetTokensGroupForTeacherToGroupSchool.sql', 'utf-8');
-            params = [ 
-                destinationId
-                , deviceFromId
-                , destinationId
-            ]
-        }
-
-        let query = await this.repository.executeSelectWithParams(getTokens, params);
-        query.map(function() {
-            tokens.push(Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query))));
-        });
-        return tokens;
-    }
-
-    async findGroupForDirector(deviceFromId: string, destinationId: string): Promise<Array<UserTokenEntity>> {
-        let tokens: Array<UserTokenEntity> = new Array<UserTokenEntity>();
-        let getTokens: string = fs.readFileSync(__dirname + '\\queries\\GetTokensGroupForDirector.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [destinationId, deviceFromId, destinationId]);
-        query.map(function() {
-            tokens.push(Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query))));
-        });
-        return tokens;
     }
 }

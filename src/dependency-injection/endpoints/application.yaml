@@ -1,10 +1,13 @@
 services:
   endpoints.token.create:
-    class: ./../../api/endpoints/token/create
+    class: ./../../api/endpoints/user-token/create
 
   endpoints.contacts.get:
     class: ./../../api/endpoints/contacts/get
 
+  endpoints.contacts.get-group-members:
+    class: ./../../api/endpoints/contacts/get-group-members
+    
   endpoints.messages.send:
     class: ./../../api/endpoints/messages/send
       
@@ -13,3 +16,10 @@ services:
 
   endpoints.health.checker:
     class: ./../../api/endpoints/health/checker
+
+  endpoints.user-restriction.create:
+    class: ./../../api/endpoints/user-restrictions/create
+  
+  endpoints.user-restriction.delete:
+    class: ./../../api/endpoints/user-restrictions/delete
+  
