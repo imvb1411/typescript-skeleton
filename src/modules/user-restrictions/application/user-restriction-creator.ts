@@ -25,8 +25,9 @@ export class UserRestrictionCreator {
         }else {
             userRestriction = restrictionFound;
         }
-        let userRestrictionResult: CreateUserRestrictionResult = { id: null, createdAt: null };
+        let userRestrictionResult: CreateUserRestrictionResult = { id: null, restrictionType: null, createdAt: null };
         userRestrictionResult.id = userRestriction.id;
+        userRestrictionResult.restrictionType = userRestriction.restrictionType;
         userRestrictionResult.createdAt = moment(userRestriction.createdAt).format("yyyy-MM-DD HH:mm:ss");
         return userRestrictionResult;
     }

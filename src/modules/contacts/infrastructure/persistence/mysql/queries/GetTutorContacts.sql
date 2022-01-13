@@ -1,5 +1,5 @@
--- Cursos
-SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip ) as nombre, 6 as tipo  
+-- Cursos con el profesor
+SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip,'-Tutores') as nombre, 7 as tipo  
 FROM cursos c 
 	INNER JOIN paralelos p 
 		ON (p.cod_par = ?

@@ -53,13 +53,16 @@ export class MySqlUserRestrictionRepository extends MySqlRepository implements I
     }
 
     async findRestrictions(userId: string, destinationId: string, destinationType: number): Promise<Array<UserRestrictionEntity>> {
-        let restrictions: Array<UserRestrictionEntity> =new Array<UserRestrictionEntity>();
+        let restrictions: Array<UserRestrictionEntity> = new Array<UserRestrictionEntity>();
         let sql = "select id, userRestricted, restrictionType, userId, userType, state, createdAt, updatedAt from UserRestrictions where state = 1 and " +
             "userRestricted = '" + userId + "' and userId = '" + destinationId + "' and userType = " + destinationType + ";";
+        console.log(sql);
         let query = await this.repository.executeSelect(sql);
-        query.map(function(item) {
-            restrictions.push(Object.assign(new UserRestrictionEntity,JSON.parse(JSON.stringify(item))));
-        });
+        if (query != null) {
+            query.map(function(item) {
+                restrictions.push(Object.assign(new UserRestrictionEntity,JSON.parse(JSON.stringify(item))));
+            });
+        }
         return restrictions;
     }
     

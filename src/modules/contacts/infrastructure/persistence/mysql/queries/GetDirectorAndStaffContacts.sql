@@ -33,7 +33,7 @@ WHERE
 	AND a.cod_col = ?
 UNION ALL
 -- GRUPO DEL COLEGIO
-SELECT DISTINCT a.cod_col as codigo, 0 as codpar, a.nombre, 7 as tipo
+SELECT DISTINCT a.cod_col as codigo, 0 as codpar, a.nombre, 8 as tipo
 FROM colegios as a
 WHERE a.cod_col = ?
 	AND a.estado = 1

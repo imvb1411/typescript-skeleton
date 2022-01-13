@@ -10,3 +10,11 @@ export interface CreateTokenResult {
     userType: number;
     firebaseToken: string;
 }
+
+export interface CreateTokenWithNameResult {
+    id : string;
+    userId: string;
+    userType: number;
+    name: string;
+    firebaseToken: string;
+}

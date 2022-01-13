@@ -38,7 +38,7 @@ export class MySqlContactRepository extends MySqlRepository implements IContactR
                 break;
             case UserType.Teacher:
                 sql = fs.readFileSync(__dirname + '/queries/GetTeacherContacts.sql', 'utf-8');
-                params = [ userId, userId, userId ];
+                params = [ userId, userId, userId, userId ];
                 break;
             case UserType.Staff:
             case UserType.Director:

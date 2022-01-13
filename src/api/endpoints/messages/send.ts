@@ -26,7 +26,7 @@ export default class SendMessage implements BaseEndpoint {
             var messageToSend: SendMessageCommand = _req.body.message as SendMessageCommand;
             var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository()), container.get('shared.logger'));
             var restrictionsValidator = new UserRestrictionValidator(new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
-            var contactFinder = new ContactFinder(new MySqlContactRepository(new MySqlRepository()), container.get('shared.logger'));
+            var contactFinder = new ContactFinder(new MySqlContactRepository(new MySqlRepository()), new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
             let messageSended: SendMessageResult;
 
             let hasRestrictions: boolean = await restrictionsValidator.validate(messageToSend.deviceFromId, messageToSend.destinationId, messageToSend.destinationType, messageToSend.messageType);
@@ -62,7 +62,7 @@ export default class SendMessage implements BaseEndpoint {
                 // }
                 
                 for(let token of groupMembers.contacts) {
-                    messageSended = await messageSender.sendMessageToDevice(messageToSend, token.firebaseToken);
+                    messageSended = await messageSender.sendMessageToDevice(messageToSend, token.userToken.firebaseToken);
                 }
             }
             res.header('Access-Control-Allow-Origin', '*');

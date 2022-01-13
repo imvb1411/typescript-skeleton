@@ -8,6 +8,7 @@ export interface CreateUserRestrictionCommand {
 
 export interface CreateUserRestrictionResult {
     id: string;
+    restrictionType: number;
     createdAt: string;
 }
 

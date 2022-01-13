@@ -15,5 +15,6 @@ export enum RestrictionType {
     Mute = 1,
     SendImages = 2,
     SendVideos = 3,
-    SendDocuments = 4
+    SendDocuments = 4,
+    SendAudio = 5
 }
