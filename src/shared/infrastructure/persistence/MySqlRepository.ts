@@ -11,14 +11,14 @@ export class MySqlRepository implements IRepository {
     static async connect(): Promise<Pool> {
         if(!this.connection) {
             this.connection = await createPool({
-                // host: 'localhost',
-                // user: 'root',
-                // password: '123',
-                // database: 'db_agendaaizama'
-                host: 'www.agendaaizama.net',
-                user: 'agendaaizama_bdd_admin',
-                password: 'admin160597',
-                database: 'agendaaizama_bdd'
+                host: 'localhost',
+                user: 'root',
+                password: '123',
+                database: 'db_agendaaizama'
+                // host: 'www.agendaaizama.net',
+                // user: 'agendaaizama_bdd_admin',
+                // password: 'admin160597',
+                // database: 'agendaaizama_bdd'
             });
         }
         return this.connection;

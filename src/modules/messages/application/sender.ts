@@ -8,6 +8,7 @@ import { SendMessageCommand, SendMessageResult } from './../../../api/endpoints/
 import { MessageProfile } from './../../../api/mappers/message-profile';
 import moment from 'moment';
 import { MultimediaEntity } from '../domain/multimedia-entity';
+import { GroupMemberRestrictionResult } from './../../../api/endpoints/contacts/contact.dto';
 
 export default class MessageSender {
 
@@ -17,12 +18,14 @@ export default class MessageSender {
         this.mapper = new MessageProfile();
      }
 
-     async sendMessageToDevice(sendMessageCommand: SendMessageCommand, token: string): Promise<SendMessageResult> {
+    async sendMessageToDevice(sendMessageCommand: SendMessageCommand, token: string): Promise<SendMessageResult> {
 
         let rowInserted: number;
         let newMessage: MessageEntity = this.mapper.map<SendMessageCommand, MessageEntity>(sendMessageCommand, new MessageEntity());
         newMessage.id = Uuid.random().value;
         newMessage.deviceFromType = sendMessageCommand.deviceFromType;
+        newMessage.groupId = sendMessageCommand.groupId;
+        newMessage.groupType = sendMessageCommand.groupType;
         newMessage.destinationType = sendMessageCommand.destinationType;
         newMessage.createdAt = new Date(sendMessageCommand.createdAt);
         newMessage.sentAt = new Date();
@@ -49,7 +52,7 @@ export default class MessageSender {
         }
 
         if (rowInserted > 0) {
-            const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage.destinationType, newMessage.destinationId);
+            const notificationsBody: string = await this.messageRepository.findNotificationBody(newMessage);
 
             await this.messaging.sendMessageToDevice(newMessage, token, notificationsBody)
             .then(e => {

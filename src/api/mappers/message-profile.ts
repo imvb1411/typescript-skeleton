@@ -15,7 +15,7 @@ export class MessageProfile extends TypeMapper {
             .map(src => src.deviceFromId, dest => dest.deviceFromId)
             .map(src => src.destinationId, dest => dest.destinationId)
             .map(src => src.data, dest => dest.data)
-            .map(src => src.forGroup, dest => dest.forGroup)
+            .map(src => src.groupId, dest => dest.groupId)
             .map(src => moment(src.createdAt, 'YYYY-MM-DD HH:mm:ss'), dest => dest.createdAt);
 
         this.createMap<MessageEntity, SendMessageCommand>()
@@ -23,7 +23,7 @@ export class MessageProfile extends TypeMapper {
             .map(src => src.deviceFromId, dest => dest.deviceFromId)
             .map(src => src.destinationId, dest => dest.destinationId)
             .map(src => src.data, dest => dest.data)
-            .map(src => src.forGroup, dest => dest.forGroup)
+            .map(src => src.groupId, dest => dest.groupId)
             .map(src => moment(src.createdAt).format('YYYY-MM-DD HH:mm:ss'), dest => dest.createdAt);
 
         this.createMap<MessageEntity, SendMessageResult>()

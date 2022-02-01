@@ -18,8 +18,9 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
                                                     + messageEntity.deviceFromType + ",'"
                                                     + messageEntity.destinationId + "'," 
                                                     + messageEntity.destinationType + ",'"
-                                                    + messageEntity.data + "'," 
-                                                    + messageEntity.forGroup + "," 
+                                                    + messageEntity.data + "','" 
+                                                    + messageEntity.groupId + "'," 
+                                                    + messageEntity.groupType + ","
                                                     + messageEntity.destinationState + ","
                                                     + messageEntity.state + ",'" 
                                                     + moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss") + "','" 
@@ -35,17 +36,17 @@ export default class MySqlMessageRepository extends MySqlRepository implements I
         return query;
     }
 
-    async updateDestinationState(message: MessageEntity): Promise<number> {
-        var sql = "update messages set destinationState = " + message.destinationState + ", receivedAt = '" + moment(message.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + message.id + "';"
+    async updateDestinationState(destinationState: number, receivedAt: Date, id: string): Promise<number> {
+        var sql = "update messages set destinationState = " + destinationState + ", receivedAt = '" + moment(receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + id + "';"
         console.log(sql);
         const query = await this.repository.executeInsert(sql);
         return query;
     }
 
-    async findNotificationBody(destinationType: number, destinationId: string): Promise<string> {
+    async findNotificationBody(messageEntity : MessageEntity): Promise<string> {
         let notificationsBody : string;
-        let sql: string = fs.readFileSync(__dirname + '\\queries\\GetNotificationBody.sql', 'utf-8');
-        let params: string[] = [destinationType.toString(), destinationId ]
+        let sql: string = fs.readFileSync(__dirname + '/queries/GetNotificationBody.sql', 'utf-8');
+        let params: string[] = [messageEntity.deviceFromId, messageEntity.deviceFromType.toString(), messageEntity.groupId, messageEntity.groupType.toString(), messageEntity.destinationId, messageEntity.destinationType.toString() ]
         const query = await this.repository.executeSelectWithParams(sql, params);
         query.map(function(item: { body: string; }) {
             notificationsBody = item.body;

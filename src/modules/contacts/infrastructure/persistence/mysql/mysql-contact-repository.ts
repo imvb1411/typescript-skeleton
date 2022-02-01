@@ -18,19 +18,8 @@ export class MySqlContactRepository extends MySqlRepository implements IContactR
         
         switch(userType) {
             case UserType.Tutor:
-                let courseAndParalelSql = fs.readFileSync(__dirname + '/queries/GetTutorCoursesAndParalels.sql', 'utf-8');
-                const courseAndParalel = await this.repository.executeSelectWithParams(courseAndParalelSql, [ userId ]);
                 sql = fs.readFileSync(__dirname + '/queries/GetTutorContacts.sql', 'utf-8');
-                params = [
-                    courseAndParalel[0].cod_par
-                    , courseAndParalel[0].cod_cur
-                    , courseAndParalel[0].cod_col
-                    , courseAndParalel[0].cod_par
-                    , courseAndParalel[0].cod_cur
-                    , userId
-                    , courseAndParalel[0].cod_par
-                    , courseAndParalel[0].cod_cur
-                    , courseAndParalel[0].cod_col ]
+                params = [userId]
                 break;
             case UserType.Student:
                 sql = fs.readFileSync(__dirname + '/queries/GetStudentContacts.sql', 'utf-8');

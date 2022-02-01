@@ -5,7 +5,8 @@ export interface SendMessageCommand {
     destinationId: string;
     destinationType: number;
     data: string;
-    forGroup: number;
+    groupId: string;
+    groupType: number;
     createdAt: string;
     multimedia: SendMultimediaCommand;
 }

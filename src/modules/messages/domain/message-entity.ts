@@ -4,12 +4,13 @@ export class MessageEntity {
 
     id                     : string;
     readonly messageType   : MessageType;
-    readonly deviceFromId  : number;
+    deviceFromId  : string;
     deviceFromType : number;
     destinationId : string;
     destinationType : number;
     data                   : string;
-    readonly forGroup      : number;
+    groupId      : string;
+    groupType: number;
     destinationState       : MessageDestinationState;
     state                  : MessageState;
     createdAt              : Date;

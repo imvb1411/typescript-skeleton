@@ -40,7 +40,6 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         let tokenEntity: UserTokenEntity = null;
         let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt" + 
                     " from " + this.tableName + " where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
-        console.log(sql);
         const query = await this.repository.executeSqlStatement(sql);
 
         if(query != null) {
@@ -53,7 +52,6 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
         let tokenEntity: UserTokenEntity = null;
         let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from " + this.tableName + " where state = 1 and firebaseToken = '" + token + "';";
         const query = await this.repository.executeSqlStatement(sql);
-
         if(query != null) {
             tokenEntity = Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query)));
         }

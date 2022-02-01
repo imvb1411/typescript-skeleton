@@ -16,7 +16,7 @@ export class TokenCreator {
     async create(tokenForCreate: CreateTokenCommand): Promise<CreateTokenResult> {
         let currentDate: Date = new Date();
         this.logger.info("TokenForCreate: Receive " + tokenForCreate);
-        let tokenFound: UserTokenEntity = await this.repository.findUserTokenByToken(tokenForCreate.firebaseToken);
+        let tokenFound: UserTokenEntity = await this.repository.findUserTokenByUserIdAndType(tokenForCreate.userId, tokenForCreate.userType);
         let createTokenResult: CreateTokenResult = { id: null, userId: null, userType: null, firebaseToken: null };
 
         if (tokenFound != null) {
@@ -36,7 +36,6 @@ export class TokenCreator {
         }
 
         let tokenForCreation: UserTokenEntity = this.mapper.map<CreateTokenCommand, UserTokenEntity>(tokenForCreate, new UserTokenEntity());
-        console.log(tokenForCreation)
         tokenForCreation.id = Uuid.random().value;
         tokenForCreation.userType = tokenForCreate.userType;
         tokenForCreation.state = 1;

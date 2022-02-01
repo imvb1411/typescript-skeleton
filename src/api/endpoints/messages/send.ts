@@ -9,7 +9,6 @@ import { UserTokenEntity, UserTokenWithName } from '../../../modules/user-tokens
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';
-import { ContactType } from './../../../modules/contacts/domain/contact-entity';
 import { UserRestrictionValidator } from './../../../modules/user-restrictions/application/user-restriction-validator';
 import { MySqlUserRestrictionRepository } from './../../../modules/user-restrictions/infrastructure/persistence/mysql/mysql-user-restriction-repository';
 import { ContactFinder } from './../../../modules/contacts/application/contact-finder';
@@ -34,7 +33,7 @@ export default class SendMessage implements BaseEndpoint {
                 throw new Error("Usted no tiene permisos para realizar la acción.");
             }
 
-            if (messageToSend.forGroup == 0) {
+            if (messageToSend.groupId == '') {
                 var tokenFounded: UserTokenEntity = await tokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationType);
                 if (tokenFounded == null) {
                     throw new Error("El usuario no tiene una cuenta activa.");
@@ -44,24 +43,10 @@ export default class SendMessage implements BaseEndpoint {
                 let command: GetGroupMembersCommand = {deviceFromId: messageToSend.deviceFromId, deviceFromType: messageToSend.deviceFromType, destinationId: messageToSend.destinationId, destinationType: messageToSend.destinationType};
                 
                 var groupMembers: GroupMembersListResult = await contactFinder.findGroupMembers(command);
-                // switch(messageToSend.deviceFromType) {
-                //     case ContactType.Tutor:
-                //         tokens = await tokenRepository.findGroupForTutor(messageToSend.deviceFromId, messageToSend.destinationId);
-                //         break;
-                //     case ContactType.Student:
-                //         tokens = await tokenRepository.findGroupForStudent(messageToSend.deviceFromId, messageToSend.destinationId);
-                //         break;
-                //     case ContactType.Teacher:
-                //         tokens = await tokenRepository.findGroupForTeacher(messageToSend.deviceFromId, messageToSend.destinationId, messageToSend.destinationType);
-                //         break; 
-                //     case ContactType.Director:
-                //         tokens = await tokenRepository.findGroupForDirector(messageToSend.deviceFromId, messageToSend.destinationId);
-                //         break; 
-                //     case ContactType.Staff:
-                //         break; 
-                // }
                 
                 for(let token of groupMembers.contacts) {
+                    messageToSend.destinationId = token.userToken.userId;
+                    messageToSend.destinationType = token.userToken.userType;
                     messageSended = await messageSender.sendMessageToDevice(messageToSend, token.userToken.firebaseToken);
                 }
             }

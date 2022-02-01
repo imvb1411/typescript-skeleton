@@ -4809,3 +4809,51 @@
 [32minfo[39m: {"userRestricted":"805","restrictionType":4,"userId":"D1","userType":7,"state":1}
 [32minfo[39m: {"userRestricted":"805","restrictionType":5,"userId":"D1","userType":7,"state":1}
 [32minfo[39m: {"userRestricted":"805","restrictionType":1,"userId":"D1","userType":7,"state":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Save {"userId":"805","firebaseToken":"eduj77ZpT6C9s8TkDLK_36:APA91bE7jcUu5yabezRKwOGx4xsguuYX0ki-9EuxdBbQct7VW3Y8SOykNy1Jy6q_2nQnl2PhD_kG80nMejDmTYg7X2Ta45MWPR-nuxcPI45ZeG_FhUahZu2c_gmyOPgDDt4P4e4_Fd-3","id":"11952ff5-4940-4fd1-806e-47224605634d","userType":1,"state":1,"createdAt":"2022-01-13T14:27:16.382Z"}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Save {"userId":"805","firebaseToken":"eduj77ZpT6C9s8TkDLK_36:APA91bE7jcUu5yabezRKwOGx4xsguuYX0ki-9EuxdBbQct7VW3Y8SOykNy1Jy6q_2nQnl2PhD_kG80nMejDmTYg7X2Ta45MWPR-nuxcPI45ZeG_FhUahZu2c_gmyOPgDDt4P4e4_Fd-4","id":"a78637f6-db2f-40c2-bf23-c90235d9d10d","userType":1,"state":1,"createdAt":"2022-01-13T14:29:15.838Z"}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Update 3
+[32minfo[39m: TokenCreator: Save {"userId":"805","firebaseToken":"eduj77ZpT6C9s8TkDLK_36:APA91bE7jcUu5yabezRKwOGx4xsguuYX0ki-9EuxdBbQct7VW3Y8SOykNy1Jy6q_2nQnl2PhD_kG80nMejDmTYg7X2Ta45MWPR-nuxcPI45ZeG_FhUahZu2c_gmyOPgDDt4P4e4_Fd-5","id":"88b117dd-b736-45d5-a3a5-7ed6c371738a","userType":1,"state":1,"createdAt":"2022-01-13T14:32:15.734Z"}
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Update 4
+[32minfo[39m: TokenCreator: Save {"userId":"805","firebaseToken":"eduj77ZpT6C9s8TkDLK_36:APA91bE7jcUu5yabezRKwOGx4xsguuYX0ki-9EuxdBbQct7VW3Y8SOykNy1Jy6q_2nQnl2PhD_kG80nMejDmTYg7X2Ta45MWPR-nuxcPI45ZeG_FhUahZu2c_gmyOPgDDt4P4e4_Fd-4","id":"84489762-edcb-4cab-8c28-f6c6c274cba7","userType":1,"state":1,"createdAt":"2022-01-13T14:33:01.616Z"}
+[32minfo[39m: TokenForCreate: Receive [object Object]
+[32minfo[39m: TokenCreator: Save {"userId":"806","firebaseToken":"eduj77ZpT6C9s8TkDLK_36:APA91bE7jcUu5yabezRKwOGx4xsguuYX0ki-9EuxdBbQct7VW3Y8SOykNy1Jy6q_2nQnl2PhD_kG80nMejDmTYg7X2Ta45MWPR-nuxcPI45ZeG_FhUahZu2c_gmyOPgDDt4P4e4_Fd-5","id":"65ef75f0-9d9e-4a24-83bd-a10d8ffcb279","userType":1,"state":1,"createdAt":"2022-01-13T14:33:22.100Z"}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"116","userType":1}
+[32minfo[39m: GetContacts: {"userId":"967","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"967","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"967","userType":1}
+[32minfo[39m: GetContacts: {"userId":"116","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"116","userType":1}

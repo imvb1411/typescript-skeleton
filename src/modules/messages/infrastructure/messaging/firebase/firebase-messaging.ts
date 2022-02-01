@@ -24,10 +24,6 @@ export default class FirebaseMessaging implements IMessaging {
 
     async sendMessageToDevice(messageEntity: MessageEntity, token: string, notificationBody: string): Promise<MessageEntity> {
         var payload = {
-            // notification : {
-            //     title : messageEntity.deviceFromId.toString(),
-            //     body : messageEntity.data
-            // },
             data               : {
                 id                 : messageEntity.id
                 ,messageType     : messageEntity.messageType.toString()
@@ -36,12 +32,12 @@ export default class FirebaseMessaging implements IMessaging {
                 ,destinationId     : messageEntity.destinationId.toString()
                 ,destinationType : messageEntity.destinationType.toString()
                 ,data              : messageEntity.data
-                ,forGroup          : messageEntity.forGroup.toString()
+                ,groupId          : messageEntity.groupId
+                ,groupType        : messageEntity.groupType.toString()
                 ,destinationState : messageEntity.destinationState.toString()
                 ,state            : messageEntity.state.toString()
                 ,createdAt         : moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss")
                 ,sentAt          : moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss")
-                //,receivedAt        : messageEntity.receivedAt == null?"": moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss")
                 ,notificationBody  : notificationBody == null?"" + messageEntity.data: notificationBody
                 ,multimedia        : messageEntity.messageType != MessageType.Text ? JSON.stringify(messageEntity.multimedia):""
             }              
