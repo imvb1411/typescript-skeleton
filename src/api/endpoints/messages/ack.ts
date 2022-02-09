@@ -4,7 +4,7 @@ import httpStatus from 'http-status';
 import container from './../../../dependency-injection';
 import MessageConfirmer from './../../../modules/messages/application/receive-message-confirmer';
 import MySqlMessageRepository from './../../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository';
-import { MySqlRepository } from './../../../shared/infrastructure/persistence/MySqlRepository';
+import { MySqlRepository } from '../../../shared/infrastructure/persistence/mysql/MySqlRepository';
 import { ConfirmMessageCommand } from './message.dto';
 import Logger from './../../../shared/domain/logger';
 

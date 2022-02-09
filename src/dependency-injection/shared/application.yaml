@@ -1,3 +1,7 @@
 services:
   shared.logger:
     class: ./../../shared/infrastructure/winston-logger
+  
+  shared.repository:
+    class: ./../../shared/infrastructure/persistence/mysql/MySqlRepository
+    method: 'connect'

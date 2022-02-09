@@ -1,15 +1,13 @@
 import { UserTokenWithName, UserType } from "../../../../user-tokens/domain/user-token-entity";
-import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
+import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
 import { ContactEntity, ContactType } from "../../../domain/contact-entity";
 import { IContactRepository } from "../../../domain/contact-repository";
 import * as fs from 'fs';
+import container from "./../../../../../dependency-injection";
 
-export class MySqlContactRepository extends MySqlRepository implements IContactRepository {
+export class MySqlContactRepository implements IContactRepository {
 
-    constructor(private repository: IRepository) {
-        super();
-    }
+    constructor(private repository: IRepository) { }
 
     async findByUser(userId: string, userType: number): Promise<Array<ContactEntity>> {
         let contacts: Array<ContactEntity> = new Array<ContactEntity>();

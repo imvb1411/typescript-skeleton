@@ -1,14 +1,12 @@
-import { IUserRestrictionRepository } from "./../../../domain/user-restriction-repository";
-import { MySqlRepository } from "./../../../../../shared/infrastructure/persistence/MySqlRepository";
-import IRepository from "./../../../../../shared/infrastructure/persistence/IRepository";
-import { UserRestrictionEntity } from "./../../../domain/user-restriction-entity";
+import { IUserRestrictionRepository } from "../../../domain/user-restriction-repository";
+import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/mysql/MySqlRepository";
+import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
+import { UserRestrictionEntity } from "../../../domain/user-restriction-entity";
 import moment from "moment";
 
-export class MySqlUserRestrictionRepository extends MySqlRepository implements IUserRestrictionRepository {
+export class MySqlUserRestrictionRepository implements IUserRestrictionRepository {
         
-    constructor(private repository: IRepository) {
-        super();
-    }
+    constructor(private repository: IRepository) { }
 
     async save(userRestrictionEntity: UserRestrictionEntity): Promise<number> {
         var sql = "insert into UserRestrictions values('" + userRestrictionEntity.id + "'," 

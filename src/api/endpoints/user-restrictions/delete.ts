@@ -2,10 +2,10 @@ import { BaseEndpoint } from "../base.endpoint";
 import { Request, Response } from "express";
 import container from "./../../../dependency-injection";
 import httpStatus from "http-status";
-import { MySqlRepository } from "./../../../shared/infrastructure/persistence/MySqlRepository";
+import { MySqlRepository } from "../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import { DeleteUserRestrictionCommand, DeleteUserRestrictionResult } from "./user-restriction.dto";
 import { UserRestrictionEliminator } from "./../../../modules/user-restrictions/application/user-restriction-eliminator";
-import { MySqlUserRestrictionRepository } from "./../../../modules/user-restrictions/infrastructure/persistence/mysql/mysql-user-restriction-repository";
+import { MySqlUserRestrictionRepository } from "../../../modules/user-restrictions/infrastructure/persistence/mysql/MySqlUserRestrictionRepository";
 
 export default class DeleteUserRestriction implements BaseEndpoint {
 

@@ -1,13 +1,14 @@
-import { ContactListResult, GetContactsCommand, GetGroupMembersCommand, GroupMemberRestrictionResult, GroupMembersListResult } from "./../../../api/endpoints/contacts/contact.dto";
-import { IContactRepository } from "./../domain/contact-repository";
-import Logger from "./../../../shared/domain/logger";
-import { UserTokenWithName } from "./../../user-tokens/domain/user-token-entity";
+import { ContactListResult, GetContactsCommand, GetGroupMembersCommand, GroupMemberRestrictionResult, GroupMembersListResult } from "../../../api/endpoints/contacts/contact.dto";
+import { IContactRepository } from "../domain/contact-repository";
+import Logger from "../../../shared/domain/logger";
+import { UserTokenWithName } from "../../user-tokens/domain/user-token-entity";
 import { ContactType } from "../domain/contact-entity";
-import { IUserRestrictionRepository } from "./../../user-restrictions/domain/user-restriction-repository";
-import { UserRestrictionEntity } from "modules/user-restrictions/domain/user-restriction-entity";
-import { CreateUserRestrictionResult } from "api/endpoints/user-restrictions/user-restriction.dto";
+import { IUserRestrictionRepository } from "../../user-restrictions/domain/user-restriction-repository";
+import { UserRestrictionEntity } from "./../../user-restrictions/domain/user-restriction-entity";
+import { CreateUserRestrictionResult } from "./../../../api/endpoints/user-restrictions/user-restriction.dto";
 import moment from "moment";
-import { CreateTokenResult, CreateTokenWithNameResult } from "api/endpoints/user-token/token.dto";
+import { CreateTokenWithNameResult } from "./../../../api/endpoints/user-token/token.dto";
+import container from "./../../../dependency-injection";
 
 export class ContactFinder {
 

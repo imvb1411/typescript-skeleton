@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 import { BaseEndpoint } from "../base.endpoint";
-import { MySqlRepository } from './../../../shared/infrastructure/persistence/MySqlRepository';
+import { MySqlRepository } from '../../../shared/infrastructure/persistence/mysql/MySqlRepository';
 import MessageSender from './../../../modules/messages/application/sender';
 import FirebaseMessaging from './../../../modules/messages/infrastructure/messaging/firebase/firebase-messaging';
 import MySqlMessageRepository from './../../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository';
@@ -10,9 +10,9 @@ import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
 import container from './../../../dependency-injection';
 import { UserRestrictionValidator } from './../../../modules/user-restrictions/application/user-restriction-validator';
-import { MySqlUserRestrictionRepository } from './../../../modules/user-restrictions/infrastructure/persistence/mysql/mysql-user-restriction-repository';
-import { ContactFinder } from './../../../modules/contacts/application/contact-finder';
-import { MySqlContactRepository } from './../../../modules/contacts/infrastructure/persistence/mysql/mysql-contact-repository';
+import { MySqlUserRestrictionRepository } from '../../../modules/user-restrictions/infrastructure/persistence/mysql/MySqlUserRestrictionRepository';
+import { ContactFinder } from '../../../modules/contacts/application/ContactFinder';
+import { MySqlContactRepository } from '../../../modules/contacts/infrastructure/persistence/mysql/MySqlContactRepository';
 import { GetGroupMembersCommand, GroupMembersListResult } from '../contacts/contact.dto';
 
 export default class SendMessage implements BaseEndpoint {

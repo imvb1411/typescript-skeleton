@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
 import container from "../../../dependency-injection";
-import { ContactFinder } from "../../../modules/contacts/application/contact-finder";
+import { ContactFinder } from "../../../modules/contacts/application/ContactFinder";
 import { BaseEndpoint } from "../base.endpoint";
-import { MySqlRepository } from "../../../shared/infrastructure/persistence/MySqlRepository";
-import { MySqlContactRepository } from "../../../modules/contacts/infrastructure/persistence/mysql/mysql-contact-repository";
+import { MySqlRepository } from "../../../shared/infrastructure/persistence/mysql/MySqlRepository";
+import { MySqlContactRepository } from "../../../modules/contacts/infrastructure/persistence/mysql/MySqlContactRepository";
 import httpStatus from "http-status";
 import { GetGroupMembersCommand, GroupMembersListResult } from "./contact.dto";
-import { MySqlUserRestrictionRepository } from "./../../../modules/user-restrictions/infrastructure/persistence/mysql/mysql-user-restriction-repository";
+import { MySqlUserRestrictionRepository } from "../../../modules/user-restrictions/infrastructure/persistence/mysql/MySqlUserRestrictionRepository";
 
 export default class GetGroupMembers implements BaseEndpoint {
 

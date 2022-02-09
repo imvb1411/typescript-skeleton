@@ -4,7 +4,7 @@ import { Request, Response } from "express";
 import httpStatus from "http-status";
 import { TokenCreator } from "../../../modules/user-tokens/application/creator";
 import { MySqlTokenRepository } from "../../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository";
-import { MySqlRepository } from "./../../../shared/infrastructure/persistence/MySqlRepository";
+import { MySqlRepository } from "../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import { CreateTokenCommand, CreateTokenResult } from "./token.dto";
 
 export default class CreateToken implements BaseEndpoint {

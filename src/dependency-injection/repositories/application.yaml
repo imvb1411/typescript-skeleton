@@ -1,0 +1,8 @@
+services:
+  repository.contact:
+    class: ./../../modules/contacts/infrastructure/persistence/mysql/MySqlContactRepository
+    arguments: ['@shared.repository']
+
+  repository.user-restriction:
+    class: ./../../modules/user-restrictions/infrastructure/persistence/mysql/MySqlUserRestrictionRepository
+    arguments: ['@shared.repository']

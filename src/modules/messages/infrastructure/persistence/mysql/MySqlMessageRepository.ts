@@ -1,7 +1,7 @@
 import IMessageRepository from "../../../domain/message-repository";
 import moment from "moment";
-import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
+import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
+import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import { MessageEntity, MessageType } from "../../../domain/message-entity";
 import * as fs from 'fs';
 

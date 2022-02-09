@@ -1,4 +1,4 @@
-export default interface IRepository {
+export interface IRepository {
     executeSelect(sqlStatement: string): Promise<any>;
     executeSelectWithParams(sqlStatement: string, args: string[]): Promise<any>;
     executeSqlStatement(sqlStatement: string): Promise<any>;

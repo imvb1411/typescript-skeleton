@@ -1,0 +1,4 @@
+services:
+  app.contact.finder:
+    class: ./../../modules/contacts/application/ContactFinder
+    arguments: ['@repository.contact', '@repository.user-restriction', '@shared.logger']

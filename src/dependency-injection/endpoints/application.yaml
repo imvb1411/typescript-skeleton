@@ -3,8 +3,9 @@ services:
     class: ./../../api/endpoints/user-token/create
 
   endpoints.contacts.get:
-    class: ./../../api/endpoints/contacts/get
-
+    class: ./../../api/endpoints/contacts/GetContacts
+    arguments: ['@app.contact.finder']
+    
   endpoints.contacts.get-group-members:
     class: ./../../api/endpoints/contacts/get-group-members
     

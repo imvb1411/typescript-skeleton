@@ -1,5 +1,5 @@
-import { SendMessageCommand, SendMessageResult } from "api/endpoints/messages/message.dto";
-import { MessageEntity } from "modules/messages/domain/message-entity";
+import { SendMessageCommand, SendMessageResult } from "./../../api/endpoints/messages/message.dto";
+import { MessageEntity } from "./../../modules/messages/domain/message-entity";
 import moment from "moment";
 import { TypeMapper } from "ts-mapper";
 

@@ -1,8 +1,8 @@
 import { UserTokenEntity, UserTokenWithName } from "../../../domain/user-token-entity";
 import { ITokenRepository } from "../../../domain/user-token-repository";
 import moment from "moment";
-import IRepository from "../../../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/MySqlRepository";
+import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
+import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import * as fs from 'fs';
 import { ContactType } from "./../../../../../modules/contacts/domain/contact-entity";
 
