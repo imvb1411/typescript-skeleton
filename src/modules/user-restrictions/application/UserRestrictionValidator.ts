@@ -1,8 +1,8 @@
-import { IUserRestrictionRepository } from "./../domain/user-restriction-repository";
+import { IUserRestrictionRepository } from "../domain/user-restriction-repository";
 import Logger from "../../../shared/domain/logger";
-import { RestrictionType, UserRestrictionEntity } from "./../domain/user-restriction-entity";
-import { MessageType } from "./../../messages/domain/message-entity";
-import { UserType } from "./../../user-tokens/domain/user-token-entity";
+import { RestrictionType, UserRestrictionEntity } from "../domain/user-restriction-entity";
+import { MessageType } from "../../messages/domain/message-entity";
+import { UserType } from "../../user-tokens/domain/user-token-entity";
 
 export class UserRestrictionValidator {
 

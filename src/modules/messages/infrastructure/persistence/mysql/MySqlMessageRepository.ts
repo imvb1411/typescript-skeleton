@@ -1,7 +1,6 @@
 import IMessageRepository from "../../../domain/message-repository";
 import moment from "moment";
 import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
-import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import { MessageEntity, MessageType } from "../../../domain/message-entity";
 import * as fs from 'fs';
 
@@ -24,11 +23,9 @@ export default class MySqlMessageRepository implements IMessageRepository{
                                                     + moment(messageEntity.createdAt).format("yyyy-MM-DD HH:mm:ss") + "','" 
                                                     + moment(messageEntity.sentAt).format("yyyy-MM-DD HH:mm:ss") + "'," 
                                                     + (messageEntity.receivedAt == null?null: "'" + moment(messageEntity.receivedAt).format("yyyy-MM-DD HH:mm:ss") + "'") + ");"
-        console.log(sql);
         const query = await this.repository.executeInsert(sql);
         if (messageEntity.messageType != MessageType.Text) {
             sql = "insert into multimedia values('" + messageEntity.multimedia.id + "', '" + messageEntity.multimedia.messageId + "','" + messageEntity.multimedia.firebaseUri + "');"
-            console.log(sql);
             await this.repository.executeInsert(sql);
         }
         return query;
@@ -36,7 +33,6 @@ export default class MySqlMessageRepository implements IMessageRepository{
 
     async updateDestinationState(destinationState: number, receivedAt: Date, id: string): Promise<number> {
         var sql = "update messages set destinationState = " + destinationState + ", receivedAt = '" + moment(receivedAt).format("yyyy-MM-DD HH:mm:ss") + "' where id = '" + id + "';"
-        console.log(sql);
         const query = await this.repository.executeInsert(sql);
         return query;
     }

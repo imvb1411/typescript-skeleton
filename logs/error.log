@@ -55,3 +55,4 @@
 [31merror[39m: MessageSenderError: Error: Duplicate entry '' for key 'PRIMARY'
 [31merror[39m: MessageSender: error->Error: Messaging payload contains an invalid value for the "data.multimedia" property. Values must be strings.
 [31merror[39m: MessageSenderError: Error: Duplicate entry 'b64b56b6-2c4a-4e7a-b4e1-2076d82635b381' for key 'PRIMARY'
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1

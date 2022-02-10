@@ -5083,3 +5083,89 @@
 [32minfo[39m:   Press CTRL-C to stop
 
 [32minfo[39m: {"userRestricted":"","restrictionType":"","userId":"","userType":"","state":1,"id":"46de3202-c4ad-4281-bf64-cfc3b0f8e5c0","updatedAt":"2022-02-10T00:53:33.082Z"}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: GetGroupMembers: {"deviceFromId":"1148","deviceFromType":1,"destinationId":"123","destinationType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: GetGroupMembers: {"deviceFromId":"1148","deviceFromType":1,"destinationId":"123","destinationType":1}
+[32minfo[39m: Found 0 restrictions
+[31merror[39m: MessageSenderError: Error: Column count doesn't match value count at row 1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"7ab27c04-8a28-45e7-828a-f7688a25af71","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:15:45.245Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"7ab27c04-8a28-45e7-828a-f7688a25af71","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:15:45.245Z","state":1,"destinationState":1} ,token: f1
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"43d15083-4463-497b-824f-b8add3d36baf","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:16:26.484Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"43d15083-4463-497b-824f-b8add3d36baf","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:16:26.484Z","state":1,"destinationState":1} ,token: f1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"543c053c-73a3-4247-9100-cfdce72e3492","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:19:11.159Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"543c053c-73a3-4247-9100-cfdce72e3492","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:19:11.159Z","state":1,"destinationState":1} ,token: f1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"3a3f29e5-ac16-4a1e-aaf4-3c48c7013f48","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:20:53.561Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"3a3f29e5-ac16-4a1e-aaf4-3c48c7013f48","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:20:53.561Z","state":1,"destinationState":1} ,token: f1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"958b14ce-38de-42f8-9e0d-c01d949d98f3","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:23:28.545Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"1471","destinationId":"123","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"958b14ce-38de-42f8-9e0d-c01d949d98f3","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:23:28.545Z","state":1,"destinationState":1} ,token: f1
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"120","userType":1}
+[32minfo[39m: GetContacts: {"userId":"120","userType":1}
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: TokenForCreate: Receive {"userId":"120","userType":1,"firebaseToken":"cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ"}
+[32minfo[39m: TokenCreator: Save {"userId":"120","firebaseToken":"cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ","id":"5a04c35d-1488-41b7-8be2-7b31a2098521","userType":1,"state":1,"createdAt":"2022-02-10T01:34:37.321Z"}
+[32minfo[39m: GetContacts: {"userId":"120","userType":1}
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"0a9a6531-043e-4cb8-9cdc-102f104b922a","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:35:06.536Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola26","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"0a9a6531-043e-4cb8-9cdc-102f104b922a","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:35:06.536Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola2","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"f387e5b6-a1b2-4c80-ab39-8de4b00fce71","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:37:05.108Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola2","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"f387e5b6-a1b2-4c80-ab39-8de4b00fce71","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:37:05.108Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola3","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"7eb954c7-e19b-4cc2-a32f-14befefc9d9f","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:37:53.721Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola3","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"7eb954c7-e19b-4cc2-a32f-14befefc9d9f","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:37:53.721Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola4","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"08ec47ee-f12a-437b-907a-2ddfb5ca5cfa","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:04.353Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola4","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"08ec47ee-f12a-437b-907a-2ddfb5ca5cfa","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:04.353Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola5","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"9373ceda-22d0-486d-a8d9-e813c363fc5a","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:07.197Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola5","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"9373ceda-22d0-486d-a8d9-e813c363fc5a","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:07.197Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola6","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"70f3da93-c68a-4f24-a768-903c2a6260f2","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:16.646Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola6","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"70f3da93-c68a-4f24-a768-903c2a6260f2","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:16.646Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"70f3da93-c68a-4f24-a768-903c2a6260f2","destinationState":2,"receivedAt":"2022-02-09 21:38:20"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"0a9a6531-043e-4cb8-9cdc-102f104b922a","destinationState":3,"receivedAt":"2022-02-09 21:35:10"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"f387e5b6-a1b2-4c80-ab39-8de4b00fce71","destinationState":3,"receivedAt":"2022-02-09 21:37:09"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"7eb954c7-e19b-4cc2-a32f-14befefc9d9f","destinationState":3,"receivedAt":"2022-02-09 21:37:58"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"08ec47ee-f12a-437b-907a-2ddfb5ca5cfa","destinationState":3,"receivedAt":"2022-02-09 21:38:07"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"9373ceda-22d0-486d-a8d9-e813c363fc5a","destinationState":3,"receivedAt":"2022-02-09 21:38:10"}
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"70f3da93-c68a-4f24-a768-903c2a6260f2","destinationState":3,"receivedAt":"2022-02-09 21:38:20"}
+[32minfo[39m: Found 0 restrictions
+[32minfo[39m: MessageSender: rowsInserted1 ,messageInserted -> {"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola7","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"4b3d08ab-eb36-4685-8e55-bd798dffb045","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:42.384Z","state":1,"destinationState":1}
+[32minfo[39m: MessageSender: sendMessage->{"messageType":1,"deviceFromId":"116","destinationId":"120","data":"Hola7","groupId":"","createdAt":"2022-01-31T23:03:10.000Z","id":"4b3d08ab-eb36-4685-8e55-bd798dffb045","deviceFromType":1,"groupType":0,"destinationType":1,"sentAt":"2022-02-10T01:38:42.384Z","state":1,"destinationState":1} ,token: cd1aYAwJRnulAIXJKvJa77:APA91bGnLSF4T_D-sRNbaQuK9Ugr4yO7zdWEtzpbTh9knsLXxDkTnvL2DEl56kqfn1RiwFaCkvD5LyZabvlfhcVZ4ti5oRX6eBWlRe_y_DY42K3EmHnsKnN0FNE_7O6Ix8tNPGzrXbyZ
+[32minfo[39m: MessageConfirmer: ConfirmMessageCommand->{"id":"4b3d08ab-eb36-4685-8e55-bd798dffb045","destinationState":2,"receivedAt":"2022-02-09 21:38:46"}

@@ -12,8 +12,9 @@ services:
     arguments: ['@app.contact.finder']
 
   endpoints.messages.send:
-    class: ./../../api/endpoints/messages/send
-      
+    class: ./../../api/endpoints/messages/SendMessage
+    arguments: ['@app.message.sender', '@app.user-restriction.validator', '@app.contact.finder', '@repository.user-token']
+
   endpoints.messages.ack:
     class: ./../../api/endpoints/messages/ack
 

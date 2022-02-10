@@ -53,7 +53,6 @@ export class MySqlUserRestrictionRepository implements IUserRestrictionRepositor
         let restrictions: Array<UserRestrictionEntity> = new Array<UserRestrictionEntity>();
         let sql = "select id, userRestricted, restrictionType, userId, userType, state, createdAt, updatedAt from UserRestrictions where state = 1 and " +
             "userRestricted = '" + userId + "' and userId = '" + destinationId + "' and userType = " + destinationType + ";";
-        console.log(sql);
         let query = await this.repository.executeSelect(sql);
         if (query != null) {
             query.map(function(item) {

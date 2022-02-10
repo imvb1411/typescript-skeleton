@@ -15,3 +15,17 @@ services:
     class: ./../../modules/user-restrictions/application/UserRestrictionEliminator
     arguments: ['@repository.user-restriction', '@shared.logger']
     
+  app.user-restriction.validator:
+    class: ./../../modules/user-restrictions/application/UserRestrictionValidator
+    arguments: ['@repository.user-restriction', '@shared.logger']
+
+  app.message.messaging:
+    factory:
+      class: ./../../modules/messages/infrastructure/messaging/firebase/FirebaseMessaging
+      method: 'connect'
+
+  app.message.sender:
+    class: ./../../modules/messages/application/MessageSender
+    arguments: ['@app.message.messaging', '@repository.message', '@shared.logger']
+
+  

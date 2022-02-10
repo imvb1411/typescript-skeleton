@@ -1,5 +1,5 @@
-import { MessageEntity, MessageType } from "./../../../domain/message-entity";
-import IMessaging from "./../../../../../shared/infrastructure/messaging/IMessaging";
+import { MessageEntity, MessageType } from "../../../domain/message-entity";
+import IMessaging from "../../../../../shared/infrastructure/messaging/IMessaging";
 import admin from 'firebase-admin';
 import { ServiceAccount } from "./service-account";
 import moment from "moment";
@@ -42,7 +42,6 @@ export default class FirebaseMessaging implements IMessaging {
                 ,multimedia        : messageEntity.messageType != MessageType.Text ? JSON.stringify(messageEntity.multimedia):""
             }              
         };
-        console.log(payload);
         var options = {
             priority: "high"
         };
@@ -50,7 +49,6 @@ export default class FirebaseMessaging implements IMessaging {
         const result = await admin
                         .messaging()
                         .sendToDevice(token, payload, options);
-        console.log(result.results[0].error);
         return messageEntity;
     }
 

@@ -1,19 +1,16 @@
-import { UserTokenEntity } from '../../user-tokens/domain/user-token-entity';
-import Logger from "./../../../shared/domain/logger";
-import { Uuid } from "./../../../shared/domain/value-object/Uuid";
-import IMessaging from "./../../../shared/infrastructure/messaging/IMessaging";
-import { MessageDestinationState, MessageEntity, MessageState, MessageType } from "./../domain/message-entity";
-import IMessageRepository from "./../domain/message-repository";
-import { SendMessageCommand, SendMessageResult } from './../../../api/endpoints/messages/message.dto';
-import { MessageProfile } from './../../../api/mappers/message-profile';
+import Logger from "../../../shared/domain/logger";
+import { Uuid } from "../../../shared/domain/value-object/Uuid";
+import IMessaging from "../../../shared/infrastructure/messaging/IMessaging";
+import { MessageDestinationState, MessageEntity, MessageState, MessageType } from "../domain/message-entity";
+import IMessageRepository from "../domain/message-repository";
+import { SendMessageCommand, SendMessageResult } from '../../../api/endpoints/messages/message.dto';
+import { MessageProfile } from '../../../api/mappers/message-profile';
 import moment from 'moment';
 import { MultimediaEntity } from '../domain/multimedia-entity';
-import { GroupMemberRestrictionResult } from './../../../api/endpoints/contacts/contact.dto';
 
 export default class MessageSender {
 
     private mapper: MessageProfile;
-
      constructor(private messaging: IMessaging, private messageRepository: IMessageRepository, private logger: Logger) {
         this.mapper = new MessageProfile();
      }

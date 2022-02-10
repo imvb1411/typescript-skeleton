@@ -10,3 +10,7 @@ services:
   repository.user-token:
     class: ./../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository
     arguments: ['@shared.repository']
+
+  repository.message:
+    class: ./../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository
+    arguments: ['@shared.repository']
