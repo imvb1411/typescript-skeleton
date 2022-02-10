@@ -1,10 +1,10 @@
 import { MessageEntity, MessageType } from "../../../domain/message-entity";
-import IMessaging from "../../../../../shared/infrastructure/messaging/IMessaging";
+import { IMessaging } from "../../../../../shared/infrastructure/messaging/IMessaging";
 import admin from 'firebase-admin';
 import { ServiceAccount } from "./service-account";
 import moment from "moment";
 
-export default class FirebaseMessaging implements IMessaging {
+export class FirebaseMessaging implements IMessaging {
 
     static instance: FirebaseMessaging;
 

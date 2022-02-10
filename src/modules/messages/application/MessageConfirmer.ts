@@ -1,6 +1,6 @@
 import { ConfirmMessageCommand } from "../../../api/endpoints/messages/message.dto";
 import Logger from "../../../shared/domain/logger";
-import MySqlMessageRepository from "../infrastructure/persistence/mysql/MySqlMessageRepository";
+import { MySqlMessageRepository } from "../infrastructure/persistence/mysql/MySqlMessageRepository";
 
 export class MessageConfirmer {
     constructor(private messageRepository: MySqlMessageRepository, private logger: Logger) {}

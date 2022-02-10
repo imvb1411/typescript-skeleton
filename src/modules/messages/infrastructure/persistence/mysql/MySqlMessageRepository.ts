@@ -1,10 +1,10 @@
-import IMessageRepository from "../../../domain/message-repository";
+import { IMessageRepository } from "../../../domain/message-repository";
 import moment from "moment";
 import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
 import { MessageEntity, MessageType } from "../../../domain/message-entity";
 import * as fs from 'fs';
 
-export default class MySqlMessageRepository implements IMessageRepository{
+export class MySqlMessageRepository implements IMessageRepository{
 
     constructor(private repository: IRepository) { }
     

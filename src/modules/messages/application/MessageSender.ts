@@ -1,14 +1,14 @@
 import Logger from "../../../shared/domain/logger";
 import { Uuid } from "../../../shared/domain/value-object/Uuid";
-import IMessaging from "../../../shared/infrastructure/messaging/IMessaging";
+import { IMessaging } from "../../../shared/infrastructure/messaging/IMessaging";
 import { MessageDestinationState, MessageEntity, MessageState, MessageType } from "../domain/message-entity";
-import IMessageRepository from "../domain/message-repository";
+import { IMessageRepository } from "../domain/message-repository";
 import { SendMessageCommand, SendMessageResult } from '../../../api/endpoints/messages/message.dto';
 import { MessageProfile } from '../../../api/mappers/message-profile';
 import moment from 'moment';
 import { MultimediaEntity } from '../domain/multimedia-entity';
 
-export default class MessageSender {
+export class MessageSender {
 
     private mapper: MessageProfile;
      constructor(private messaging: IMessaging, private messageRepository: IMessageRepository, private logger: Logger) {
