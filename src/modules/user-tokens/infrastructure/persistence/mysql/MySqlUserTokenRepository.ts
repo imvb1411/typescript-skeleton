@@ -6,16 +6,12 @@ import { MySqlRepository } from "../../../../../shared/infrastructure/persistenc
 import * as fs from 'fs';
 import { ContactType } from "./../../../../../modules/contacts/domain/contact-entity";
 
-export class MySqlTokenRepository extends MySqlRepository implements ITokenRepository {
-        
-    private readonly tableName: string = "UserToken";
+export class MySqlUserTokenRepository implements ITokenRepository {
     
-    constructor(private repository: IRepository) {
-        super();
-    }
+    constructor(private repository: IRepository) { }
 
     async save(token: UserTokenEntity): Promise<number> {
-        var sql = "insert into " + this.tableName + " (Id, UserId, UserType, FirebaseToken, State, CreatedAt) values ("
+        var sql = "insert into UserToken (Id, UserId, UserType, FirebaseToken, State, CreatedAt) values ("
                                         + "default,'" 
                                         + token.userId + "','" 
                                         + token.userType + "','"
@@ -27,7 +23,7 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
     }
 
     async update(token: UserTokenEntity): Promise<number> {
-        var sql = "update " + this.tableName + " set state = " 
+        var sql = "update UserToken set state = " 
                 + token.state 
                 + ", updatedAt = '" 
                 + moment(token.updatedAt).format("yyyy-MM-DD HH:mm:ss") 
@@ -39,7 +35,7 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
     async findUserTokenByUserIdAndType(userId: string, userType: number): Promise<UserTokenEntity> {
         let tokenEntity: UserTokenEntity = null;
         let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt" + 
-                    " from " + this.tableName + " where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
+                    " from UserToken where state = 1 and userId = '" + userId + "' and userType = "+ userType + ";";
         const query = await this.repository.executeSqlStatement(sql);
 
         if(query != null) {
@@ -50,7 +46,7 @@ export class MySqlTokenRepository extends MySqlRepository implements ITokenRepos
 
     async findUserTokenByToken(token: string): Promise<UserTokenEntity> {
         let tokenEntity: UserTokenEntity = null;
-        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from " + this.tableName + " where state = 1 and firebaseToken = '" + token + "';";
+        let sql = "select id, userId, userType, firebaseToken, state, date_format(createdAt, '%Y-%m-%d %T') as createdAt, updatedAt from UserToken where state = 1 and firebaseToken = '" + token + "';";
         const query = await this.repository.executeSqlStatement(sql);
         if(query != null) {
             tokenEntity = Object.assign(new UserTokenEntity,JSON.parse(JSON.stringify(query)));

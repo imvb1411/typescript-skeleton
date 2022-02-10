@@ -3,7 +3,7 @@ import { UserTokenEntity } from "../domain/user-token-entity";
 import { ITokenRepository } from "../domain/user-token-repository";
 import { TokenProfile } from "../../../api/mappers/token-profile";
 import Logger from "../../../shared/domain/logger";
-import { CreateTokenCommand, CreateTokenResult } from "./../../../api/endpoints/user-token/token.dto";
+import { CreateTokenCommand, CreateTokenResult } from "../../../api/endpoints/user-token/token.dto";
 
 export class TokenCreator {
 
@@ -15,7 +15,7 @@ export class TokenCreator {
     
     async create(tokenForCreate: CreateTokenCommand): Promise<CreateTokenResult> {
         let currentDate: Date = new Date();
-        this.logger.info("TokenForCreate: Receive " + tokenForCreate);
+        this.logger.info("TokenForCreate: Receive " + JSON.stringify(tokenForCreate));
         let tokenFound: UserTokenEntity = await this.repository.findUserTokenByUserIdAndType(tokenForCreate.userId, tokenForCreate.userType);
         let createTokenResult: CreateTokenResult = { id: null, userId: null, userType: null, firebaseToken: null };
 

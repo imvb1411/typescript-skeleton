@@ -8,7 +8,6 @@ import { UserRestrictionEntity } from "./../../user-restrictions/domain/user-res
 import { CreateUserRestrictionResult } from "./../../../api/endpoints/user-restrictions/user-restriction.dto";
 import moment from "moment";
 import { CreateTokenWithNameResult } from "./../../../api/endpoints/user-token/token.dto";
-import container from "./../../../dependency-injection";
 
 export class ContactFinder {
 

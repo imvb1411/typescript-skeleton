@@ -5,11 +5,9 @@ import { MySqlRepository } from "../../../../../shared/infrastructure/persistenc
 import { MessageEntity, MessageType } from "../../../domain/message-entity";
 import * as fs from 'fs';
 
-export default class MySqlMessageRepository extends MySqlRepository implements IMessageRepository{
+export default class MySqlMessageRepository implements IMessageRepository{
 
-    constructor(private repository: IRepository) {
-        super();
-    }
+    constructor(private repository: IRepository) { }
     
     async save(messageEntity: MessageEntity): Promise<number> {
         var sql = "insert into messages values('" + messageEntity.id + "'," 

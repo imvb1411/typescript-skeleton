@@ -2,3 +2,7 @@ services:
   app.contact.finder:
     class: ./../../modules/contacts/application/ContactFinder
     arguments: ['@repository.contact', '@repository.user-restriction', '@shared.logger']
+
+  app.token.creator:
+    class: ./../../modules/user-tokens/application/TokenCreator
+    arguments: ['@repository.user-token', '@shared.logger']

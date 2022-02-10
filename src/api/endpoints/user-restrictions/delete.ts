@@ -12,7 +12,7 @@ export default class DeleteUserRestriction implements BaseEndpoint {
     async run(_req: Request, res: Response): Promise<void> {
         try {
             let createRestrictionCommand: DeleteUserRestrictionCommand = _req.body.restriction as DeleteUserRestrictionCommand;
-            const userRestrictionEliminator = new UserRestrictionEliminator(new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
+            const userRestrictionEliminator = new UserRestrictionEliminator(new MySqlUserRestrictionRepository(new MySqlRepository(null)), container.get('shared.logger'));
             
             let result: DeleteUserRestrictionResult = await userRestrictionEliminator.delete(createRestrictionCommand);
             res.header('Access-Control-Allow-Origin', '*');

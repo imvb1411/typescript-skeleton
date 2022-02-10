@@ -2,6 +2,12 @@ services:
   shared.logger:
     class: ./../../shared/infrastructure/winston-logger
   
+  shared.repository.connection:
+    factory:
+      class: ./../../shared/infrastructure/persistence/mysql/MySqlConnectionFactory
+      method: 'createConnection'
+    arguments: ['backend-agenda']
+
   shared.repository:
     class: ./../../shared/infrastructure/persistence/mysql/MySqlRepository
-    method: 'connect'
+    arguments: ['@shared.repository.connection']

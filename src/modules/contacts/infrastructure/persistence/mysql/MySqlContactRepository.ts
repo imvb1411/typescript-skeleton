@@ -3,7 +3,6 @@ import { IRepository } from "../../../../../shared/infrastructure/persistence/IR
 import { ContactEntity, ContactType } from "../../../domain/contact-entity";
 import { IContactRepository } from "../../../domain/contact-repository";
 import * as fs from 'fs';
-import container from "./../../../../../dependency-injection";
 
 export class MySqlContactRepository implements IContactRepository {
 

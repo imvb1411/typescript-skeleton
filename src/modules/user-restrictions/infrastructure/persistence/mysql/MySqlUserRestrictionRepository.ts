@@ -1,5 +1,4 @@
 import { IUserRestrictionRepository } from "../../../domain/user-restriction-repository";
-import { MySqlRepository } from "../../../../../shared/infrastructure/persistence/mysql/MySqlRepository";
 import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
 import { UserRestrictionEntity } from "../../../domain/user-restriction-entity";
 import moment from "moment";

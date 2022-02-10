@@ -13,7 +13,7 @@ export default class MessageACK implements BaseEndpoint {
     async run(_req: Request, res: Response): Promise<void>  {
         try { 
             const message: ConfirmMessageCommand = _req.body.message as ConfirmMessageCommand;
-            const messageConfirmer: MessageConfirmer = new MessageConfirmer(new MySqlMessageRepository(new MySqlRepository()), container.get('shared.logger'));
+            const messageConfirmer: MessageConfirmer = new MessageConfirmer(new MySqlMessageRepository(new MySqlRepository(null)), container.get('shared.logger'));
             await messageConfirmer.confirmReceivedMessage(message);//TODO
             res.header('Access-Control-Allow-Origin', '*');
             res.status(httpStatus.OK).json(message);

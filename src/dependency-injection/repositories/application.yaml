@@ -6,3 +6,7 @@ services:
   repository.user-restriction:
     class: ./../../modules/user-restrictions/infrastructure/persistence/mysql/MySqlUserRestrictionRepository
     arguments: ['@shared.repository']
+
+  repository.user-token:
+    class: ./../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository
+    arguments: ['@shared.repository']

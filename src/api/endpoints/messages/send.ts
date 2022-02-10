@@ -4,7 +4,7 @@ import { MySqlRepository } from '../../../shared/infrastructure/persistence/mysq
 import MessageSender from './../../../modules/messages/application/sender';
 import FirebaseMessaging from './../../../modules/messages/infrastructure/messaging/firebase/firebase-messaging';
 import MySqlMessageRepository from './../../../modules/messages/infrastructure/persistence/mysql/MySqlMessageRepository';
-import { MySqlTokenRepository } from '../../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository';
+import { MySqlUserTokenRepository } from '../../../modules/user-tokens/infrastructure/persistence/mysql/MySqlUserTokenRepository';
 import { UserTokenEntity, UserTokenWithName } from '../../../modules/user-tokens/domain/user-token-entity';
 import httpStatus from 'http-status';
 import { SendMessageCommand, SendMessageResult } from './message.dto';
@@ -20,12 +20,12 @@ export default class SendMessage implements BaseEndpoint {
     async run(_req: Request, res: Response): Promise<void>  {
 
         try {
-            let tokenRepository = new MySqlTokenRepository(new MySqlRepository());
+            let tokenRepository = new MySqlUserTokenRepository(new MySqlRepository(null));
             
             var messageToSend: SendMessageCommand = _req.body.message as SendMessageCommand;
-            var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository()), container.get('shared.logger'));
-            var restrictionsValidator = new UserRestrictionValidator(new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
-            var contactFinder = new ContactFinder(new MySqlContactRepository(new MySqlRepository()), new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
+            var messageSender = new MessageSender(FirebaseMessaging.connect(), new MySqlMessageRepository(new MySqlRepository(null)), container.get('shared.logger'));
+            var restrictionsValidator = new UserRestrictionValidator(new MySqlUserRestrictionRepository(new MySqlRepository(null)), container.get('shared.logger'));
+            var contactFinder = new ContactFinder(new MySqlContactRepository(new MySqlRepository(null)), new MySqlUserRestrictionRepository(new MySqlRepository(null)), container.get('shared.logger'));
             let messageSended: SendMessageResult;
 
             let hasRestrictions: boolean = await restrictionsValidator.validate(messageToSend.deviceFromId, messageToSend.destinationId, messageToSend.destinationType, messageToSend.messageType);

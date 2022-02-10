@@ -1,6 +1,7 @@
 services:
   endpoints.token.create:
-    class: ./../../api/endpoints/user-token/create
+    class: ./../../api/endpoints/user-token/CreateUserToken
+    arguments: ['@app.token.creator']
 
   endpoints.contacts.get:
     class: ./../../api/endpoints/contacts/GetContacts

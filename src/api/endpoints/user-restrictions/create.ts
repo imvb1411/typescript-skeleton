@@ -12,7 +12,7 @@ export default class CreateUserRestriction implements BaseEndpoint {
     async run(_req: Request, res: Response): Promise<void> {
         try {
             let createRestrictionCommand: CreateUserRestrictionCommand = _req.body.restriction as CreateUserRestrictionCommand;
-            const restrictionCreator = new UserRestrictionCreator(new MySqlUserRestrictionRepository(new MySqlRepository()), container.get('shared.logger'));
+            const restrictionCreator = new UserRestrictionCreator(new MySqlUserRestrictionRepository(new MySqlRepository(null)), container.get('shared.logger'));
             
             let result: CreateUserRestrictionResult = await restrictionCreator.create(createRestrictionCommand);
             res.header('Access-Control-Allow-Origin', '*');
