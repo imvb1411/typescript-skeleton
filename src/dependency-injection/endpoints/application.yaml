@@ -15,9 +15,10 @@ services:
     class: ./../../api/endpoints/messages/SendMessage
     arguments: ['@app.message.sender', '@app.user-restriction.validator', '@app.contact.finder', '@repository.user-token']
 
-  endpoints.messages.ack:
-    class: ./../../api/endpoints/messages/ack
-
+  endpoints.messages.confirm:
+    class: ./../../api/endpoints/messages/ConfirmMessage
+    arguments: ['@app.message.confirmer']
+    
   endpoints.health.checker:
     class: ./../../api/endpoints/health/checker
 

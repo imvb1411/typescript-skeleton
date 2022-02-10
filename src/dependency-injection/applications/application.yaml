@@ -28,4 +28,8 @@ services:
     class: ./../../modules/messages/application/MessageSender
     arguments: ['@app.message.messaging', '@repository.message', '@shared.logger']
 
+  app.message.confirmer:
+    class: ./../../modules/messages/application/MessageConfirmer
+    arguments: ['@repository.message', '@shared.logger']
+
   
