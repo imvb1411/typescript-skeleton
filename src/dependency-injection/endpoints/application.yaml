@@ -8,8 +8,9 @@ services:
     arguments: ['@app.contact.finder']
     
   endpoints.contacts.get-group-members:
-    class: ./../../api/endpoints/contacts/get-group-members
-    
+    class: ./../../api/endpoints/contacts/GetGroupMembers
+    arguments: ['@app.contact.finder']
+
   endpoints.messages.send:
     class: ./../../api/endpoints/messages/send
       

@@ -1,7 +1,7 @@
 import { Express } from 'express';
 import container from './../dependency-injection';
 import { GetContacts } from "../api/endpoints/contacts/GetContacts";
-import GetGroupMembers from './../api/endpoints/contacts/get-group-members';
+import { GetGroupMembers } from '../api/endpoints/contacts/GetGroupMembers';
 
 export const register = (app: Express) => {
 
