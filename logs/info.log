@@ -5074,3 +5074,8 @@
 
 [32minfo[39m: GetGroupMembers: {"deviceFromId":"D1","deviceFromType":3,"destinationId":"16","destinationType":7}
 [32minfo[39m: GetGroupMembers: {"deviceFromId":"D1","deviceFromType":3,"destinationId":"16","destinationType":7}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: {"userRestricted":"504","restrictionType":3,"userId":"D1","userType":7,"state":1}
+[32minfo[39m: {"userRestricted":"504","restrictionType":3,"userId":"D1","userType":7,"state":1}

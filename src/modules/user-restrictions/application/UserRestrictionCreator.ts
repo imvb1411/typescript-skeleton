@@ -1,10 +1,10 @@
-import { IUserRestrictionRepository } from "./../domain/user-restriction-repository";
+import { IUserRestrictionRepository } from "../domain/user-restriction-repository";
 import Logger from "../../../shared/domain/logger";
-import { CreateUserRestrictionCommand, CreateUserRestrictionResult } from "./../../../api/endpoints/user-restrictions/user-restriction.dto";
-import { UserRestrictionEntity } from "./../domain/user-restriction-entity";
-import { Uuid } from "./../../../shared/domain/value-object/Uuid";
+import { CreateUserRestrictionCommand, CreateUserRestrictionResult } from "../../../api/endpoints/user-restrictions/user-restriction.dto";
+import { UserRestrictionEntity } from "../domain/user-restriction-entity";
+import { Uuid } from "../../../shared/domain/value-object/Uuid";
 import moment from "moment";
-import { UserRestrictionProfile } from "./../../../api/mappers/user-restriction-profile";
+import { UserRestrictionProfile } from "../../../api/mappers/user-restriction-profile";
 
 export class UserRestrictionCreator {
 

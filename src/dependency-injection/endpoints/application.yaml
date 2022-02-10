@@ -21,8 +21,9 @@ services:
     class: ./../../api/endpoints/health/checker
 
   endpoints.user-restriction.create:
-    class: ./../../api/endpoints/user-restrictions/create
-  
+    class: ./../../api/endpoints/user-restrictions/CreateUserRestriction
+    arguments: ['@app.user-restriction.creator']
+
   endpoints.user-restriction.delete:
     class: ./../../api/endpoints/user-restrictions/delete
   

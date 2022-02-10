@@ -6,3 +6,7 @@ services:
   app.token.creator:
     class: ./../../modules/user-tokens/application/TokenCreator
     arguments: ['@repository.user-token', '@shared.logger']
+
+  app.user-restriction.creator:
+    class: ./../../modules/user-restrictions/application/UserRestrictionCreator
+    arguments: ['@repository.user-restriction', '@shared.logger']
