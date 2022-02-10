@@ -10,3 +10,8 @@ services:
   app.user-restriction.creator:
     class: ./../../modules/user-restrictions/application/UserRestrictionCreator
     arguments: ['@repository.user-restriction', '@shared.logger']
+
+  app.user-restriction.eliminator:
+    class: ./../../modules/user-restrictions/application/UserRestrictionEliminator
+    arguments: ['@repository.user-restriction', '@shared.logger']
+    

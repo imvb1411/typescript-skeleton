@@ -25,5 +25,6 @@ services:
     arguments: ['@app.user-restriction.creator']
 
   endpoints.user-restriction.delete:
-    class: ./../../api/endpoints/user-restrictions/delete
+    class: ./../../api/endpoints/user-restrictions/DeleteUserRestriction
+    arguments: ['@app.user-restriction.eliminator']
   

@@ -1,6 +1,6 @@
 import { Express } from 'express';
 import { CreateUserRestriction } from '../api/endpoints/user-restrictions/CreateUserRestriction';
-import DeleteUserRestriction from './../api/endpoints/user-restrictions/delete';
+import { DeleteUserRestriction } from '../api/endpoints/user-restrictions/DeleteUserRestriction';
 import container from './../dependency-injection';
 
 export const register = (app: Express) => {
