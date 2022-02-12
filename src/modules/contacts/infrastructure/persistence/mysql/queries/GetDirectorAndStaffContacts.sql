@@ -18,7 +18,7 @@ FROM profesores p
 		ON (c.cod_pro = p.cod_pro
 			AND c.cod_col = ?)
 WHERE
-	p.estado = 'activo'
+	p.estado = 1
 UNION ALL
 -- Listado de cursos
 SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip ) as nombre, 6 as tipo  

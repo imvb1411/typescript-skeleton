@@ -5,7 +5,7 @@ FROM UserToken as a
 			AND b.cod_col = ?)
     INNER JOIN profesores as c 
         ON (c.cod_pro = b.cod_pro
-            AND c.estado = 'activo')
+            AND c.estado = 1)
 WHERE a.state=1
 	AND a.UserType = 3 -- Profesores
 UNION ALL

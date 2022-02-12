@@ -23,7 +23,7 @@ FROM profesores p
 			AND c.cod_col = a.cod_col
 			AND c.estado = 1)
 WHERE
-	p.estado = 'activo'
+	p.estado = 1
 -- LISTADO DE TUTORES
 SELECT DISTINCT a.cod_tut as codigo, c.cod_par, concat(a.paterno,' ',a.materno,' ',a.nombres) as nombre, 1 as tipo
 FROM tutores as a 
