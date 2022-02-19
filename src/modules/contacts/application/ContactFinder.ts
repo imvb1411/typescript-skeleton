@@ -43,7 +43,7 @@ export class ContactFinder {
         
         let groupMemberRestrictionsResult: GroupMemberRestrictionResult[] = new Array<GroupMemberRestrictionResult>();
         for(let token of tokens) {
-            let restrictions: UserRestrictionEntity[] = await this.restrictionRepository.findRestrictions(token.userId, command.deviceFromId, command.destinationType);
+            let restrictions: UserRestrictionEntity[] = await this.restrictionRepository.findRestrictions(token.userId, command.destinationId, command.destinationType);
             let userRestrictionsResult: CreateUserRestrictionResult[] = new Array<CreateUserRestrictionResult>();
             for (let restriction of restrictions) {
                 let userRestriction: CreateUserRestrictionResult = { id: restriction.id, restrictionType: restriction.restrictionType, createdAt: moment(restriction.createdAt).format("yyyy-MM-DD HH:mm:ss")};
