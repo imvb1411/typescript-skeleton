@@ -19,19 +19,22 @@ export class TokenCreator {
         let tokenFound: UserTokenEntity = await this.repository.findUserTokenByUserIdAndType(tokenForCreate.userId, tokenForCreate.userType);
         let createTokenResult: CreateTokenResult = { id: null, userId: null, userType: null, firebaseToken: null };
 
+        if (tokenFound == null) {
+            tokenFound = await this.repository.findUserTokenByToken(tokenForCreate.firebaseToken);
+        }
+
         if (tokenFound != null) {
-            if (tokenFound.firebaseToken == tokenForCreate.firebaseToken && tokenFound.userId != tokenForCreate.userId) {
-                throw new Error("El token esta activado para otro usuario.");
+            if ((tokenFound.firebaseToken == tokenForCreate.firebaseToken && tokenFound.userId != tokenForCreate.userId) ||  
+                (tokenForCreate.firebaseToken != tokenFound.firebaseToken && tokenFound.userId == tokenForCreate.userId)) {
+                    tokenFound.state = 0;
+                    tokenFound.updatedAt = currentDate;
+                    await this.repository.update(tokenFound);
+                    this.logger.info("TokenCreator: Update " + tokenFound.id);
             }else if(tokenFound.firebaseToken == tokenForCreate.firebaseToken && tokenFound.userId == tokenForCreate.userId) {
                 createTokenResult = this.mapper.map<UserTokenEntity, CreateTokenResult>(tokenFound, createTokenResult);
                 createTokenResult.id = tokenFound.id;
                 createTokenResult.userType = tokenFound.userType;
                 return createTokenResult;
-            }else if (tokenForCreate.firebaseToken != tokenFound.firebaseToken && tokenFound.userId == tokenForCreate.userId) {
-                tokenFound.state = 0;
-                tokenFound.updatedAt = currentDate;
-                await this.repository.update(tokenFound);
-                this.logger.info("TokenCreator: Update " + tokenFound.id);
             }
         }
 

@@ -18,3 +18,9 @@ export interface CreateTokenWithNameResult {
     name: string;
     firebaseToken: string;
 }
+
+export interface DeleteTokenCommand {
+    userId: string; 
+    userType: number;  
+    firebaseToken: string;
+}
