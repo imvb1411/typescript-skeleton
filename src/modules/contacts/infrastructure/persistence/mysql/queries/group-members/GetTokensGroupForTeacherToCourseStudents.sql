@@ -1,42 +1,36 @@
-SELECT DISTINCT a.id, a.userId, a.userType, concat(c.paterno,' ',c.materno,' ',c.nombres) as name, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
-FROM UserToken as a
-    INNER JOIN tutor_alumno as b
-		ON (b.cod_tut = a.userId
-			AND b.estado = 1)
-	INNER JOIN alumnos as c
-		ON (c.codigo = b.codigo
-			and c.cod_cur = ?)
-	INNER JOIN (SELECT y.cod_par, y.cod_col 
-				FROM tutor_alumno x 
-					INNER JOIN alumnos y 
-					ON (y.codigo = x.codigo
-                        and y.cod_cur = ?) 
-				WHERE x.estado = 1) AS d
-		ON (d.cod_par = c.cod_par
-			and d.cod_col = c.cod_col)
+SELECT DISTINCT UserToken.id, UserToken.userId, UserToken.userType
+	, concat(alumnos.paterno,' ',alumnos.materno,' ',alumnos.nombres) as name, UserToken.firebaseToken, UserToken.state
+    , date_format(UserToken.createdAt, '%Y-%m-%d %T') as createdAt, UserToken.updatedAt
+FROM UserToken
+    INNER JOIN alumnos
+		ON (alumnos.codigo = UserToken.UserId
+			AND alumnos.estado = 1)
+	INNER JOIN prof_cur_mat
+		ON (prof_cur_mat.codcur = alumnos.cod_cur
+			AND prof_cur_mat.codpar = alumnos.cod_par
+            AND prof_cur_mat.cod_col = alumnos.cod_col
+            AND prof_cur_mat.estado = 'activo'
+            AND prof_cur_mat.prof = ?)
 WHERE
-	a.state = 1
-	AND a.UserType = 2 -- Estudiantes
+	UserToken.state = 1
+	AND UserToken.UserType = 2 -- Estudiantes
 UNION ALL
-SELECT DISTINCT a.id, a.userId, a.userType, concat(e.paterno,' ',e.materno,' ',e.nombres) as name, a.firebaseToken, a.state, date_format(a.createdAt, '%Y-%m-%d %T') as createdAt, a.updatedAt
-FROM UserToken as a
-	INNER JOIN prof_cur_mat as b 
-		ON (b.prof = a.UserId
-			AND b.estado='activo'
-            AND b.prof <> ?)
-	INNER JOIN (SELECT y.cod_cur, y.cod_par, y.cod_col
-				FROM tutor_alumno x 
-					INNER JOIN alumnos y 
-					ON (y.codigo = x.codigo
-                        AND y.cod_cur = ?) 
-				WHERE x.estado = 1) AS c
-		ON (c.cod_cur = b.codcur
-			AND c.cod_par = b.codpar)
-	INNER JOIN prof_colegio as d
-		ON (d.cod_pro = b.prof
-			AND d.cod_col = c.cod_col)
-	INNER JOIN profesores as e
-		ON (e.cod_pro = b.prof 
-			AND e.estado = 1)
-WHERE a.state=1
-	AND a.UserType = 3; -- Profesores
+SELECT DISTINCT UserToken.id, UserToken.userId, UserToken.userType
+	, concat(profesores.paterno,' ',profesores.materno,' ',profesores.nombres) as name, UserToken.firebaseToken, UserToken.state
+    , date_format(UserToken.createdAt, '%Y-%m-%d %T') as createdAt, UserToken.updatedAt
+FROM UserToken
+	INNER JOIN prof_cur_mat as colegas
+		ON (colegas.prof = UserToken.UserId
+			AND colegas.estado = 'activo')
+	INNER JOIN prof_cur_mat
+		ON (prof_cur_mat.codcur = colegas.codcur
+			AND prof_cur_mat.codpar = colegas.codpar
+            AND prof_cur_mat.cod_col = colegas.cod_col
+            AND prof_cur_mat.estado = 'activo'
+            AND prof_cur_mat.prof = ?)
+    INNER JOIN profesores
+        ON (profesores.cod_pro = colegas.prof
+			AND profesores.estado = 1)
+WHERE UserToken.state=1
+	AND UserToken.UserType = 3
+    AND UserToken.UserId <> ?; -- Profesores

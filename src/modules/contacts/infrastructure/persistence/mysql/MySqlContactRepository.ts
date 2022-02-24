@@ -24,7 +24,7 @@ export class MySqlContactRepository implements IContactRepository {
                 break;
             case UserType.Teacher:
                 sql = fs.readFileSync(__dirname + '/queries/GetTeacherContacts.sql', 'utf-8');
-                params = [ userId, userId, userId, userId ];
+                params = [ userId, userId, userId, userId, userId ];
                 break;
             case UserType.Staff:
             case UserType.Director:
@@ -66,7 +66,7 @@ export class MySqlContactRepository implements IContactRepository {
     async findGroupForStudent(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>> {
         let tokens: Array<UserTokenWithName> = new Array<UserTokenWithName>();
         let getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForStudent.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, deviceFromId ]);
+        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, deviceFromId, deviceFromId ]);
         if (query != null) {
             query.map(function(item) {
                 tokens.push(Object.assign(new UserTokenWithName,JSON.parse(JSON.stringify(item))));
@@ -82,18 +82,15 @@ export class MySqlContactRepository implements IContactRepository {
         if (destinationType == ContactType.Course) {
             getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForTeacherToCourseStudents.sql', 'utf-8');
             params = [ 
-                destinationId
-                , destinationId
+                deviceFromId
                 , deviceFromId
-                , destinationId
+                , deviceFromId
             ]
         } else if (destinationType == ContactType.CourseWithTutors) {
             getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForTeacherToCourseTutors.sql', 'utf-8');
             params = [ 
                 destinationId
-                , destinationId
                 , deviceFromId
-                , destinationId
             ]
         } else if (destinationType == ContactType.TeacherAndDirectorGroup) {
             getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForTeacherToGroupSchool.sql', 'utf-8');

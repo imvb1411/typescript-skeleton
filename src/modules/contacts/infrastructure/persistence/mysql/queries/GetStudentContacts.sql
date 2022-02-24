@@ -1,37 +1,51 @@
 -- LISTADO DE CURSOS
-SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip ) as nombre, 6 as tipo  
-FROM alumnos as a
-	INNER JOIN cursos as c
-		ON (c.cod_cur = a.cod_cur)
-	INNER JOIN paralelos p 
-		ON (p.cod_par = a.cod_par
-			AND p.estado = 1)
+SELECT DISTINCT cursos.cod_cur as codigo, paralelos.cod_par, concat(cursos.descrip, ' ',paralelos.descrip ) as nombre, 6 as tipo  
+FROM alumnos
+	INNER JOIN cursos
+		ON (cursos.cod_cur = alumnos.cod_cur)
+	INNER JOIN paralelos 
+		ON (paralelos.cod_par = alumnos.cod_par
+			AND paralelos.estado = 1)
 WHERE
-	a.estado = 1
-    AND a.codigo = ?
+	alumnos.estado = 1
+    AND alumnos.codigo = ?
 UNION ALL
 -- LISTADO DE PROFESORES
-SELECT DISTINCT p.cod_pro as codigo, pcm.codpar as cod_par, concat(p.paterno,' ',p.materno,' ',p.nombres) as nombre, 3 as tipo
-FROM profesores p
-	INNER JOIN prof_cur_mat pcm
-        ON (pcm.prof = p.cod_pro)
-    INNER JOIN alumnos as a
-        ON (a.cod_cur = pcm.cod_cur
-		    AND a.codigo = ?)
-	INNER JOIN prof_colegio as c 
-		ON (c.cod_pro = p.prof
-			AND c.cod_col = a.cod_col
-			AND c.estado = 1)
-WHERE
-	p.estado = 1
+select DISTINCT profesores.cod_pro as codigo, prof_cur_mat.codpar as cod_par, concat(profesores.paterno,' ',profesores.materno,' ',profesores.nombres) as nombre, 3 as tipo
+from prof_cur_mat 
+	inner join profesores
+		on (profesores.cod_pro = prof_cur_mat.prof
+			and profesores.estado = 1)
+	inner join alumnos
+		on (alumnos.cod_cur = prof_cur_mat.codcur
+			and alumnos.cod_par = prof_cur_mat.codpar
+			and alumnos.cod_col = prof_cur_mat.cod_col
+            and alumnos.estado = 1
+            and alumnos.codigo = ?)
+where 
+	prof_cur_mat.estado = 'activo'
+    and prof_cur_mat.gestion = year(now())
+UNION ALL
 -- LISTADO DE TUTORES
-SELECT DISTINCT a.cod_tut as codigo, c.cod_par, concat(a.paterno,' ',a.materno,' ',a.nombres) as nombre, 1 as tipo
-FROM tutores as a 
-	INNER JOIN tutor_alumno as b
-		ON (b.cod_tut = a.cod_tut
-			AND b.estado = 1)
-	INNER JOIN alumnos as c
-		ON (c.codigo = b.codigo
-			AND c.estado = 1
-            AND c.codigo = ?)
+SELECT DISTINCT tutores.cod_tut as codigo, alumnos.cod_par, concat(tutores.paterno,' ',tutores.materno,' ',tutores.nombres) as nombre, 1 as tipo
+FROM tutores 
+	INNER JOIN tutor_alumno
+		ON (tutor_alumno.cod_tut = tutores.cod_tut
+			AND tutor_alumno.estado = 1)
+	INNER JOIN alumnos
+		ON (alumnos.codigo = tutor_alumno.codigo
+			AND alumnos.estado = 1
+            AND alumnos.codigo = ?)
+-- LISTADO DE COMPAÑEROS
+UNION ALL
+select DISTINCT compañeros.codigo as codigo, compañeros.cod_par as cod_par, concat(compañeros.paterno,' ',compañeros.materno,' ',compañeros.nombres) as nombre, 2 as tipo
+from alumnos
+	inner join alumnos as compañeros
+		on (compañeros.cod_cur = alumnos.cod_cur
+			and compañeros.cod_par = alumnos.cod_par
+            and compañeros.cod_col = alumnos.cod_col
+			and compañeros.estado = 1)
+where 
+	alumnos.estado = 1
+	and alumnos.codigo = ?
 ORDER BY tipo, codigo;

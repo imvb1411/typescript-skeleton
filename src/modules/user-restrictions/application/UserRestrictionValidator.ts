@@ -34,7 +34,7 @@ export class UserRestrictionValidator {
                 }
                 break;
             case MessageType.Audio:
-                if (restrictionFound.filter(r=>r.restrictionType == RestrictionType.Mute).length > 0) {
+                if (restrictionFound.filter(r=>r.restrictionType == RestrictionType.SendAudio).length > 0) {
                     result = false;
                 }
                 break;

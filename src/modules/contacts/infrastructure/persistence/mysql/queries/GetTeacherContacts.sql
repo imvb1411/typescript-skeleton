@@ -36,6 +36,18 @@ FROM prof_cur_mat as a
  		ON (e.cod_tut = d.cod_tut)
 WHERE a.prof= ?
 	AND a.estado='activo'
+UNION ALL 
+-- LISTADO DE ALUMNOS
+SELECT DISTINCT alumnos.codigo as codigo, alumnos.cod_par as cod_par, concat(alumnos.paterno,' ',alumnos.materno,' ',alumnos.nombres) as nombre, 2 as tipo
+FROM alumnos
+	INNER JOIN prof_cur_mat
+		ON (prof_cur_mat.codcur = alumnos.cod_cur
+			AND prof_cur_mat.codpar = alumnos.cod_par
+            AND prof_cur_mat.cod_col = alumnos.cod_col
+            AND prof_cur_mat.estado = 'activo'
+            AND prof_cur_mat.prof = ?)
+WHERE
+	alumnos.estado = 1
 UNION ALL
 -- GRUPO DE PROFESORES Y EL DIRECTOR DEL COLEGIO
 SELECT DISTINCT a.cod_col as codigo, 0 as codpar, b.nombre, 8 as tipo
@@ -46,3 +58,4 @@ FROM prof_colegio as a
 WHERE a.cod_pro = ?
 	AND a.estado = 1
 ORDER BY tipo, codigo;
+
