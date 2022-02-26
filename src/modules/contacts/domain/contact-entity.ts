@@ -20,3 +20,8 @@ export enum ContactType {
     CourseWithTutors = 7,
     TeacherAndDirectorGroup = 8
 }
+
+export class CourseEntity {
+    id: string;
+    name: string;
+}

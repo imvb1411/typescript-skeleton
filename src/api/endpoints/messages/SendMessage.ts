@@ -34,6 +34,7 @@ export class SendMessage implements BaseEndpoint {
                 var tokenFounded: UserTokenEntity = await this.userTokenRepository.findUserTokenByUserIdAndType(messageToSend.destinationId, messageToSend.destinationType);
                 if (tokenFounded == null) {
                     error = new ApiError(404, "SendMessage","El usuario no tiene una cuenta activa.");
+                    throw error;
                 }
                 messageSended = await this.messageSender.sendMessageToDevice(messageToSend, tokenFounded.firebaseToken);
             }else {

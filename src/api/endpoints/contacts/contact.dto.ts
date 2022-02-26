@@ -1,14 +1,20 @@
 import { CreateUserRestrictionResult } from "../user-restrictions/user-restriction.dto";
 import { CreateTokenWithNameResult } from "../user-token/token.dto";
-import { ContactEntity } from "./../../../modules/contacts/domain/contact-entity";
+import { ContactType, CourseEntity } from "./../../../modules/contacts/domain/contact-entity";
 
 export interface GetContactsCommand {
     userId: string;
     userType: number;
 }
+export interface ContactResult {
+    id: string;
+    name: string;
+    contactType: ContactType;
+    courses: Array<CourseEntity>
+}
 
 export interface ContactListResult {
-    contacts: Array<ContactEntity>;
+    contacts: Array<ContactResult>;
 }
 
 export interface GetGroupMembersCommand {

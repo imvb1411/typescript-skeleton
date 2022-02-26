@@ -14,8 +14,8 @@ WHERE
 	AND UserToken.UserType = 1 -- Tutores
 UNION ALL
 SELECT DISTINCT UserToken.id, UserToken.userId, UserToken.userType
-, concat(profesores.paterno,' ',profesores.materno,' ',profesores.nombres) as name, UserToken.firebaseToken, UserToken.state
-, date_format(UserToken.createdAt, '%Y-%m-%d %T') as createdAt, UserToken.updatedAt
+	, concat(profesores.paterno,' ',profesores.materno,' ',profesores.nombres) as name, UserToken.firebaseToken, UserToken.state
+	, date_format(UserToken.createdAt, '%Y-%m-%d %T') as createdAt, UserToken.updatedAt
 FROM UserToken
 	INNER JOIN prof_cur_mat
 		ON (prof_cur_mat.prof = UserToken.UserId

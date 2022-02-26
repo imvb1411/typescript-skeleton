@@ -7,7 +7,7 @@ FROM (
 			ON (p.estado = 1)
 	UNION ALL
 	-- Profesores
-	SELECT DISTINCT p.cod_pro as codigo, pcm.codpar as cod_par, concat(p.paterno,' ',p.materno,' ',p.nombres) as nombre, 3 as tipo, pcm.codcur, c.cod_col
+	SELECT DISTINCT p.cod_pro as codigo, pcm.codpar as cod_par, concat(p.paterno,' ',p.materno,' ',p.nombres) as nombre, 3 as tipo, pcm.codcur as cod_cur, c.cod_col
 	FROM prof_cur_mat pcm 
 		INNER JOIN profesores p 
 			ON (p.cod_pro = pcm.prof

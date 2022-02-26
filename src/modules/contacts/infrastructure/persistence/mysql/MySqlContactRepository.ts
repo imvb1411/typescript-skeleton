@@ -1,6 +1,6 @@
 import { UserTokenWithName, UserType } from "../../../../user-tokens/domain/user-token-entity";
 import { IRepository } from "../../../../../shared/infrastructure/persistence/IRepository";
-import { ContactEntity, ContactType } from "../../../domain/contact-entity";
+import { ContactEntity, ContactType, CourseEntity } from "../../../domain/contact-entity";
 import { IContactRepository } from "../../../domain/contact-repository";
 import * as fs from 'fs';
 
@@ -20,7 +20,7 @@ export class MySqlContactRepository implements IContactRepository {
                 break;
             case UserType.Student:
                 sql = fs.readFileSync(__dirname + '/queries/GetStudentContacts.sql', 'utf-8');
-                params = [userId, userId, userId]
+                params = [userId, userId, userId, userId]
                 break;
             case UserType.Teacher:
                 sql = fs.readFileSync(__dirname + '/queries/GetTeacherContacts.sql', 'utf-8');
@@ -123,5 +123,86 @@ export class MySqlContactRepository implements IContactRepository {
             });
         }
         return tokens;
+    }
+
+    async getCourseForTutor(userId: string): Promise<Array<CourseEntity>> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForTutor.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [userId]);
+        if (result != null) {
+            result.map(function(item) {
+                courses.push(Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item))));
+            });
+        }
+        return courses;
+    }
+
+    async getCourseForStudent(userId: string): Promise<Array<CourseEntity>> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForStudent.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [userId]);
+        if (result != null) {
+            result.map(function(item) {
+                courses.push(Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item))));
+            });
+        }
+        return courses;
+    }
+
+    async getCourseForTeacher(userId: string): Promise<Array<CourseEntity>> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForTeacher.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [ userId]);
+        if (result != null) {
+            result.map(function(item) {
+                courses.push(Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item))));
+            });
+        }
+        return courses;
+    }
+
+    async getCourseForTutorByCourseId(userId: string, courseId: string): Promise<CourseEntity[]> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForTutor.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [userId]);
+        if (result != null) {
+            result.map(function(item) {
+                let course: CourseEntity = Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item)));
+                if (course.id == courseId) {
+                    courses.push(course);
+                }
+            });
+        }
+        return courses;
+    }
+
+    async getCourseForStudentByCourseId(userId: string, courseId: string): Promise<CourseEntity[]> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForStudent.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [userId]);
+        if (result != null) {
+            result.map(function(item) {
+                let course: CourseEntity = Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item)));
+                if (course.id == courseId) {
+                    courses.push(course);
+                }
+            });
+        }
+        return courses;
+    }
+
+    async getCourseForTeacherByCourseId(userId: string, courseId: string): Promise<CourseEntity[]> {
+        let courses : Array<CourseEntity> = new Array<CourseEntity>();
+        let query: string = fs.readFileSync(__dirname + '/queries/GetCourseForTeacher.sql', 'utf-8');
+        let result = await this.repository.executeSelectWithParams(query, [userId]);
+        if (result != null) {
+            result.map(function(item) {
+                let course: CourseEntity = Object.assign(new CourseEntity,JSON.parse(JSON.stringify(item)));
+                if (course.id == courseId) {
+                    courses.push(course);
+                }
+            });
+        }
+        return courses;
     }
 }
