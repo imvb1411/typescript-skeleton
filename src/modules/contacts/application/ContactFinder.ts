@@ -46,16 +46,24 @@ export class ContactFinder {
                         coursesFounded = await this.contactRepository.getCourseForTeacherByCourseId(contact.id, courseUser.id);
                         break;
                     case ContactType.Course:
+                        if (contact.id == courseUser.id) {
+                            let courseEntity: CourseEntity = { id: contact.id, name: contact.name} 
+                            coursesFounded.push(courseEntity);
+                        } 
+                        break;
                     case ContactType.CourseWithTutors:
                         if (contact.id == courseUser.id) {
                             let courseEntity: CourseEntity = { id: contact.id, name: contact.name} 
                             coursesFounded.push(courseEntity);
                         }                       
-                    break;
-                    case ContactType.TeacherAndDirectorGroup:
-                        let courseEntity: CourseEntity = { id: contact.id, name: contact.name} 
-                        coursesFounded.push(courseEntity);
                         break;
+                    case ContactType.TeacherAndDirectorGroup:
+                        if (courses.filter( course => course.id == contact.id && course.name == contact.name).length == 0) {
+                            let courseEntity: CourseEntity = { id: contact.id, name: contact.name}                       
+                            coursesFounded.push(courseEntity);
+                        }
+                        
+                    break;
                 }
                 courses = courses.concat(coursesFounded);
             } 

@@ -1,5 +1,13 @@
 SELECT DISTINCT t.codigo, t.cod_par, t.nombre, t.tipo
 FROM (
+	SELECT DISTINCT alumnos.codigo as codigo, alumnos.cod_par, concat(alumnos.paterno,' ',alumnos.materno,' ',alumnos.nombres) as nombre, 2 as tipo, alumnos.cod_cur, alumnos.cod_col
+	FROM tutor_alumno
+		INNER JOIN alumnos
+			ON (alumnos.codigo = tutor_alumno.codigo
+				AND alumnos.estado = 1)
+	WHERE
+		tutor_alumno.estado = 1
+	UNION ALL
 	-- Cursos con el profesor
 	SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip,'-Tutores') as nombre, 7 as tipo, c.cod_cur, 0 as cod_col 
 	FROM cursos c 
@@ -30,6 +38,7 @@ FROM (
 		a.estado = 1) as t
 	inner join alumnos as a
 		on (a.cod_cur = t.cod_cur
+			and ((t.tipo = 2 and a.codigo = t.codigo) or (t.tipo <> 2))
 			and ((t.tipo = 3) or (t.tipo <> 3 and a.cod_par = t.cod_par))
 			and (a.cod_col = t.cod_col or t.cod_col = 0))
 	inner join tutor_alumno as b
