@@ -2,7 +2,7 @@ import { ContactListResult, ContactResult, GetContactsCommand, GetGroupMembersCo
 import { IContactRepository } from "../domain/contact-repository";
 import Logger from "../../../shared/domain/logger";
 import { UserTokenWithName, UserType } from "../../user-tokens/domain/user-token-entity";
-import { ContactEntity, ContactType, CourseEntity } from "../domain/contact-entity";
+import { ContactEntity, ContactType, GroupEntity, GroupType } from "../domain/contact-entity";
 import { IUserRestrictionRepository } from "../../user-restrictions/domain/user-restriction-repository";
 import { UserRestrictionEntity } from "./../../user-restrictions/domain/user-restriction-entity";
 import { CreateUserRestrictionResult } from "./../../../api/endpoints/user-restrictions/user-restriction.dto";
@@ -16,7 +16,7 @@ export class ContactFinder {
     async findByUserId(user: GetContactsCommand): Promise<ContactListResult> {
         this.logger.info('GetContacts: ' + JSON.stringify(user));
         let contactsResult: Array<ContactResult> = new Array<ContactResult>();
-        let coursesUser: Array<CourseEntity> = new Array<CourseEntity>();
+        let coursesUser: Array<GroupEntity> = new Array<GroupEntity>();
 
         switch (user.userType) {
             case UserType.Tutor:
@@ -28,47 +28,71 @@ export class ContactFinder {
             case UserType.Teacher:
                 coursesUser = await this.contactRepository.getCourseForTeacher(user.userId);
                 break;
+            case UserType.Director:
+                coursesUser = await this.contactRepository.getAllCourses(); 
+                break;
+            case UserType.Staff:
+            case UserType.Director:
+                coursesUser = await this.contactRepository.getAllCourses(); 
+                break;
         }
 
         let contactsFound: Array<ContactEntity> = await this.contactRepository.findByUser(user.userId, user.userType);
         for (let contact of contactsFound) {
-            let courses: Array<CourseEntity> = new Array<CourseEntity>();
-            for (let courseUser of coursesUser) {
-                let coursesFounded: Array<CourseEntity> = new Array<CourseEntity>();
-                switch (contact.contactType) {
-                    case ContactType.Tutor:
-                        coursesFounded = await this.contactRepository.getCourseForTutorByCourseId(contact.id, courseUser.id);
-                        break;
-                    case ContactType.Student:
-                        coursesFounded = await this.contactRepository.getCourseForStudentByCourseId(contact.id, courseUser.id);
-                        break;
-                    case ContactType.Teacher:
-                        coursesFounded = await this.contactRepository.getCourseForTeacherByCourseId(contact.id, courseUser.id);
-                        break;
-                    case ContactType.Course:
-                        if (contact.id == courseUser.id) {
-                            let courseEntity: CourseEntity = { id: contact.id, name: contact.name} 
-                            coursesFounded.push(courseEntity);
-                        } 
-                        break;
-                    case ContactType.CourseWithTutors:
-                        if (contact.id == courseUser.id) {
-                            let courseEntity: CourseEntity = { id: contact.id, name: contact.name} 
-                            coursesFounded.push(courseEntity);
-                        }                       
-                        break;
-                    case ContactType.TeacherAndDirectorGroup:
-                        if (courses.filter( course => course.id == contact.id && course.name == contact.name).length == 0) {
-                            let courseEntity: CourseEntity = { id: contact.id, name: contact.name}                       
-                            coursesFounded.push(courseEntity);
-                        }
-                        
-                    break;
+            let courses: Array<GroupEntity> = new Array<GroupEntity>();
+            if (contact.contactType == ContactType.Director || contact.contactType == ContactType.Staff || contact.contactType == ContactType.TeacherAndDirectorGroup) {
+                let groupEntity: GroupEntity 
+                if (contact.contactType == ContactType.TeacherAndDirectorGroup) {
+                    groupEntity = { id: contact.id, name: contact.name, type: GroupType.Course}
+                } else {
+                    groupEntity = await this.contactRepository.getOccupation(contact.id);
                 }
-                courses = courses.concat(coursesFounded);
-            } 
+                courses.push(groupEntity);
+            } else {
+                for (let courseUser of coursesUser) {
+                    let coursesFounded: Array<GroupEntity> = new Array<GroupEntity>();
+                    switch (contact.contactType) {
+                        case ContactType.Tutor:
+                            coursesFounded = await this.contactRepository.getCourseForTutorByCourseId(contact.id, courseUser.id);
+                            break;
+                        case ContactType.Student:
+                            coursesFounded = await this.contactRepository.getCourseForStudentByCourseId(contact.id, courseUser.id);
+                            break;
+                        case ContactType.Teacher:
+                            coursesFounded = await this.contactRepository.getCourseForTeacherByCourseId(contact.id, courseUser.id);
+                            break;
+                        case ContactType.Course:
+                            if (contact.id == courseUser.id) {
+                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course } 
+                                coursesFounded.push(courseEntity);
+                            } 
+                            break;
+                        case ContactType.CourseWithTutors:
+                            if (contact.id == courseUser.id) {
+                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course} 
+                                coursesFounded.push(courseEntity);
+                            }                       
+                            break;
+                        /*case ContactType.TeacherAndDirectorGroup:
+                            if (courses.filter( course => course.id == contact.id && course.name == contact.name && course.type == GroupType.Course).length == 0) {
+                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course}                       
+                                coursesFounded.push(courseEntity);
+                            }
+                        break;
+                        case ContactType.Staff:
+                            if (courses.filter( course => course.id == contact.id && course.name == contact.name && course.type == GroupType.Occupation).length == 0) {
+                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course}                       
+                                coursesFounded.push(courseEntity);
+                            }
+                        break;*/
+                    }
+                    courses = courses.concat(coursesFounded);
+                } 
+            }
+            
             let contactResult: ContactResult = { id: contact.id, name: contact.name, contactType: contact.contactType, courses: courses}
-            contactsResult.push(contactResult);                   
+            contactsResult.push(contactResult);     
+            console.log(contactsResult.length);              
         }
         let contactListResult: ContactListResult = { contacts : contactsResult };
         return contactListResult;

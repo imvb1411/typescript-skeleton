@@ -21,7 +21,13 @@ export enum ContactType {
     TeacherAndDirectorGroup = 8
 }
 
-export class CourseEntity {
+export class GroupEntity {
     id: string;
     name: string;
+    type: GroupType;
+}
+
+export enum GroupType {
+    Course = 1,
+    Occupation = 2
 }

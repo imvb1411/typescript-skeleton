@@ -48,4 +48,9 @@ from alumnos
 where 
 	alumnos.estado = 1
 	and alumnos.codigo = ?
+-- ADMINISTRACION
+SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre,  5 as tipo
+FROM adm
+	INNER JOIN alumnos ON (alumnos.estado = 1 and alumnos.cod_col = adm.colegio and alumnos.codigo = ?)
+WHERE adm.estado = 1 and adm.cargo = 4 
 ORDER BY tipo, codigo;

@@ -5275,3 +5275,94 @@
 [32minfo[39m:   Press CTRL-C to stop
 
 [32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: TokenForCreate: Receive {"userId":"D39","userType":3,"firebaseToken":"fR_QPz2XTDSx4WCE9oDctJ:APA91bFZQRZnK1z9sAPBcfy-FNbQsgsV9OxlYNhWL0ym9BhNkZyjPcT18T38eqClZK_uCriTsl7dXIMPwW3JIyo7V1Wh9nScfArtnGS889esePYJKrbDrJA-XnqXfPrXNDnixMn1H7CI"}
+[32minfo[39m: TokenCreator: Save {"userId":"D39","firebaseToken":"fR_QPz2XTDSx4WCE9oDctJ:APA91bFZQRZnK1z9sAPBcfy-FNbQsgsV9OxlYNhWL0ym9BhNkZyjPcT18T38eqClZK_uCriTsl7dXIMPwW3JIyo7V1Wh9nScfArtnGS889esePYJKrbDrJA-XnqXfPrXNDnixMn1H7CI","id":"39301989-5929-4ab0-b973-e9b94440fe7b","userType":3,"state":1,"createdAt":"2022-02-27T20:57:13.236Z"}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: TokenForCreate: Receive {"userId":"D39","userType":3,"firebaseToken":"e3Hh3QWEScym-0QpSo_qY8:APA91bHoa5SwRDAvCmrA6ZQRong4Gu0QgBEHtWPCjOkICNO9tGVsFJf8GL79ofGSXUGcPICRk8KhUtV_Kzoow3-0lSyonYWqsY8msKYYYCiYs_SyQc_CdJL2qEY_B9gdLuYWvDeCs7Og"}
+[32minfo[39m: TokenCreator: Update 3
+[32minfo[39m: TokenCreator: Save {"userId":"D39","firebaseToken":"e3Hh3QWEScym-0QpSo_qY8:APA91bHoa5SwRDAvCmrA6ZQRong4Gu0QgBEHtWPCjOkICNO9tGVsFJf8GL79ofGSXUGcPICRk8KhUtV_Kzoow3-0lSyonYWqsY8msKYYYCiYs_SyQc_CdJL2qEY_B9gdLuYWvDeCs7Og","id":"856c9885-0722-423c-ba1e-926d18347d30","userType":3,"state":1,"createdAt":"2022-02-27T22:39:55.749Z"}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: GetContacts: {"userId":"D39","userType":3}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetGroupMembers: {"deviceFromId":"D39","deviceFromType":3,"destinationId":"15","destinationType":7}
+[32minfo[39m: GetGroupMembers: {"deviceFromId":"D39","deviceFromType":3,"destinationId":"14","destinationType":7}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"1","userType":4}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+
+[32minfo[39m: GetContacts: {"userId":"116","userType":1}
+[32minfo[39m: Backend App is running at http://localhost:3000 in development mode
+[32minfo[39m:   Press CTRL-C to stop
+

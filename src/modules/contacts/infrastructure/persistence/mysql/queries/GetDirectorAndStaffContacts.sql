@@ -1,3 +1,10 @@
+-- LISTADO DE ALUMNOS
+SELECT DISTINCT alumnos.codigo as codigo, alumnos.cod_par as cod_par, concat(alumnos.paterno,' ',alumnos.materno,' ',alumnos.nombres) as nombre, 2 as tipo
+FROM alumnos
+WHERE
+	alumnos.estado = 1
+	and alumnos.cod_col = ?
+UNION ALL
 -- LISTADO DE TUTORES
 SELECT DISTINCT a.cod_tut as codigo, c.cod_par, concat(a.paterno,' ',a.materno,' ',a.nombres) as nombre, 1 as tipo
 FROM tutores as a 
@@ -10,7 +17,7 @@ FROM tutores as a
 			AND c.cod_col = ?)
 UNION ALL
 -- LISTADO DE PROFESORES
-SELECT DISTINCT p.cod_pro as codigo, pcm.codpar as cod_par, concat(p.paterno,' ',p.materno,' ',p.nombres) as nombre, 3 as tipo
+SELECT DISTINCT p.cod_pro as codigo, 0 as cod_par, concat(p.paterno,' ',p.materno,' ',p.nombres) as nombre, 3 as tipo
 FROM profesores p
 	INNER JOIN prof_cur_mat pcm
     	ON (pcm.prof = p.cod_pro)
@@ -32,6 +39,11 @@ WHERE
 	a.estado = 1
 	AND a.cod_col = ?
 UNION ALL
+-- LISTADO DE PERSONAL
+SELECT DISTINCT adm.cod_adm as codigo, 0 as cod_par, adm.nombre, 5 as tipo
+FROM adm
+WHERE adm.estado = 1 and adm.colegio = ? and adm.cod_adm <> ?
+UNION ALL 
 -- GRUPO DEL COLEGIO
 SELECT DISTINCT a.cod_col as codigo, 0 as codpar, a.nombre, 8 as tipo
 FROM colegios as a

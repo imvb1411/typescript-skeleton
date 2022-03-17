@@ -1,3 +1,4 @@
-SELECT cod_col
-FROM personal_colegio
-WHERE estado = 1;
+SELECT colegio as cod_col
+FROM adm
+WHERE estado = 1
+    AND cod_adm = ?;

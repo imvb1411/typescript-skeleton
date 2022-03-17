@@ -9,14 +9,14 @@ export class MySqlConnectionFactory {
 
         if(!connection) {
             connection = createPool({
-                host: 'localhost',
-                user: 'root',
-                password: '123',
-                database: 'db_agendaaizama'
-                // host: 'www.agendaaizama.net',
-                // user: 'agendaaizama_bdd_admin',
-                // password: 'admin160597',
-                // database: 'agendaaizama_bdd'
+                //host: 'localhost',
+                //user: 'root',
+                //password: '123',
+                //database: 'db_agendaaizama'
+                host: 'www.agendaaizama.net',
+                user: 'agendaaizama_bdd_admin',
+                password: 'admin160597',
+                database: 'agendaaizama_bdd'
             });
             MySqlConnectionFactory.registerClient(connection, contextName);            
         }
