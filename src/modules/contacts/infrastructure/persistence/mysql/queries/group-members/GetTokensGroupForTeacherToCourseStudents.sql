@@ -34,3 +34,16 @@ FROM UserToken
 WHERE UserToken.state=1
 	AND UserToken.UserType = 3
     AND UserToken.UserId <> ?; -- Profesores
+UNION ALL
+SELECT DISTINCT UserToken.id, UserToken.userId, UserToken.userType, '' as name
+	, UserToken.firebaseToken, UserToken.state, date_format(UserToken.createdAt, '%Y-%m-%d %T') as createdAt, UserToken.updatedAt
+FROM UserToken
+	INNER JOIN adm
+		ON (adm.cod_adm = UserToken.UserId
+			AND adm.estado = 1)
+	INNER JOIN prof_cur_mat
+		ON (prof_cur_mat.cod_col = adm.colegio
+			AND prof_cur_mat.estado = 'activo'
+			AND prof_cur_mat.prof = ?) 
+WHERE UserToken.state=1
+	AND UserToken.UserType = 4; -- Directores

@@ -37,6 +37,7 @@ export class MySqlContactRepository implements IContactRepository {
                     , directorSchool[0].cod_col
                     , directorSchool[0].cod_col
                     , directorSchool[0].cod_col
+                    , directorSchool[0].cod_col
                     , userId
                     , directorSchool[0].cod_col];
                 break;
@@ -57,7 +58,7 @@ export class MySqlContactRepository implements IContactRepository {
         let tokens: Array<UserTokenWithName> = new Array<UserTokenWithName>();
         let getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForTutor.sql', 'utf-8');
         
-        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, destinationId, deviceFromId, deviceFromId ]);
+        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, destinationId, deviceFromId, deviceFromId, deviceFromId ]);
         if (query != null) {
             query.map(function(item) {
                 tokens.push(Object.assign(new UserTokenWithName,JSON.parse(JSON.stringify(item))));
@@ -69,7 +70,7 @@ export class MySqlContactRepository implements IContactRepository {
     async findGroupForStudent(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>> {
         let tokens: Array<UserTokenWithName> = new Array<UserTokenWithName>();
         let getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForStudent.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, deviceFromId, deviceFromId ]);
+        let query = await this.repository.executeSelectWithParams(getTokens, [ deviceFromId, deviceFromId, deviceFromId, deviceFromId ]);
         if (query != null) {
             query.map(function(item) {
                 tokens.push(Object.assign(new UserTokenWithName,JSON.parse(JSON.stringify(item))));
@@ -88,11 +89,13 @@ export class MySqlContactRepository implements IContactRepository {
                 deviceFromId
                 , deviceFromId
                 , deviceFromId
+                , deviceFromId
             ]
         } else if (destinationType == ContactType.CourseWithTutors) {
             getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForTeacherToCourseTutors.sql', 'utf-8');
             params = [ 
                 destinationId
+                , deviceFromId
                 , deviceFromId
             ]
         } else if (destinationType == ContactType.TeacherAndDirectorGroup) {
@@ -116,10 +119,41 @@ export class MySqlContactRepository implements IContactRepository {
         return tokens;
     }
 
-    async findGroupForDirector(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>> {
+    async findGroupForDirector(deviceFromId: string, destinationId: string, destinationType: number): Promise<Array<UserTokenWithName>> {
         let tokens: Array<UserTokenWithName> = new Array<UserTokenWithName>();
-        let getTokens: string = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForDirector.sql', 'utf-8');
-        let query = await this.repository.executeSelectWithParams(getTokens, [destinationId, deviceFromId, destinationId]);
+        let directorSchoolQuery = fs.readFileSync(__dirname + '/queries/GetDirectorAndStaffSchool.sql', 'utf-8');
+        const directorSchool = await this.repository.executeSelectWithParams(directorSchoolQuery, [ deviceFromId ]);
+        let getTokens: string = "";
+        let params: string[];
+        if (destinationType == ContactType.TeacherAndDirectorGroup) {
+            getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForDirectorToGroupSchool.sql', 'utf-8');
+            params = [
+                directorSchool[0].cod_col
+                , directorSchool[1].cod_col
+                , deviceFromId
+            ];
+        } else if (destinationType == ContactType.Course) {
+            getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForDirectorToGroupStudents.sql', 'utf-8');
+            params = [
+                destinationId
+                , directorSchool[0].cod_col
+                , destinationId
+                , directorSchool[0].cod_col
+                , directorSchool[0].cod_col
+                , deviceFromId
+            ];
+        } else if (destinationType == ContactType.CourseWithTutors) {
+            getTokens = fs.readFileSync(__dirname + '/queries/group-members/GetTokensGroupForDirectorToGroupTutors.sql', 'utf-8');
+            params = [
+                destinationId
+                , directorSchool[0].cod_col
+                , destinationId
+                , directorSchool[0].cod_col
+                , directorSchool[0].cod_col
+                , deviceFromId
+            ];
+        }
+        let query = await this.repository.executeSelectWithParams(getTokens, params);
         if (query != null) {
             query.map(function(item) {
                 tokens.push(Object.assign(new UserTokenWithName,JSON.parse(JSON.stringify(item))));

@@ -113,7 +113,7 @@ export class ContactFinder {
                     tokens = await this.contactRepository.findGroupForTeacher(command.deviceFromId, command.destinationId, command.destinationType);
                     break; 
                 case ContactType.Director:
-                    tokens = await this.contactRepository.findGroupForDirector(command.deviceFromId, command.destinationId);
+                    tokens = await this.contactRepository.findGroupForDirector(command.deviceFromId, command.destinationId, command.destinationType);
                     break; 
                 case ContactType.Staff:
                     break; 

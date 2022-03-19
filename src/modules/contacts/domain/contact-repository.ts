@@ -6,7 +6,7 @@ export interface IContactRepository {
     findGroupForTutor(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>>
     findGroupForStudent(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>>
     findGroupForTeacher(deviceFromId: string, destinationId: string, destinationType: number): Promise<Array<UserTokenWithName>>
-    findGroupForDirector(deviceFromId: string, destinationId: string): Promise<Array<UserTokenWithName>>
+    findGroupForDirector(deviceFromId: string, destinationId: string, destinationType: number): Promise<Array<UserTokenWithName>>
     getAllCourses(): Promise<Array<GroupEntity>>;
     getCourseForTutor(userId: string): Promise<Array<GroupEntity>>
     getCourseForStudent(userId: string): Promise<Array<GroupEntity>>

@@ -27,7 +27,7 @@ FROM profesores p
 WHERE
 	p.estado = 1
 UNION ALL
--- Listado de cursos
+-- Listado de cursos con los alumnos
 SELECT DISTINCT c.cod_cur as codigo, p.cod_par, concat(c.descrip, ' ',p.descrip ) as nombre, 6 as tipo  
 FROM alumnos as a
 	INNER JOIN cursos as c
@@ -38,6 +38,16 @@ FROM alumnos as a
 WHERE
 	a.estado = 1
 	AND a.cod_col = ?
+UNION ALL
+-- LISTADO DE CURSOS CON TUTORES
+SELECT DISTINCT a.codcur as codigo, a.codpar, concat(b.descrip, ' ',c.descrip, '-Tutores') as nombre, 7 as tipo  
+FROM prof_cur_mat as a
+    INNER JOIN cursos as b
+        on (b.cod_cur = a.codcur)
+    INNER JOIN paralelos as c
+    ON (c.estado = 1
+        AND c.cod_par = a.codpar)
+WHERE a.cod_col= ? AND a.estado='activo'
 UNION ALL
 -- LISTADO DE PERSONAL
 SELECT DISTINCT adm.cod_adm as codigo, 0 as cod_par, adm.nombre, 5 as tipo
