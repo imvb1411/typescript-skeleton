@@ -50,7 +50,7 @@ FROM prof_cur_mat as a
 WHERE a.cod_col= ? AND a.estado='activo'
 UNION ALL
 -- LISTADO DE PERSONAL
-SELECT DISTINCT adm.cod_adm as codigo, 0 as cod_par, adm.nombre, 5 as tipo
+SELECT DISTINCT adm.cod_adm as codigo, 0 as cod_par, adm.nombre, case when cargo in (1,2) then 4 else 5 end as tipo
 FROM adm
 WHERE adm.estado = 1 and adm.colegio = ? and adm.cod_adm <> ?
 UNION ALL 

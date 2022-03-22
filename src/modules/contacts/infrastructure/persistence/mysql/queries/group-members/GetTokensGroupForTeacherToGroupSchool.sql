@@ -21,4 +21,4 @@ FROM UserToken as a
             AND b.estado = 1
             AND b.cod_col = ?)   
 WHERE a.state=1
-	AND a.UserType = 4; -- Director
+	AND a.UserType in (4,5); -- Director

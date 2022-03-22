@@ -49,8 +49,9 @@ where
 	alumnos.estado = 1
 	and alumnos.codigo = ?
 -- ADMINISTRACION
-SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre,  5 as tipo
+UNION ALL
+SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre, case when cargo in (1,2) then 4 else 5 end as tipo
 FROM adm
 	INNER JOIN alumnos ON (alumnos.estado = 1 and alumnos.cod_col = adm.colegio and alumnos.codigo = ?)
-WHERE adm.estado = 1 and adm.cargo = 4 
+WHERE adm.estado = 1
 ORDER BY tipo, codigo;

@@ -73,18 +73,6 @@ export class ContactFinder {
                                 coursesFounded.push(courseEntity);
                             }                       
                             break;
-                        /*case ContactType.TeacherAndDirectorGroup:
-                            if (courses.filter( course => course.id == contact.id && course.name == contact.name && course.type == GroupType.Course).length == 0) {
-                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course}                       
-                                coursesFounded.push(courseEntity);
-                            }
-                        break;
-                        case ContactType.Staff:
-                            if (courses.filter( course => course.id == contact.id && course.name == contact.name && course.type == GroupType.Occupation).length == 0) {
-                                let courseEntity: GroupEntity = { id: contact.id, name: contact.name, type: GroupType.Course}                       
-                                coursesFounded.push(courseEntity);
-                            }
-                        break;*/
                     }
                     courses = courses.concat(coursesFounded);
                 } 

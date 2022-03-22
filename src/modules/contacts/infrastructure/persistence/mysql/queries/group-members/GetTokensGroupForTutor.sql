@@ -51,4 +51,4 @@ FROM UserToken as a
 				AND x.estado = 1) AS c
 		ON (b.colegio = c.cod_col)
 WHERE a.state=1
-	AND a.UserType = 4; -- Directores
+	AND a.UserType in (4,5); -- Directores

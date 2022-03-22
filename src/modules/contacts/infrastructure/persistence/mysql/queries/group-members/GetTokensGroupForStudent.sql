@@ -38,4 +38,4 @@ FROM UserToken
 		ON (alumno.cod_col = adm.colegio
 			AND alumno.codigo = ?) 
 WHERE UserToken.state=1
-	AND UserToken.UserType = 4; -- Directores
+	AND UserToken.UserType in (4,5); -- Directores

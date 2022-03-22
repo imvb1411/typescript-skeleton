@@ -39,14 +39,14 @@ FROM (
 		a.estado = 1
 	union all
 	-- Administracion
-	SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre,  5 as tipo, 0 as cod_cur, colegio as cod_col
+	SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre, case when cargo in (1,2) then 4 else 5 end as tipo, 0 as cod_cur, colegio as cod_col
 	FROM adm
 	WHERE adm.estado = 1
 	) as t
 	inner join alumnos as a
 		on ( ((t.tipo not in (4,5) and a.cod_cur = t.cod_cur) or (t.tipo in (4,5)))
 			and ((t.tipo = 2 and a.codigo = t.codigo) or (t.tipo <> 2))
-			and ((t.tipo in (3,5)) or (t.tipo <> 3 and a.cod_par = t.cod_par))
+			and ((t.tipo in (3,4,5)) or (t.tipo <> 3 and a.cod_par = t.cod_par))
 			and (a.cod_col = t.cod_col or t.cod_col = 0))
 	inner join tutor_alumno as b
 		on (b.codigo = a.codigo

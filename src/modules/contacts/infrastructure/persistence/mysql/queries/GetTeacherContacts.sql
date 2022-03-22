@@ -50,7 +50,7 @@ WHERE
 	alumnos.estado = 1
 UNION ALL
 -- ADMINISTRACION
-SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre,  5 as tipo
+SELECT DISTINCT cod_adm as codigo, 0 as cod_par, nombre, case when cargo in (1,2) then 4 else 5 end as tipo
 FROM adm
 	INNER JOIN prof_cur_mat ON (prof_cur_mat.cod_col = adm.colegio and prof_cur_mat.estado = 'activo' and prof_cur_mat.prof = ?)
 WHERE adm.estado = 1

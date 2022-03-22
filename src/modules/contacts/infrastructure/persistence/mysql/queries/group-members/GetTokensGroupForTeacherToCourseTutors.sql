@@ -38,4 +38,4 @@ FROM UserToken
 			AND prof_cur_mat.estado = 'activo'
 			AND prof_cur_mat.prof = ?) 
 WHERE UserToken.state=1
-	AND UserToken.UserType = 4; -- Directores
+	AND UserToken.UserType in (4,5); -- Directores
